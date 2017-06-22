@@ -1,0 +1,22 @@
+[Unit]
+Description=Mobi APPersonal API - Node.js Server
+Documentation=https://nodesource.com/blog/running-your-node-js-app-with-systemd-part-1
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /opt/mobi-app-api/src/index.js
+ExecReload=/bin/kill -9 $(ps -eo pid,comm | awk '/node$/  {print $1; exit}')
+
+Restart=always
+RestartSec=10                       # Restart service after 10 seconds if node service crashes
+
+StandardOutput=syslog               # Output to syslog
+StandardError=syslog                # Output to syslog
+SyslogIdentifier=mobi-serve
+
+User=developer
+Group=wheel
+Environment="NODE_ENV=production"
+
+[Install]
+WantedBy=multi-user.target
