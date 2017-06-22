@@ -1,0 +1,147 @@
+<div class="product-detail-form-container md-background-bg">
+  <div layout-gt-sm="row" layout-align="start center">
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.PLATE">Width</label>
+      <input type="text" ng-model="vm.vehicle.plate.number" maxlength="6"
+        md-maxlength="6" required/>
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.MODEL">Height</label>
+      <input type="number" ng-model="vm.vehicle.vehicleData.model" required />
+    </md-input-container>
+    <!--<md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.BRAND">Depth</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.brand" />
+      </md-input-container>-->
+    <md-autocomplete flex required
+      md-input-name="autocompleteField"
+      md-input-minlength="2"
+      md-input-maxlength="18"
+      md-no-cache="vm.noCache"
+      md-selected-item="vm.vehicle.vehicleData.brand"
+      md-search-text="vm.searchBrand"
+      md-items="item in vm.querySearchBrands(vm.searchBrand)"
+      md-item-text="item"
+      md-require-match
+      md-floating-label="{{'VEHICLES.BRAND'|translate}}" >
+      <md-item-template>
+        <span md-highlight-text="vm.searchBrand">{{item}}</span>
+      </md-item-template>
+      <md-not-found>
+        No existe, la <a ng-click="vm.newBrand(vm.searchBrand)">Creamos!</a>
+      </md-not-found>
+      <div ng-messages="vehicleForm.autocompleteField.$error" ng-if="vehicleForm.autocompleteField.$touched">
+        <div ng-message="required">You <b>must</b> have a favorite state.</div>
+        <div ng-message="md-require-match">Please select an existing state.</div>
+        <div ng-message="minlength">Your entry is not long enough.</div>
+        <div ng-message="maxlength">Your entry is too long.</div>
+      </div>
+    </md-autocomplete>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.CYL">CYL</label>
+      <input type="number" ng-model="vm.vehicle.vehicleData.cyl" required />
+    </md-input-container>
+  </div>
+  <div layout-gt-sm="row" layout-align="start center">
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.COLOR">COLOR</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.color" />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.BODYWORK">BODYWORK</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.bodyWork" />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.SERVICE">SERVICE</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.service" />
+    </md-input-container>
+    <!--<md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.CLASS">Depth</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.class" />
+      </md-input-container>-->
+    <md-autocomplete flex required
+      md-input-name="autocompleteFieldClasses"
+      md-input-minlength="2"
+      md-input-maxlength="40"
+      md-no-cache="vm.noCache"
+      md-selected-item="vm.vehicle.vehicleData.class"
+      md-search-text="vm.searchClass"
+      md-items="item in vm.querySearchClasses(vm.searchClass)"
+      md-item-text="item"
+      md-require-match
+      md-floating-label="{{'VEHICLES.CLASS'|translate}}" >
+      <md-item-template>
+        <span md-highlight-text="vm.searchClass">{{item}}</span>
+      </md-item-template>
+      <md-not-found>
+        No existe, la <a ng-click="vm.newClass(vm.searchClass)">Creamos!</a>
+      </md-not-found>
+      <div ng-messages="vehicleForm.autocompleteFieldClasses.$error" ng-if="vehicleForm.autocompleteFieldClasses.$touched">
+        <div ng-message="required">You <b>must</b> have a favorite state.</div>
+        <div ng-message="md-require-match">Please select an existing state.</div>
+        <div ng-message="minlength">Your entry is not long enough.</div>
+        <div ng-message="maxlength">Your entry is too long.</div>
+      </div>
+    </md-autocomplete>
+  </div>
+  <div layout-gt-sm="row" layout-align="start center">
+    <!--<md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.LINE">LINE</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.line" />
+      </md-input-container>-->
+    <md-autocomplete flex required
+      md-input-name="autocompleteFieldLine"
+      md-input-minlength="1"
+      md-input-maxlength="18"
+      md-no-cache="vm.noCache"
+      md-selected-item="vm.vehicle.vehicleData.line"
+      md-search-text="vm.searchLine"
+      md-items="item in vm.querySearchLines(vm.searchLine)"
+      md-item-text="item"
+      md-require-match
+      md-floating-label="{{'VEHICLES.LINE'|translate}}" >
+      <md-item-template>
+        <span md-highlight-text="vm.searchLine">{{item}}</span>
+      </md-item-template>
+      <md-not-found>
+        No existe, la <a ng-click="vm.newLine(vm.searchLine)">Creamos!</a>
+      </md-not-found>
+      <div ng-messages="vehicleForm.autocompleteFieldLine.$error" ng-if="vehicleForm.autocompleteFieldLine.$touched">
+        <div ng-message="required">You <b>must</b> have a favorite state.</div>
+        <div ng-message="md-require-match">Please select an existing state.</div>
+        <div ng-message="minlength">Your entry is not long enough.</div>
+        <div ng-message="maxlength">Your entry is too long.</div>
+      </div>
+    </md-autocomplete>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.CAPACITY">CAPACITY</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.capacity" />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.FUEL">FUEL</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.fuel" />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.MOTOR">MOTOR</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.motor" />
+    </md-input-container>
+  </div>
+  <div layout-gt-sm="row" layout-align="start center">
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.SERIE">SERIE</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.serie" />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.CHASSIS">CHASSIS</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.chassis" />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.VIN">VIN</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.vin" required />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="VEHICLES.MILEAGE">MILEAGE</label>
+      <input type="number" ng-model="vm.vehicle.vehicleData.mileage" required />
+    </md-input-container>
+  </div>
+</div>

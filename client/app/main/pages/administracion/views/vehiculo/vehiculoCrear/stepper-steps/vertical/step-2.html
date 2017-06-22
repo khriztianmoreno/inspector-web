@@ -1,0 +1,58 @@
+<div class="product-detail-form-container md-background-bg">
+  <div layout-gt-sm="row" layout-align="start center">
+    <md-input-container class="md-block" flex-gt-sm>
+      <md-icon md-font-icon="icon-account-box"></md-icon>
+      <label translate="VEHICLES.OWNER_FULLNAME">OWNER FULLNAME</label>
+      <input type="text" ng-model="vm.vehicle.vehicleData.owner.fullName"  />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <md-icon md-font-icon="icon-account-key"></md-icon>
+      <label translate="CUSTOMERS.IDENTIFICATION">Identification</label>
+      <md-icon></md-icon>
+      <input ng-model="vm.vehicle.vehicleData.owner.identification.number" type="text">
+    </md-input-container>
+  </div>
+  <md-autocomplete flex required
+    md-input-name="autocompleteFieldCustomer"
+    md-input-minlength="2"
+    md-input-maxlength="18"
+    md-no-cache="vm.noCache"
+    md-selected-item="vm.selectedCustomer"
+    md-selected-item-change="vm.selectedCustomerChange(item)"
+    md-search-text="vm.searchCustomer"
+    md-items="item in vm.querySearchCustomers(vm.searchCustomer)"
+    md-item-text="item.name"
+    md-require-match
+    md-floating-label="{{'VEHICLES.CLIENT_VEHICLE'|translate}}" >
+    <md-item-template>
+      <span md-highlight-text="vm.searchCustomer">{{item.name}}</span>
+    </md-item-template>
+    <md-not-found>
+      No existe.
+    </md-not-found>
+    <div ng-messages="vehicleForm.autocompleteFieldCustomer.$error" ng-if="vehicleForm.autocompleteFieldCustomer.$touched">
+      <div ng-message="required">You <b>must</b> have a favorite state.</div>
+      <div ng-message="md-require-match">Please select an existing state.</div>
+      <div ng-message="minlength">Your entry is not long enough.</div>
+      <div ng-message="maxlength">Your entry is too long.</div>
+    </div>
+  </md-autocomplete>
+  <!--<md-input-container class="md-icon-float md-block">
+    <md-icon md-font-icon="icon-clipboard"></md-icon>
+    <label translate="VEHICLES.CLIENT_VEHICLE">CLIENTVEHICLE</label>
+    <md-icon></md-icon>
+    <md-select name="customerSelected" ng-model="vm.customerSelected"
+      style="min-width: 200px;" ng-required >
+      <md-option ng-value="customer"
+        ng-repeat="customer in vm.customers"
+        ng-selected="customer.name === vm.vehicle.customer.localName ? true : false"
+        >
+        {{customer.name}}
+      </md-option>
+    </md-select>
+    <div ng-messages="vehicleForm.customerSelected.$error">
+      <div ng-message="required">Esto es necesario.</div>
+    </div>
+    <br/>
+    </md-input-container>-->
+</div>

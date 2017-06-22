@@ -1,0 +1,33 @@
+<div class="md-inline-form">
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100">
+            <label>Nombre Completo</label>
+            <input type="text" ng-model="vm.verticalStepper.step4.fullName" md-maxlength="150"></input>
+            <div ng-messages="verticalStep4.owner_name.$error" ng-show="verticalStep4.owner_name.$touched" role="alert">
+            </div>
+        </md-input-container>
+    </div>
+    <div layout="column" layout-gt-xs="row" flex>
+    </div>
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100">
+            <input type="number" ng-model="vm.verticalStepper.step4.owner_document" ng-required="true" placeholder="Número de Identificación"></input>
+        </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+            <label>Lugar de Expedición</label>
+            <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.document_origin.selectedItem" md-search-text-change="vm.searchTextChange(vm.document_origin.searchText)" md-search-text="vm.document_origin.searchText" md-selected-item-change="vm.selectedItemChange(itemDocumentOrigin, 'document_origin')"
+                md-items="itemDocumentOrigin in vm.querySearch(vm.document_origin.searchText, 'document_origin')" md-selected-item="itemDocumentOrigin" md-item-text="itemDocumentOrigin.display" md-item md-min-length="0">
+                <md-item-template>
+                    <span md-highlight-text="vm.document_origin.searchText" md-highlight-flags="^i">{{itemDocumentOrigin.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    Ningún lugar de expedición coincide con
+                    <<{{vm.document_origin.searchText}}>>.
+                </md-not-found>
+            </md-autocomplete>
+        </md-input-container>
+    </div>
+</div>

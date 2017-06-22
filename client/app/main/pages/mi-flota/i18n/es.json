@@ -1,0 +1,13 @@
+{
+    "FLOTA": {
+        "FLOTA_NAV": "Flota"
+    },
+    "WIDGET":{
+        "VEHICLE": "Vehículos",
+        "FLEET": "Flotas",
+        "TOTAL": "Total",
+        "CURRENT_MONTH": "En el mes de:",
+        "COMPLETED": "Revisados",
+        "UNFINISHED": "Por revisar"
+    }
+}

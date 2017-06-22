@@ -1,0 +1,132 @@
+<div ng-if="!vm.loading" >
+  <md-input-container class="md-icon-float md-block">
+    <label translate="CUSTOMERS.NAME_REQUIRED">Name (required)</label>
+    <md-icon md-font-icon="icon-factory" class="name"></md-icon>
+    <input name="customerName" ng-model="vm.customer.name" type="text" required md-autofocus />
+    <div ng-messages="contactForm.customerName.$error">
+      <div ng-message="required">Esto es necesario.</div>
+    </div>
+  </md-input-container>
+
+  <md-input-container class="md-icon-float md-block">
+    <label translate="CUSTOMERS.EMAIL">Email</label>
+    <md-icon md-font-icon="icon-email" class="email"></md-icon>
+    <input name="email" ng-model="vm.customer.payment.email" type="email"  translate
+      translate-attr-placeholder="CUSTOMERS.EMAIL" placeholder="{{ 'CUSTOMERS.EMAIL' | translate }}" required />
+      <div ng-messages="contactForm.email.$error">
+        <div ng-message="required">Esto es necesario.</div>
+        <div ng-message="email">This field must be a valid email address.</div>
+      </div>
+  </md-input-container>
+  <md-input-container class="md-icon-float md-block" ng-if="vm.newCustomer">
+    <md-icon md-font-icon="icon-clipboard-account"></md-icon>
+    <label translate="CUSTOMERS.CUSTOMER_TYPE">Customer Type *</label>
+    <md-icon></md-icon>
+    <md-select name="customerType" ng-model="vm.customerTypeSelected"  style="min-width: 200px;" >
+      <md-option ng-value="type"
+        ng-repeat="type in vm.customerTypes"
+        ng-click="vm.showCustomerByType(type)"
+        ng-selected="$first" >
+        {{type.name | renameCustomer}}
+      </md-option>
+    </md-select>
+    <br/>
+  </md-input-container>
+  <md-autocomplete flex required
+    md-input-name="autocompleteField"
+    md-input-minlength="2"
+    md-input-maxlength="70"
+    md-no-cache="vm.noCache"
+    md-selected-item="vm.channelSelected"
+    md-search-text="vm.searchChannel"
+    md-items="item in vm.querySearchChannels(vm.searchChannel)"
+    md-item-text="item.name"
+    md-require-match
+    md-floating-label="{{'CUSTOMERS.CHANNEL'|translate}}"
+    ng-if="vm.customerTypeSelected.id === 2" >
+    <md-item-template>
+      <span md-highlight-text="vm.searchChannel">{{item.name}}</span>
+    </md-item-template>
+    <md-not-found>
+      No existe.
+    </md-not-found>
+    <div ng-messages="vehicleForm.autocompleteField.$error" ng-if="vehicleForm.autocompleteField.$touched">
+      <div ng-message="required">You <b>must</b> have a favorite state.</div>
+      <div ng-message="md-require-match">Please select an existing state.</div>
+      <div ng-message="minlength">Your entry is not long enough.</div>
+      <div ng-message="maxlength">Your entry is too long.</div>
+    </div>
+  </md-autocomplete>
+
+  <md-autocomplete flex required
+    md-input-name="autocompleteFieldDistributor"
+    md-input-minlength="2"
+    md-input-maxlength="70"
+    md-no-cache="vm.noCache"
+    md-selected-item="vm.distributorSelected"
+    md-search-text="vm.searchDistributor"
+    md-items="item in vm.querySearchDistributors(vm.searchDistributor)"
+    md-item-text="item.name"
+    md-floating-label="{{'CUSTOMERS.DISTRIBUTOR'|translate}}"
+    ng-if="vm.customerTypeSelected.id === 3" >
+    <md-item-template>
+      <span md-highlight-text="vm.searchDistributor">{{item.name}}</span>
+    </md-item-template>
+    <md-not-found>
+      No existe.
+    </md-not-found>
+    <div ng-messages="vehicleForm.autocompleteField.$error" ng-if="vehicleForm.autocompleteField.$touched">
+      <div ng-message="required">You <b>must</b> have a favorite state.</div>
+      <div ng-message="md-require-match">Please select an existing state.</div>
+      <div ng-message="minlength">Your entry is not long enough.</div>
+      <div ng-message="maxlength">Your entry is too long.</div>
+    </div>
+  </md-autocomplete>
+
+  <md-input-container class="md-icon-float md-block">
+    <md-icon md-font-icon="icon-domain"></md-icon>
+    <input ng-model="vm.customer.payment.businessName" type="text" translate
+      translate-attr-placeholder="CUSTOMERS.BUSINESS_NAME" placeholder="{{ 'CUSTOMERS.BUSINESS_NAME' | translate }}">
+  </md-input-container>
+  <md-input-container class="md-icon-float md-block">
+    <md-icon md-font-icon="icon-phone"></md-icon>
+    <input ng-model="vm.customer.payment.phoneNumber" type="text" translate
+      translate-attr-placeholder="CUSTOMERS.PHONE_NUMBER" placeholder="{{ 'CUSTOMERS.PHONE_NUMBER' | translate }}">
+  </md-input-container>
+
+
+  <div layout="row" layout-xs="column">
+    <div flex>
+      <md-input-container class="md-block">
+        <md-icon md-font-icon="icon-account-key"></md-icon>
+        <label translate="CUSTOMERS.IDENTIFICATION">Identification</label>
+        <md-icon></md-icon>
+        <input ng-model="vm.customer.identification.number" type="text">
+      </md-input-container>
+    </div>
+    <div flex>
+      <md-input-container class="md-block">
+        <label translate="CUSTOMERS.TYPE">Type</label>
+        <md-icon></md-icon>
+        <md-select ng-model="vm.customer.identification.type">
+          <md-option ng-repeat="type in vm.identificationTypes" value="{{type.value}}" >
+            {{type.value}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+  </div>
+
+
+  <div layout="row" layout-align="end">
+    <md-button type="submit" ng-if="vm.newCustomer" ng-click="vm.addNewCustomer()"
+      class="send-button md-accent md-raised"
+      ng-disabled="contactForm.$invalid || contactForm.$pristine"
+      aria-label="Add Task" translate="CUSTOMERS.ADD_CUSTOMER"
+      translate-attr-aria-label="CUSTOMERS.ADD_CUSTOMER">
+      ADD CUSTOMER
+    </md-button>
+  </div>
+
+
+</div>

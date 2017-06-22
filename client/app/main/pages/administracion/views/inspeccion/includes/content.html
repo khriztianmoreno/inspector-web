@@ -1,0 +1,140 @@
+<div class="demo-content">
+  <div flex layout="column"
+    ng-repeat="(keyC, inspection) in vm.inspection.check | filterByName: vm.filterCategory track by $index"
+    layout-margin layout-padding>
+    <div flex layout="column">
+      <!-- items title -->
+      <div layout="row" layout-align="start center">
+        <span>Agregar un nuevo item</span>
+        <md-fab-speed-dial md-open="vm.isOpen" md-direction="right"
+          ng-mouseenter="vm.isOpen=true" ng-mouseleave="vm.isOpen=false">
+          <md-fab-trigger>
+            <md-button class="md-fab md-mini" aria-label="Add Inspection">
+              <md-icon md-font-icon="icon-plus" class="s22"></md-icon>
+            </md-button>
+          </md-fab-trigger>
+          <md-fab-actions ng-show="vm.isOpen">
+            <md-button aria-label="submenu 3" class="md-fab md-raised md-mini"
+              ng-click="vm.addItem(inspection.items, 3)">
+              <md-tooltip md-direction="left">
+                Text input
+              </md-tooltip>
+              <md-icon class="icon-alphabetical font-size-22"></md-icon>
+            </md-button>
+            <md-button aria-label="submenu 2" class="md-fab md-raised md-mini"
+              ng-click="vm.addItem(inspection.items, 2)">
+              <md-tooltip md-direction="down">
+                Multiple
+              </md-tooltip>
+              <md-icon class="icon-view-list font-size-22"></md-icon>
+            </md-button>
+            <md-button aria-label="submenu 1" class="md-fab md-raised md-mini"
+              ng-click="vm.addItem(inspection.items, 1)">
+              <md-tooltip md-direction="down">
+                Pass/Fail
+              </md-tooltip>
+              <md-icon class="icon-checkbox-marked-circle-outline font-size-22"></md-icon>
+            </md-button>
+          </md-fab-actions>
+        </md-fab-speed-dial>
+
+      </div>
+      <!-- / items title -->
+      <div class="items-container"
+        ng-repeat="item in inspection.items track by $index "
+        flex layout="column">
+        <md-button class="md-raised" aria-label="Show Category"
+          ng-style="{'border-left' : '5px solid' , 'border-left-color': inspection.category[0].color}"
+          ng-click="vm.toggleGroup($event)">
+          <div layout="row" layout-align="space-between">
+            <span class="label__question" ng-if="item.name['es'].description">
+            {{item.name['es'].description}}
+            </span>
+            <span class="label_type__answer" ng-if="!item.name['es'].description">
+            Ver categoria {{ keyC + 1}}
+            </span>
+            <span class="label_type__answer">({{item.type}})</span>
+          </div>
+        </md-button>
+
+        <!-- ITEM A REVISAR -->
+        <form name="itemCode" class="form-accordion ng-hide">
+          <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}"
+            md-theme-watch>
+            <md-card-title>
+              <md-card-title-text>
+                <div layout="row">
+                  <md-input-container flex layout="row">
+                    <label for="check-item">Descripción del item</label>
+                    <input type="text" name="check-item"
+                      ng-model="item.name['es'].description" required
+                      placeholder="Ej: Luces frontales" autofocus="true" />
+                  </md-input-container>
+                  <md-input-container flex="30" layout="row">
+                    <label for="check-item">Código del item</label>
+                    <input type="text" name="check-item"
+                      ng-model="item.code"
+                      placeholder="Ej: LUC999" required/>
+                  </md-input-container>
+                </div>
+              </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+              <!--<fieldset class="standard" ng-if="item.type === 'TEXT'" >
+                <legend>Espacio para registrar la respuesta </legend>
+                <textarea name="name" rows="8" cols="40" disabled></textarea>
+              </fieldset>-->
+              <fieldset class="standard" ng-if="item.type === 'SELECT'" >
+                <legend>Opciones de respuestas </legend>
+                <div layout="row" layout-align="space-between"
+                  ng-repeat="answer in item.values track by $index">
+                  <md-input-container class="md-icon-float md-block" flex="90" >
+                    <label for="anwser">Respuesta {{$index + 1}}</label>
+                    <input type="text" value="{{answer.name.es.description}}"
+                      ng-model="answer.name.es.description" aria-label="anwser"/>
+                  </md-input-container>
+                  <md-button aria-label="delete answer"
+                    ng-click="vm.deleteAnswerOption(item.values, $index)">
+                    <md-tooltip md-direction="left">
+                      <span>Eliminar respuesta</span>
+                    </md-tooltip>
+                    <md-icon md-font-icon="icon-window-close"></md-icon>
+                  </md-button>
+                </div>
+                <!-- Button Add answer -->
+                <div layout="row" layout-align="end">
+                  <md-button class="md-fab md-primary" ng-click="vm.addAnswerOption(item.values)"
+                    aria-label="Add Anwswer">
+                    <md-tooltip md-direction="left">
+                      <span>Agregar otra respuesta</span>
+                    </md-tooltip>
+                    <md-icon md-font-icon="icon-plus" class="s30"></md-icon>
+                  </md-button>
+                </div>
+                <!-- /Button Add answer -->
+              </fieldset>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+              <md-button ng-click="vm.duplicateItem(inspection.items, item)">
+                <md-icon md-font-icon="icon-content-copy" class="s30"></md-icon>
+                <md-tooltip md-direction="bottom">Duplicar</md-tooltip>
+              </md-button>
+              <md-button ng-click="vm.removeItem(inspection.items,item)">
+                <md-icon md-font-icon="icon-delete" class="s30"></md-icon>
+                <md-tooltip md-direction="bottom">Eliminar</md-tooltip>
+              </md-button>
+              <md-button class="vertical-divider">
+                <div layout="row">
+                  <md-switch ng-model="item.isRequired" aria-label="Switch 1">
+                    <span>Obligatorio</span>
+                  </md-switch>
+                </div>
+              </md-button>
+            </md-card-actions>
+          </md-card>
+        </form>
+        <!-- /ITEM A REVISAR -->
+      </div>
+    </div>
+  </div>
+</div>

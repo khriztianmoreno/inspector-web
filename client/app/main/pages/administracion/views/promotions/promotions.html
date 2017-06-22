@@ -1,0 +1,99 @@
+<div id="promotions" class="page-layout carded fullwidth" layout="row">
+  <!-- TOP BACKGROUND -->
+  <div class="top-bg md-accent-bg"></div>
+  <!-- / TOP BACKGROUND -->
+  <!-- CENTER -->
+  <div class="center" layout="column" flex>
+    <!-- CONTENT HEADER -->
+    <div class="header" layout="row" layout-align="space-between center">
+      <div class="white-fg" layout="column" layout-align="start start">
+        <div class="h1" layout="row" layout-align="start center">
+          <md-icon md-font-icon="icon-cube-outline"></md-icon>
+          <span translate="PROMOTION.TITLE">PROMOTIONS</span>
+        </div>
+        <div class="product-count secondary-text">
+          <span translate="PROMOTION.TOTAL_PROMOTIONS">Total PROMOTIONS:</span>
+          <span>{{vm.promotions.length}}</span>
+        </div>
+      </div>
+      <div class="search" layout="row" layout-align="start center" flex>
+        <md-icon md-font-icon="icon-magnify" class="white-text icon search-icon"></md-icon>
+        <input id="e-commerce-products-search" class="search-input" type="text" placeholder="Search"
+          translate translate-attr-placeholder="PROMOTION.SEARCH"
+          flex>
+      </div>
+      <button class="md-raised md-background md-button" ng-click="vm.gotoAddPromotion()">
+        <span translate="PROMOTION.ADD">Add New Product</span>
+      </button>
+    </div>
+    <!-- / CONTENT HEADER -->
+    <!-- CONTENT CARD -->
+    <div class="content-card" layout="column" flex>
+      <!-- CONTENT TOOLBAR -->
+      <!-- / CONTENT TOOLBAR -->
+      <!-- CONTENT -->
+      <div class="content fullpage-datatable" layout="column" flex>
+        <scrollable-table watch="visibleProjects">
+          <table class="dataTable row-border hover">
+            <thead>
+              <tr>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title">ID</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title">Image</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title">Name</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title">Category</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title">Active</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title">Actions</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="promotion in ::vm.promotions">
+                <td>{{promotion._id}}</td>
+                <td><img class="product-image" ng-src="{{promotion.image}}"></td>
+                <td>{{promotion.name}}</td>
+                <td>{{promotion.category}}</td>
+                <td>
+                  <i class="icon-checkbox-marked-circle green-500-fg" ng-if="promotion.active"></i>
+                  <i class="icon-cancel red-500-fg" ng-if="!promotion.active"></i>
+                </td>
+                <td>
+                  <md-button class="edit-button md-icon-button"
+                    ng-click="vm.gotoEditPromotion(promotion._id)" aria-label="Promotion details" translate
+                    translate-attr-aria-label="PROMOTION.PRODUCT_DETAILS">
+                    <md-icon md-font-icon="icon-pencil" class="s16"></md-icon>
+                    </md-button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </scrollable-table>
+      </div>
+      <!-- / CONTENT -->
+    </div>
+    <!-- / CONTENT CARD -->
+  </div>
+  <!-- / CENTER -->
+</div>

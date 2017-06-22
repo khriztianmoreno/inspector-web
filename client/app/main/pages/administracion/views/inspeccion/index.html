@@ -1,0 +1,172 @@
+<div id="inspection--master">
+  <div class="page-layout carded left-sidenav" layout="row">
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg md-accent-bg"></div>
+    <!-- / TOP BACKGROUND -->
+    <!-- SIDENAV -->
+    <md-sidenav class="sidenav"
+      md-is-locked-open="$mdMedia('gt-md')"
+      md-component-id="sidenav" ms-scroll ms-sidenav-helper>
+      <!-- SIDENAV HEADER -->
+      <div class="header" class="white-fg">
+        <md-button class="white-fg md-icon-button" aria-label="Go to Inspections"
+            ng-click="vm.gotoInspection()"
+            translate translate-attr-aria-label="EC.GO_TO_PRODUCTS">
+            <md-icon md-font-icon="icon-arrow-left"></md-icon>
+        </md-button>
+      </div>
+      <!-- / SIDENAV HEADER -->
+      <!-- SIDENAV CONTENT -->
+      <md-content class="content" flex ms-scroll>
+        <!-- DEMO SIDENAV -->
+        <div ng-include="'app/main/pages/administracion/views/inspeccion/includes/sidenav.html'"></div>
+        <!-- / DEMO SIDENAV -->
+      </md-content>
+      <!-- / SIDENAV CONTENT -->
+    </md-sidenav>
+    <!-- / SIDENAV -->
+    <!-- CENTER -->
+    <div class="center" layout="column" flex>
+      <!-- CONTENT HEADER -->
+      <div class="header" layout="row">
+        <div ng-if="!vm.visibleEdition">
+          <span class="h2 white-fg">{{vm.inspection.name}}</span>
+          <md-button class="md-icon-button edit-group-button" ng-click="vm.showEditInspection()"
+            ng-hide="editGroupForm.$visible" aria-label="edit group name" translate
+            translate-attr-label="CONTACTS.EDIT_GROUP_NAME">
+            <md-icon md-font-icon="icon-pencil s18 white-fg"></md-icon>
+          </md-button>
+        </div>
+        <div ng-if="vm.visibleEdition" style="width:100%;">
+          <form name="dataInspection">
+            <div layout="row" layout-align="space-between">
+              <md-input-container class="md-block" flex="50">
+                  <label translate="INSPECTION.TITLE" class="white-fg">Title</label>
+                  <input name="title" ng-model="vm.inspection.name" class="white-fg" required autofocus />
+                  <div ng-messages="taskForm.title.$error" ng-show="taskForm.title.$touched" role="alert">
+                      <div ng-message="required">
+                          <span class="white-fg">Título es requerido</span>
+                      </div>
+                  </div>
+              </md-input-container>
+              <md-input-container class="md-block" flex="30">
+                <label class="white-fg">Tipo de Inspección</label>
+                <md-select ng-model="vm.inspectionTypeSelected">
+                  <md-option ng-repeat="inspectionType in vm.inspectionTypes"
+                    ng-value="vm.inspection.type"
+                    ng-selected="inspectionType === vm.inspection.type ? true : false">
+                     {{ inspectionType | translate }}
+                  </md-option>
+                </md-select>
+              </md-input-container>
+              <md-input-container flex="20" ng-if="!vm.showSaveInspection">
+                <md-button ng-click="vm.saveInspectionData()"
+                    class="md-raised"
+                    ng-disabled="dataInspection.$invalid"
+                    aria-label="UPDATE" translate="INSPECTION.UPDATE" translate-attr-aria-label="INSPECTION.UPDATE">
+                    UPDATE
+                </md-button>
+              </md-input-container>
+            </div>
+
+          </form>
+        </div>
+        <div layout="row" layout-align="start end">
+          <md-input-container ng-if="vm.showSaveInspection">
+            <md-button type="submit"  ng-click="vm.saveInspection()"
+                class="md-raised"
+                ng-disabled="taskForm.$invalid"
+                aria-label="SAVE INSPECTION" translate="INSPECTION.SAVE_INSPECTION" translate-attr-aria-label="INSPECTION.SAVE_INSPECTION">
+                SAVE INSPECTION
+            </md-button>
+          </md-input-container>
+        </div>
+      </div>
+      <!-- / CONTENT HEADER -->
+      <!-- CONTENT CARD -->
+      <div class="content-card" layout="column" flex>
+        <!-- CONTENT TOOLBAR -->
+        <div class="toolbar" layout="row" layout-align="start center">
+          <md-button class="md-icon-button sidenav-toggle" ng-click="vm.toggleSidenav('sidenav')" hide-gt-md
+            aria-label="Toggle left sidenav">
+            <md-icon md-font-icon="icon-menu" class="icon"></md-icon>
+          </md-button>
+
+          <div class="list-title" layout="row" layout-align="start center" ng-if="vm.showNewCategory">
+            <form name="taskForm" class="md-inline-form" novalidate ng-submit="vm.saveCategory()">
+              <div layout="row">
+                <md-input-container flex class="md-block">
+                    <label translate="INSPECTION.TITLE">Title</label>
+                    <input name="title" ng-model="vm.category.name" required autofocus />
+                    <div ng-messages="taskForm.title.$error" ng-show="taskForm.title.$touched" role="alert">
+                        <div ng-message="required">
+                            <span >Título es requerido</span>
+                        </div>
+                    </div>
+                </md-input-container>
+                <div flex label="{{'INSPECTION.COLOR' | translate }}"
+                  md-color-picker ng-model="vm.category.color" ></div>
+                <div layout="row" flex="30">
+                  <md-input-container ng-if="!vm.showEditCategory" >
+                    <md-button type="submit"
+                        class="send-button md-accent md-raised"
+                        ng-disabled="taskForm.$invalid"
+                        aria-label="SAVE" translate="INSPECTION.SAVE" translate-attr-aria-label="INSPECTION.SAVE">
+                        SAVE
+                    </md-button>
+                  </md-input-container>
+
+                  <md-input-container ng-if="vm.showEditCategory" >
+                    <md-button type="submit"  ng-click="vm.editSaveCategory()"
+                        class="send-button md-accent md-raised"
+                        ng-disabled="taskForm.$invalid"
+                        aria-label="UPDATE" translate="INSPECTION.UPDATE" translate-attr-aria-label="INSPECTION.UPDATE">
+                        UPDATE
+                    </md-button>
+                  </md-input-container>
+
+                  <md-input-container>
+                    <md-button ng-click="vm.cancelCategory()"
+                        class="md-raised"
+                        aria-label="Cancel" translate="INSPECTION.CANCEL" translate-attr-aria-label="INSPECTION.CANCEL">
+                        CANCEL
+                    </md-button>
+                  </md-input-container>
+
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="list-title" layout="row" layout-align="start center" ng-if="!vm.showNewCategory">
+            <span ng-if="vm.listType === 'all'" translate="REVIEW.ALL_CATEGORIES">All contacts</span>
+            <span ng-if="vm.listType !== 'all'">{{vm.listType}}</span>
+
+            <div ng-if="vm.showEditDeleteIcon">
+              <md-button class="md-icon-button edit-group-button" ng-click="vm.editCategory()"
+                ng-hide="editGroupForm.$visible" aria-label="edit group name" translate
+                translate-attr-label="CONTACTS.EDIT_GROUP_NAME">
+                <md-icon md-font-icon="icon-pencil s18"></md-icon>
+              </md-button>
+              <md-button class="md-icon-button edit-group-button" ng-click="vm.removeCategory()"
+                ng-hide="editGroupForm.$visible" aria-label="delete group" translate
+                translate-attr-label="CONTACTS.DELETE_GROUP">
+                <md-icon md-font-icon="icon-delete s18"></md-icon>
+              </md-button>
+            </div>
+          </div>
+        </div>
+        <!-- / CONTENT TOOLBAR -->
+        <!-- CONTENT -->
+        <md-content class="content" flex ms-scroll>
+          <!-- DEMO CONTENT -->
+          <div ng-include="'app/main/pages/administracion/views/inspeccion/includes/content.html'"></div>
+          <!-- / DEMO CONTENT -->
+        </md-content>
+        <!-- / CONTENT -->
+      </div>
+      <!-- / CONTENT CARD -->
+    </div>
+    <!-- / CENTER -->
+  </div>
+</div>

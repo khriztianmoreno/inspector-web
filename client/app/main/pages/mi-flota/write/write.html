@@ -1,0 +1,58 @@
+<div id="mi-flota-write" class="page-layout simple fullwidth doc-page" layout="column">
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="space-between">
+            <div class="breadcrumb" layout="row" layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent">MI FLOTA</span>
+            </div>
+
+            <div class="title">Crear Vehículo</div>
+        </div>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+    <div class="content" layout="column">
+        <div class="md-title mt-32">Instrucciones para crear</div>
+        <div class="pb-16">La descripción de la creación del vehículo.</div>
+        <!--  <div layout="row">
+      
+      FORM WIZARD 
+      
+      <div class="mv-24"></div>
+      ng-model="vm.verticalStepper"
+      -->
+        <!-- VERTICAL STEPPER -->
+        <form name="verticalStepper" ms-vertical-stepper ng-submit="vm.crearVehi()" novalidate>
+
+            <ms-vertical-stepper-step ng-form="verticalStep1" step="1" step-title="'Matrícula'">
+                <div ng-include="'app/main/pages/mi-flota/write/stepper-steps/vertical/step-1.html'"></div>
+            </ms-vertical-stepper-step>
+
+            <ms-vertical-stepper-step ng-form="verticalStep2" step="2" step-title="'Información de Matrícula'">
+                <div ng-include="'app/main/pages/mi-flota/write/stepper-steps/vertical/step-2.html'"></div>
+            </ms-vertical-stepper-step>
+            <!--
+        <ms-vertical-stepper-step ng-form="verticalStep2" step="2" step-title="'Birthplace'" optional-step hide-step="!vm.verticalStepper.step1.lastname">
+          <div ng-include="'app/main/pages/mi-flota/write/stepper-steps/vertical/step-2.html'"></div>
+        </ms-vertical-stepper-step>
+
+        <ms-vertical-stepper-step ng-form="verticalStep3" step="3" step-title="'SSN'" optional-step hide-step="!vm.verticalStepper.step2.birthplace">
+          <div ng-include="'app/main/pages/mi-flota/write/stepper-steps/vertical/step-3.html'"></div>
+        </ms-vertical-stepper-step>-->
+
+            <ms-vertical-stepper-step ng-form="verticalStep3" step="3" step-title="'Registro del Vehículo'">
+                <div ng-include="'app/main/pages/mi-flota/write/stepper-steps/vertical/step-3.html'"></div>
+            </ms-vertical-stepper-step>
+
+            <ms-vertical-stepper-step ng-form="verticalStep4" step="4" step-title="'Información del Dueño'">
+                <div ng-include="'app/main/pages/mi-flota/write/stepper-steps/vertical/step-4.html'"></div>
+            </ms-vertical-stepper-step>
+        </form>
+        <!-- / VERTICAL STEPPER -->
+    </div>
+    <!-- / CONTENT -->
+</div>

@@ -1,0 +1,158 @@
+<!-- CARD DIALOG -->
+<md-dialog class="card-dialog" aria-label="Card Dialog" ng-cloak>
+  <!-- DIALOG CONTENT -->
+  <md-dialog-content ms-scroll>
+    <div layout="row" layout-align="space-between start">
+      <div layout="column" layout-align="start stretch" flex>
+        <!-- PROVIDERS -->
+        <div class="section-header" layout="row" layout-align="start center">
+          <i class="icon-account-multiple s18"></i>
+          <span class="section-title"> Asignar a: </span>
+        </div>
+        <div class="card-breadcrumb" layout="row" layout-align="start center">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Proveedores</label>
+            <md-select ng-model="vm.provider">
+              <md-option ng-repeat="provider in vm.cardInfo.providers"
+              value="{{provider._id}}" >
+                {{provider.channelName}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+        <!-- / PROVIDERS -->
+      </div>
+    </div>
+
+    <!-- CHECKLISTS SECTION -->
+    <div class="section" ng-repeat="checklist in vm.cardInfo.checklists">
+      <div class="checklist">
+        <div class="section-header" layout="row" layout-align="start center">
+          <i class="icon-checkbox-marked s18"></i>
+          <span flex class="section-title">{{checklist.name}}</span>
+          <span flex class="section-title" editable-text="checklist.name"  e-form="editChecklistForm"></span>
+        </div>
+
+        <div class="section-content">
+          <div class="check-items">
+            <div class="check-item" ng-repeat="checkItem in checklist.checkItems" layout="row" layout-align="space-between center">
+
+              <div layout="row" layout-align="start center">
+                <li> {{checkItem.name}} - $ {{checkItem.value}} </li>
+              </div>
+
+              <span flex editable-text="checkItem.name" ng-show="editCheckItemForm.$visible" e-form="editCheckItemForm"></span>
+              <md-menu md-position-mode="target-right target" class="options">
+                <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)" aria-label="options">
+                  <md-icon md-menu-origin md-font-icon="icon-dots-vertical" class="s20"></md-icon>
+                </md-button>
+
+                <md-menu-content class="options-menu-content">
+                  <md-menu-item>
+                    <md-button ng-click="editCheckItemForm.$show()" aria-label="Edit" translate translate-attr-aria-label="EDIT">
+                      <md-icon md-font-icon="icon-pencil" class="s20"></md-icon>
+                      <span translate="TRACKING.EDIT">Edit</span>
+                    </md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button ng-click="vm.removeChecklistItem(checkItem, checklist.checkItems)" aria-label="Remove" translate translate-attr-aria-label="REMOVE">
+                      <md-icon md-font-icon="icon-delete"></md-icon>
+                      <span translate="TRACKING.REMOVE">Remove</span>
+                    </md-button>
+                  </md-menu-item>
+                </md-menu-content>
+              </md-menu>
+
+            </div>
+          </div>
+
+          <form name="newCheckItemForm" class="new-check-item-form" ng-submit="vm.addCheckItem(vm.currrentItem.text,vm.currrentItem.value, checklist)"
+            layout="row" layout-align="start center">
+
+            <div layout="row" flex>
+              <md-input-container class="no-errors-spacer" flex>
+                <input placeholder="Agrega una tarea" type="text" autocomplete="off" ng-model="vm.currrentItem.text">
+              </md-input-container>
+              <md-input-container>
+                <input type="number" placeholder="Presupuesto" autocomplete="off" ng-model="vm.currrentItem.value">
+              </md-input-container>
+            </div>
+
+            <md-button type="submit" class="md-raised md-accent" aria-label="Add" translate translate-attr-aria-label="ADD">
+              <span translate="TRACKING.ADD">Add</span>
+            </md-button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <!-- / CHECKLISTS SECTION -->
+
+    <div class="section">
+      <!-- DUE DATE -->
+      <div class="section-header" layout="row" layout-align="start center">
+        <i class="icon-calendar-clock s18"></i>
+        <span flex class="section-title" translate translate-attr-aria-label="TRACKING.SET_DUE_DATE">Asignar plazo</span>
+      </div>
+      <div class="section-content">
+        <div layout="column" layout-align="start">
+          <div layout="row" flex class="layout-row flex ">
+            <md-datepicker class="padding-picker"  ng-model="vm.cardInfo.due" md-placeholder="Fecha limite"></md-datepicker>
+          </div>
+        </div>
+      </div>
+      <!-- / DUE DATE -->
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="section">
+      <div class="comments">
+        <div class="section-header" layout="row" layout-align="start center">
+          <i class="icon-comment s18"></i>
+          <span class="section-title" translate="TRACKING.COMMENTS">Comments</span>
+        </div>
+        <div class="section-content">
+          <form name="cardCommentForm" ng-submit="vm.addNewComment(vm.newCommentText, vm.cardInfo._id); vm.newCommentText =''" class="comment new-comment"
+            layout="column" layout-align="start" no-validate>
+            <div layout="row">
+              <md-input-container flex md-no-float>
+                <textarea placeholder="Write a comment.." ng-model="vm.newCommentText" required max-rows="4" translate translate-attr-placeholder="TRACKING.WRITE_A_COMMENT"></textarea>
+              </md-input-container>
+            </div>
+            <div layout="row" layout-align="end center">
+              <md-button type="submit" class="md-raised md-accent" ng-disabled="cardCommentForm.$invalid || cardCommentForm.$pristine"
+                aria-label="Add">
+                <span translate="TRACKING.STATUS.PENDING.SAVE">Guardar</span>
+              </md-button>
+            </div>
+          </form>
+          <div class="comment" layout="row" ng-repeat="comment in vm.card.comments">
+            <img class="comment-member-avatar" ng-src="{{vm.board.members.getById(comment.idMember).avatar}}">
+            <div layout="column">
+              <div class="comment-member-name">
+                {{vm.board.members.getById(comment.idMember).name}}
+              </div>
+              <div class="comment-bubble">{{comment.message}}</div>
+              <div class="comment-time secondary-text">{{comment.time}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / COMMENTS SECTION -->
+
+    <div class="section">
+      <div layout="column">
+        <div layout="row" layout-align="center center">
+          <md-button ng-click="vm.updateStatus(vm.cardInfo)"
+          class="md-raised md-warn" translate="TRACKING.STATUS.PENDING.SET_CARD">
+            Asignar Tarjeta
+          </md-button>
+        </div>
+      </div>
+    </div>
+
+  </md-dialog-content>
+  <!-- / DIALOG CONTENT -->
+</md-dialog>
+<!-- / CARD DIALOG -->

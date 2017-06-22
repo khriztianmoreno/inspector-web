@@ -1,0 +1,26 @@
+{
+    "data": {
+        "lists": [
+        { 
+            "id": "1",
+            "name": "Pendiente Gestión" 
+        }, 
+        {
+            "id": "2",
+            "name": "Entregado al Proveedor"
+        },
+        { 
+            "id": "3",
+            "name": "Cotizado"
+        },
+        { 
+            "id": "4",
+            "name": "En proceso"
+        },
+        { 
+            "id": "5",
+            "name": "Terminado"
+        }    
+        ]
+    }
+}

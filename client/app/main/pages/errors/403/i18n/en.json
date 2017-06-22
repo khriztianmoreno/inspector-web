@@ -1,0 +1,8 @@
+{
+    "ERROR403": {
+        "CODE": "403",
+        "MESSAGE": "You don´t have permission to do that",
+        "SEARCH": "Search for anything",
+        "GO_BACK": "Go back to dashboard"
+    }
+}

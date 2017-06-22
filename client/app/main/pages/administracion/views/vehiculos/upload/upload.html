@@ -1,0 +1,34 @@
+<div id="detalles-vehiculo" class="page-layout simple tabbed" layout="column">
+	<!-- HEADER -->
+	<div class="header md-accent-bg" layout="row" layout-align="start center">
+		<div class="white-fg" layout="row" layout-align="start center" flex>
+			<md-button class="goto-products-button md-icon-button" aria-label="Go to products" ng-click="vm.goToVehicles()">
+				<md-icon md-font-icon="icon-arrow-left"></md-icon>
+			</md-button>
+			<div layout="row" layout-align="start center">
+				<div layout="column" layout-align="start start">
+					<div class="h2">
+						xxxxxxx
+					</div>
+					<div class="subtitle secondary-text">
+						<span translate="VEHICLES.CUSTOMER">Customer</span>: xxx
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- CENTER -->
+    <div class="content">
+        <!--<input type="file" name="myFile" value=""  custom-on-change="vm.fileChanged">
+        <button ng-click="vm.readFile()">Read file</button>-->
+
+		<js-xls onread="read" onerror="error"></js-xls>
+
+        <!--<div ng-if="result">
+            <pre>{{vm.data.model | json }}</pre>
+        </div>
+
+        <button ng-click="vm.generate()">Generate object</button>-->
+    </div>
+</div>

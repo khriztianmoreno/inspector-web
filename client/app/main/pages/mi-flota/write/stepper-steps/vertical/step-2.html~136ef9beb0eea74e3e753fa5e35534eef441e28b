@@ -1,0 +1,180 @@
+<div class="md-inline-form">
+    <p>Descripción de <span class="text-bold">matrícula</span>.</p>
+
+    <div layout="column" layout-gt-xs="row" flex>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="number" name="model" ng-model="vm.verticalStepper.step2.model" placeholder="Modelo" ng-required="true">
+
+            <div ng-messages="verticalstep2.model.$error" ng-show="verticalstep2.model.$touched" role="alert">
+                <div ng-message="required">
+                    <span>El campo <<modelo>> es requerido.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="number" name="cyl" ng-model="vm.verticalStepper.step2.cyl" placeholder="Cilindraje" ng-required="true">
+
+            <div ng-messages="verticalstep2.cyl.$error" ng-show="verticalstep2.cyl.$touched" role="alert">
+                <div ng-message="required">
+                    <span>El campo <<cilindraje>> es requerido.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="number" name="capacity" ng-model="vm.verticalStepper.step2.capacity" placeholder="Capacidad Kg">
+            <div ng-messages="verticalstep2.capacity.$error" ng-show="verticalstep2.capacity.$touched" role="alert">
+                <div ng-message="">
+                    <span></span>
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <!-- ROW  -->
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="text" name="color" ng-model="vm.verticalStepper.step2.color" placeholder="Color">
+            <div ng-messages="verticalstep2.color.$error" ng-show="verticalstep2.color.$touched" role="alert">
+                <div ng-message="">
+                    <span></span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="text" name="bodyWork" ng-model="vm.verticalStepper.step2.bodyWork" placeholder="Tipo Carrocería">
+            <div ng-messages="verticalstep2.bodyWork.$error" ng-show="verticalstep2.bodyWork.$touched" role="alert">
+                <div ng-message="">
+                    <span></span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="text" name="service" ng-model="vm.verticalStepper.step2.service" placeholder="Servicio">
+            <div ng-messages="verticalstep2.service.$error" ng-show="verticalstep2.service.$touched" role="alert">
+                <div ng-message="">
+                    <span></span>
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <!-- ROW -->
+
+    <div layout="column" layout-gt-xs="row" flex>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="text" name="fuel" ng-model="vm.verticalStepper.step2.fuel" placeholder="Combustible">
+            <div ng-messages="verticalstep2.fuel.$error" ng-show="verticalstep2.fuel.$touched" role="alert">
+                <div ng-message="required">
+                    <span>Combustible field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="text" name="motor" ng-model="vm.verticalStepper.step2.motor" placeholder="N° Motor">
+            <div ng-messages="verticalstep2.motor.$error" ng-show="verticalstep2.motor.$touched" role="alert">
+                <div ng-message="required">
+                    <span>N° de motor field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="text" name="serie" ng-model="vm.verticalStepper.step2.serie" placeholder="N° Serie">
+            <div ng-messages="verticalstep2.serie.$error" ng-show="verticalstep2.serie.$touched" role="alert">
+                <div ng-message="required">
+                    <span>Serie field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <!--  -->
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="text" name="chassis" ng-model="vm.verticalStepper.step2.chassis" placeholder="Chasis">
+            <div ng-messages="verticalstep2.chassis.$error" ng-show="verticalstep2.chassis.$touched" role="alert">
+                <div ng-message="required">
+                    <span>Chasis field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="text" name="vin" ng-model="vm.verticalStepper.step2.vin" placeholder="VIN">
+            <div ng-messages="verticalstep2.vin.$error" ng-show="verticalstep2.vin.$touched" role="alert">
+                <div ng-message="required">
+                    <span>VIN field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="33">
+            <input type="number" name="mileage" ng-model="vm.verticalStepper.step2.mileage" placeholder="Kilometraje">
+            <div ng-messages="verticalstep2.mileage.$error" ng-show="verticalstep2.mileage.$touched" role="alert">
+                <div ng-message="required">
+                    <span>Kilometraje field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <!-- ROW -->
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+            <p class="" style="color: rgb(185, 185, 185);">Clase de Vehículo</p>
+            <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.vehicleData_class.selectedItem" md-search-text-change="vm.searchTextChange(vm.vehicleData_class.searchText)" md-search-text="vm.vehicleData_class.searchText" md-selected-item-change="vm.selectedItemChange(itemVehicleData_class, 'vehicleData_class')"
+                md-items="itemVehicleData_class in vm.querySearch(vm.vehicleData_class.searchText, 'vehicleData_class')" md-item-text="itemVehicleData_class.display" md-item md-min-length="0" placeholder="">
+                <md-item-template>
+                    <span md-highlight-text="vm.vehicleData_class.searchText" md-highlight-flags="^i">{{itemVehicleData_class.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    Ninguna clase de vehículo coincide con
+                    <<{{vm.vehicleData_class.searchText}}>>.
+                        <a ng-click="vm.newVehiClass(vm.vehicleData_class.searchText)">¡Crear una nueva!</a>
+                </md-not-found>
+            </md-autocomplete>
+        </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+            <p class="" style="color: rgb(185, 185, 185);">Marca</p>
+            <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.vehicleData_brand.selectedItem" md-search-text-change="vm.searchTextChange(vm.vehicleData_brand.searchText)" md-search-text="vm.vehicleData_brand.searchText" md-selected-item-change="vm.selectedItemChange(itemVehicleData_brand, 'vehicleData_brand')"
+                md-items="itemVehicleData_brand in vm.querySearch(vm.vehicleData_brand.searchText, 'vehicleData_brand')" md-item-text="itemVehicleData_brand.display" md-item md-min-length="0" placeholder="">
+                <md-item-template>
+                    <span md-highlight-text="vm.itemVehicleData_brand.searchText" md-highlight-flags="^i">{{itemVehicleData_brand.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    Ninguna marca de vehículo coincide con
+                    <<{{vm.VehicleData_brand.searchText}}>>.
+                        <a ng-click="vm.newVehiBrand(vm.VehicleData_brand.searchText)">¡Crear una nueva!</a>
+                </md-not-found>
+            </md-autocomplete>
+        </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+            <p class="" style="color: rgb(185, 185, 185);">Línea</p>
+            <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.vehicleData_line.selectedItem" md-search-text-change="vm.searchTextChange(vm.vehicleData_line.searchText)" md-search-text="vm.vehicleData_line.searchText" md-selected-item-change="vm.selectedItemChange(itemVehicleData_line, 'vehicleData_line')"
+                md-items="itemVehicleData_line in vm.querySearch(vm.vehicleData_line.searchText, 'vehicleData_line')" md-item-text="itemVehicleData_line.display" md-item md-min-length="0" placeholder="">
+                <md-item-template>
+                    <span md-highlight-text="vm.vehicleData_line.searchText" md-highlight-flags="^i">{{itemVehicleData_line.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    Ninguna línea de la marca {{vm.VehicleData_brand.searchText}} coincide con
+                    <<{{vm.vehicleData_line.searchText}}>>.
+                        <a ng-click="vm.newVehiClass(vm.vehicleData_line.searchText)">¡Crear una nueva!</a>
+                </md-not-found>
+            </md-autocomplete>
+        </md-input-container>
+    </div>
+</div>

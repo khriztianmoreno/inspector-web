@@ -1,0 +1,723 @@
+{
+  "data": [
+    {
+      "header": {
+        "text": "REVISIÓN ",
+        "style": "header",
+        "alignment": "center"
+      },
+      "footer": {
+        "text": "Firma CDA",
+        "style": "header",
+        "alignment": "center"
+      },
+      "content": [
+        {
+          "alignment": "justify",
+          "columns": [
+            {
+              "style": "invoiceTable",
+              "table": {
+                "headerRows": 1,
+                "body": [
+                  [
+                    {
+                      "text": "QUIÉN REVISÓ EL VEHÍCULO",
+                      "style": "titleHead",
+                      "margin": [
+                        5,
+                        0,
+                        5,
+                        0
+                      ]
+                    }
+                  ],
+                  [
+                    "Compañia: Hola mundo"
+                  ],
+                  [
+                    "Sede: Bogota"
+                  ],
+                  [
+                    "Fecha de vencimiento: 12/12/12"
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            },
+            {
+              "style": "invoiceTable",
+              "table": {
+                "headerRows": 1,
+                "body": [
+                  [
+                    {
+                      "text": "DUEÑO DEL VEHÍCULO",
+                      "style": "titleHead",
+                      "margin": [
+                        5,
+                        0,
+                        5,
+                        0
+                      ]
+                    }
+                  ],
+                  [
+                    "Compañia: Hola mundo"
+                  ],
+                  [
+                    "Sede: Bogota"
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            },
+            {
+              "style": "invoiceTable",
+              "table": {
+                "headerRows": 0,
+                "body": [
+                  [
+                    "Placa: MAY 311"
+                  ],
+                  [
+                    "Marca: Aveo"
+                  ],
+                  [
+                    "Línea: Recta"
+                  ],
+                  [
+                    "Motor: Bonito"
+                  ],
+                  [
+                    "Chasis: Redondito"
+                  ],
+                  [
+                    "VIN: ASDASD12ASD12"
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            },
+            {
+              "style": "invoiceTable",
+              "table": {
+                "headerRows": 0,
+                "widths": [
+                  "*"
+                ],
+                "body": [
+                  [
+                    {
+                      "text": "20160932398",
+                      "margin": [
+                        5,
+                        15,
+                        5,
+                        15
+                      ],
+                      "alignment": "center"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "ALERTA",
+                      "margin": [
+                        5,
+                        15,
+                        5,
+                        15
+                      ],
+                      "alignment": "center",
+                      "fillColor": "#fb8c00",
+                      "color": "white"
+                    }
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            }
+          ],
+          "columnGap": 7
+        },
+        {
+          "style": "invoiceTable",
+          "table": {
+            "headerRows": 0,
+            "widths": [
+              "*"
+            ],
+            "body": [
+              [
+                {
+                  "text": "Revisiones malas",
+                  "style": "badReviewTitle"
+                }
+              ]
+            ]
+          },
+          "layout": "noBorders",
+          "margin": [
+            0,
+            20,
+            0,
+            0
+          ]
+        },
+        {
+          "style": "invoiceTable",
+          "table": {
+            "widths": [
+              "auto",
+              "20%",
+              "*",
+              "*"
+            ],
+            "body": [
+              [
+                {
+                  "text": "CÓDIGO",
+                  "style": "header"
+                },
+                {
+                  "text": "ITEM",
+                  "style": "header"
+                },
+                {
+                  "text": "CATEGORÍA",
+                  "style": "header"
+                },
+                {
+                  "text": "OBSERVACIÓN",
+                  "style": "header"
+                }
+              ],
+              [
+                "LUC001",
+                "Luces",
+                "Color Luces",
+                "Luces en estrober, cambiar"
+              ],
+              [
+                "LUC002",
+                "Luces",
+                "Color estacionamiento",
+                "Derecha trasera no funciona"
+              ]
+            ]
+          },
+          "layout": "lightHorizontalLines",
+          "margin": [
+            0,
+            0,
+            0,
+            20
+          ]
+        },
+        {
+          "style": "invoiceTable",
+          "table": {
+            "headerRows": 0,
+            "widths": [
+              "*"
+            ],
+            "body": [
+              [
+                {
+                  "text": "Revisiones buenas",
+                  "style": "goodReviewTitle"
+                }
+              ]
+            ]
+          },
+          "layout": "noBorders"
+        },
+        {
+          "columns": [
+            {
+              "table": {
+                "widths": [
+                  "*"
+                ],
+                "headerRows": 0,
+                "body": [
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            },
+            {
+              "table": {
+                "widths": [
+                  "*"
+                ],
+                "headerRows": 0,
+                "body": [
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            },
+            {
+              "table": {
+                "widths": [
+                  "*"
+                ],
+                "headerRows": 0,
+                "body": [
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            },
+            {
+              "table": {
+                "widths": [
+                  "*"
+                ],
+                "headerRows": 0,
+                "body": [
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  [
+                    {
+                      "style": "goodTable",
+                      "table": {
+                        "widths": [
+                          "*"
+                        ],
+                        "headerRows": 1,
+                        "body": [
+                          [
+                            {
+                              "text": "Luces",
+                              "style": "goodTableTitle"
+                            }
+                          ],
+                          [
+                            "LUC003 Luces direccionales"
+                          ],
+                          [
+                            "LUC003 Luces bajas y altas"
+                          ],
+                          [
+                            "LUC003 Luces reversa"
+                          ],
+                          [
+                            "LUC003 Luces freno"
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            }
+          ],
+          "columnGap": 5
+        }
+      ],
+      "styles": {
+        "header": {
+          "bold": true,
+          "color": "#000",
+          "fontSize": 11
+        },
+        "invoiceTable": {
+          "color": "#666",
+          "fontSize": 10
+        },
+        "titleHead": {
+          "fontSize": 11,
+          "bold": true,
+          "fillColor": "#c1c1c1",
+          "alignment": "center"
+        },
+        "goodTableTitle": {
+          "fillColor": "grey",
+          "color": "white",
+          "alignment": "center"
+        },
+        "goodTable": {
+          "color": "#666",
+          "fontSize": 9
+        },
+        "badReviewTitle": {
+          "margin": [
+            5,
+            10,
+            5,
+            10
+          ],
+          "alignment": "center",
+          "fillColor": "#fb8c00",
+          "color": "white",
+          "bold": true,
+          "fontSize": 16
+        },
+        "goodReviewTitle": {
+          "margin": [
+            5,
+            10,
+            5,
+            10
+          ],
+          "alignment": "center",
+          "fillColor": "green",
+          "color": "white",
+          "bold": true,
+          "fontSize": 16
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+#invoice {
+
+    &.compact {
+        padding: 0;
+        overflow: auto;
+
+        .invoice-container {
+            padding: 20px;
+
+            .card {
+                width: 1020px;
+                min-width: 1020px;
+                max-width: 1020px;
+                padding-bottom:10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 20px;
+                overflow: hidden;
+                background: #FFFFFF;
+
+                .content {
+
+                    .photos {
+                        height: 150px;
+
+                        img {
+                            min-height: 100%;
+                        }
+                    }
+
+                    .invoice-table {
+                        /*font-size: 15px;*/
+
+                        thead {
+
+                            tr {
+
+                                th {
+
+                                    &:first-child {
+                                        padding-left: 8px;
+                                    }
+
+                                    &:last-child {
+                                        padding-right: 8px;
+                                    }
+                                }
+                            }
+                        }
+
+                        tbody {
+
+                            tr {
+                              padding: 0;
+                              border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+                                td {
+                                  padding: 0;
+                                  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+                                    &:first-child {
+                                        padding-left: 8px;
+                                    }
+
+                                    &:last-child {
+                                        padding-right: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer {
+                    hr {
+                        margin-top: 60px;
+                    }
+                }
+            }
+
+            .cascading-cotainer {
+                -webkit-column-count: 4;
+                -moz-column-count: 4;
+                column-count: 4;
+	            column-gap: 0px;
+                column-rule-style: inset;
+                column-rule-width: 1px;
+                column-rule-color: rgba(0, 0, 0, 0.12);
+
+                .h3-title{
+                  font-size: 1.6rem;
+                  font-weight: bold;
+                }
+            }
+            .cascading-item {
+                display: inline-block;
+                width: 100%;
+
+                .content-wrapper {
+                    overflow: hidden;
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+}
+
+/* PRINT STYLES */
+@media print {
+
+    /* Invoice Specific Styles */
+    #invoice {
+
+        &.compact {
+
+            .invoice-container {
+                padding: 0;
+
+                .card {
+                    width: 100%;
+                    min-width: 0;
+                    background: none;
+                    padding: 0;
+                    box-shadow: none;
+
+                    .header {
+
+                        .main-header {
+                            display: none;
+                        }
+
+                        .invoice-date {
+                            margin-bottom: 16pt;
+                        }
+
+                        .issuer {
+                            padding-right: 0;
+                            margin-right: 0;
+                        }
+                    }
+
+                    .content {
+
+                        .invoice-table {
+                            margin-top: 16pt;
+
+                            thead {
+
+                                tr {
+
+                                    th {
+                                        font-size: 10pt;
+                                        max-width: 60pt;
+
+                                        &:first-child {
+                                            padding-left: 0;
+                                        }
+
+                                        &:last-child {
+                                            padding-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            tbody {
+
+                                tr {
+
+                                    td {
+
+                                        &:first-child {
+                                            padding-left: 0;
+                                        }
+
+                                        &:last-child {
+                                            padding-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .title {
+                                font-size: 10pt;
+                            }
+
+                            .detail {
+                                margin-top: 4pt;
+                                font-size: 9pt;
+                                max-width: none;
+                            }
+                        }
+                    }
+
+                    .footer {
+
+                    }
+                }
+            }
+        }
+    }
+}

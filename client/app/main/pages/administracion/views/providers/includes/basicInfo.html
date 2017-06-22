@@ -1,0 +1,201 @@
+<div class="order-detail-form-container payments md-background-bg md-whiteframe-1dp">
+  <div class="pb-16" layout="row" layout-align="start center">
+    <md-icon md-font-icon="icon-truck" class="m-0 mr-16"></md-icon>
+    <div class="h2 secondary-text" translate="PROVIDER.PAYMENT">Payment</div>
+  </div>
+  <div layout="row" layout-align="start" flex>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="PROVIDER.COMPANY">COMPANY</label>
+      <input type="text" ng-model="vm.provider.name" required />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="PROVIDER.BUSINESS_NAME">BUSINESS_NAME</label>
+      <input type="text" ng-model="vm.provider.payment.businessName" required />
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label translate="PROVIDER.IDENTIFICATION">IDENTIFICATION</label>
+      <input type="text" ng-model="vm.provider.identification.number" required />
+    </md-input-container>
+    <md-input-container flex-gt-sm>
+      <label translate="PROVIDER.IDENTIFICATION_TYPE">IDENTIFICATION TYPE</label>
+      <md-select ng-model="vm.provider.identification.type">
+        <md-option
+          ng-repeat="type in vm.identificationTypes"
+          ng-selected="(type.value === vm.provider.identification.type ? true : false) || $first"
+          value="{{type.value}}" >
+          {{type.value}}
+        </md-option>
+      </md-select>
+      <div class="errors" ng-messages="myForm.favoriteColor.$error">
+        <div ng-message="required">Required</div>
+      </div>
+    </md-input-container>
+  </div>
+</div>
+<div class="order-detail-form-container customer md-background-bg md-whiteframe-1dp">
+  <div class="pb-16" layout="row" layout-align="start center">
+    <md-icon md-font-icon="icon-cash" class="m-0 mr-16"></md-icon>
+    <div class="h2 secondary-text" translate="PROVIDER.REPRESENTATIVE">REPRESENTATIVE</div>
+  </div>
+  <div class="customer">
+    <div layout-gt-sm="row" layout-align="start center">
+      <md-input-container class="md-block" flex-gt-sm>
+        <label translate="PROVIDER.NAME">NAME</label>
+        <input type="text" ng-model="vm.provider.representative.fullName" required />
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
+        <label translate="PROVIDER.EMAIL">EMAIL</label>
+        <input type="email" ng-model="vm.provider.representative.email" required />
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
+        <label translate="PROVIDER.PHONE">PHONE </label>
+        <input type="text" ng-model="vm.provider.representative.phoneNumber"  />
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
+        <label translate="PROVIDER.CELLPHONE">CELLPHONE</label>
+        <input type="text" ng-model="vm.provider.representative.cellPhoneNumber" required />
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
+        <label translate="PROVIDER.ADDRESS">ADDRESS</label>
+        <input type="text" ng-model="vm.provider.representative.address"  />
+      </md-input-container>
+    </div>
+  </div>
+</div>
+<!--<div class="order-detail-form-container shipping md-background-bg md-whiteframe-1dp" ng-if="!vm.edit">
+  <div class="pb-16" layout="row" layout-align="start center">
+    <md-icon md-font-icon="icon-account-multiple" class="m-0 mr-16"></md-icon>
+    <div class="h2 secondary-text" translate="PROVIDER.ACCOUNT_USERS">Users</div>
+  </div>
+  <table class="simple" ms-responsive-table>
+    <thead>
+      <tr>
+        <th translate="PROVIDER.ACCOUNT.NAME">NAME</th>
+        <th translate="PROVIDER.ACCOUNT.EMAIL">EMAIL</th>
+        <th translate="PROVIDER.ACCOUNT.CELLPHONE">CELLPHONE</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="shipping in vm.order.shippingDetails">
+        <td class="tracking-code" editable-text="shipping.tracking">
+          {{shipping.tracking || 'Click to add a tracking code'}}
+        </td>
+        <td>
+          {{shipping.carrier}}
+        </td>
+        <td>
+          {{shipping.weight}}
+        </td>
+        <td>
+          {{shipping.fee}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+
+<!-- Show Edit -->
+<div class="widget-group" layout="row" flex="100" layout-wrap ng-if="vm.edit">
+  <!-- WIDGET SERIVCES -->
+  <ms-widget flippable="false" layout="column" flex="100" flex-gt-md="40">
+    <!-- Front -->
+    <ms-widget-front class="white-bg">
+      <div class="pb-16 title--padding border-bottom" layout="row" layout-align="start center">
+        <md-icon md-font-icon="icon-account-multiple" class="m-0 mr-16"></md-icon>
+        <div class="h2 secondary-text" translate="PROVIDER.ACCOUNT_USERS">Account Users</div>
+      </div>
+      <div class="scrollable" ms-scroll style="height: 200px;">
+        <div class="p-16 pv-20 border-bottom" layout="row" layout-align="space-between center" 
+          ng-repeat="user in vm.usersProviders">
+          <div>
+            <div class="h3">{{user.name | uppercase}}</div>
+            <span class="secondary-text">{{user.email}} </span>
+          </div>
+          <md-menu>
+            <md-button class="md-icon-button" aria-label="More" translate translate-attr-aria-label="More Information">
+              <md-icon md-font-icon="icon-dots-vertical" ng-click="$mdOpenMenu($event)"></md-icon>
+            </md-button>
+            <md-menu-content width="3">
+              <md-menu-item>
+                <md-button ng-click="vm.editServiceDialog($event, service)" aria-label="Toggle done" 
+                  translate-attr-aria-label="PROVIDER.DETAIL">
+                  <md-icon md-font-icon="icon-border-color" class="s18 blue-fg"></md-icon>
+                  <span ng-show="!task.completed" translate="PROVIDER.DETAIL">Editar</span>
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="vm.deleteUserDialog($event, user)" aria-label="Toggle important" translate-attr-aria-label="PROVIDER.DELETE">
+                  <md-icon md-font-icon="icon-delete" class="s18 red-600-fg"></md-icon>
+                  <span translate="PROVIDER.DELETE">Remove important</span>
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </div>
+      </div>
+      <div class="ph-16 pv-20 " layout="row" layout-align="end end">
+        <md-button class="md-fab md-primary md-mini" ng-click="vm.addUserToProviderDialog($event)" aria-label="Add User">
+          <md-tooltip md-direction="left">
+            <span>Agregar otro usuario</span>
+          </md-tooltip>
+          <md-icon md-font-icon="icon-plus" class="s30"></md-icon>
+        </md-button>
+      </div>
+      <!-- /Button Add answer -->
+    </ms-widget-front>
+    <!-- / Front -->
+  </ms-widget>
+  <!-- / WIDGET SERVICES -->
+  <!-- WIDGET MAP -->
+  <ms-widget flippable="false" layout="column" flex="100" flex-gt-md="60">
+    <!-- Front -->
+    <ms-widget-front class="white-bg">
+      <div class="pb-16 title--padding border-bottom" layout="row" layout-align="start center">
+        <md-icon md-font-icon="icon-map-marker" class="m-0 mr-16"></md-icon>
+        <div class="h2 secondary-text" translate="PROVIDER.HEADQUARTERS">Sedes</div>
+      </div>
+      <div class="scrollable" ms-scroll style="height: 200px;">
+        <div class="p-16 pv-20 border-bottom" layout="row" layout-align="space-between center"
+         ng-repeat="headquarter in vm.headquarters">
+          <div>
+            <div class="h3">{{headquarter.name | uppercase}}</div>
+            <span class="secondary-text">{{headquarter.address}} </span>
+          </div>
+          <md-menu>
+            <md-button class="md-icon-button" aria-label="More" translate translate-attr-aria-label="More Information">
+              <md-icon md-font-icon="icon-dots-vertical" ng-click="$mdOpenMenu($event)"></md-icon>
+            </md-button>
+            <md-menu-content width="3">
+              <md-menu-item>
+                <md-button ng-click="vm.editHeadquarter(headquarter)" aria-label="Toggle done" 
+                  translate-attr-aria-label="PROVIDER.DETAIL">
+                  <md-icon md-font-icon="icon-border-color" class="s18 blue-fg"></md-icon>
+                  <span ng-show="!task.completed" translate="PROVIDER.DETAIL">Editar</span>
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="vm.deleteHeadquarter(headquarter)" aria-label="Toggle important" translate-attr-aria-label="PROVIDER.DELETE">
+                  <md-icon md-font-icon="icon-delete" class="s18 red-600-fg"></md-icon>
+                  <span translate="PROVIDER.DELETE">Remove important</span>
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </div>
+      </div>
+      <div class="ph-16 pv-20 " layout="row" layout-align="end end">
+          <md-button class="md-fab md-primary md-mini" ng-click="vm.editHeadquarter()" aria-label="Add Service">
+            <md-tooltip md-direction="left">
+              <span>Agregar otra sede</span>
+            </md-tooltip>
+            <md-icon md-font-icon="icon-plus" class="s30"></md-icon>
+          </md-button>
+        </div>
+    </ms-widget-front>
+    <!-- / Front -->
+  </ms-widget>
+  <!-- / WIDGET MAP -->
+</div>
+<!--/ Show Edit -->
+

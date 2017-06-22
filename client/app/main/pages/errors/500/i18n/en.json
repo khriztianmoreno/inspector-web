@@ -1,0 +1,8 @@
+{
+    "ERROR500": {
+        "CODE": "500",
+        "MESSAGE": "Lo sentimos pero hubo un error en el servidor, intente más tarde",
+        "SEARCH": "Search for anything",
+        "GO_BACK": "Regresa al dashboard"
+    }
+}

@@ -1,0 +1,54 @@
+<table class="dataTable row-border hover" ms-responsive-table>
+  <thead>
+    <tr>
+      <th>
+        <span tranlaste="WARNING_CENTER.TABLE.NAME">Name</span>
+      </th>
+      <th><span tranlaste="WARNING_CENTER.TABLE.CLASS">Class</span></th>
+      <th><span tranlaste="WARNING_CENTER.TABLE.COLOR">Color</span></th>
+      <th><span tranlaste="WARNING_CENTER.TABLE.MILEAGE">Mileage</span></th>
+      <th><span tranlaste="WARNING_CENTER.TABLE.DAYS">Days</span></th>
+      <th class="text-right-important">
+        <span tranlaste="WARNING_CENTER.TABLE.ACTIONS">Actions</span>
+      </th>
+    </tr>
+  </thead>
+
+  <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <tr ng-repeat="warning in vm.warnings | filter:vm.alertSearch">
+      <td class="name">{{warning.name}}</td>
+      <td class="position">{{warning.vehicleClass}}</td>
+      <td class="office">
+        <span style="background-color: {{warning.color}}; padding: 5px; color:#fff">
+          {{warning.color}}
+        </span>
+      </td>
+      <td>{{warning.mileage}}</td>
+      <td>{{warning.days}}</td>
+      <td class="text-right-important">
+        <md-button ng-if="warning.customer.localId !== vm.getCurrentUser.customer.localId"
+          class="md-icon-button" aria-label="Editar" translate
+          translate-attr-aria-label="VIEW" ng-click="vm.editAlert(ev,warning, false)">
+          <md-tooltip md-direction="right">
+            Ver
+          </md-tooltip>
+          <md-icon md-font-icon="icon-eye"></md-icon>
+        </md-button>
+        <md-button ng-if="warning.customer.localId === vm.getCurrentUser.customer.localId"
+          class="md-icon-button" aria-label="Editar" translate
+          translate-attr-aria-label="CONTACTS.EDIT" ng-click="vm.editAlert(ev,warning, true)">
+          <md-tooltip md-direction="right">
+            Editar
+          </md-tooltip>
+          <md-icon md-font-icon="icon-border-color"></md-icon>
+        </md-button>
+      </td>
+    </tr>
+  </tbody>
+</table>

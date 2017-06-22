@@ -1,0 +1,64 @@
+<div id="login" layout="row" layout-align="start">
+  <div id="login-intro" flex hide show-gt-sm>
+    <!--<div class="logo md-accent-login">
+      <span></span>
+    </div>-->
+    <!--<div class="title" translate="LOGIN.INTRO_TITLE">
+      Welcome to the MOBI!
+    </div>
+    <div class="description" translate="LOGIN.INTRO_DESCRIPTION">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat,
+      vel convallis elit fermentum pellentesque. Sed mollis velit facilisis facilisis viverra.
+    </div>-->
+  </div>
+  <div id="login-form-wrapper" class="flex-scrollable md-whiteframe-8dp" ms-scroll>
+    <div id="login-form">
+      <div class="logo md-accent-login-md" hide-gt-sm>
+        <span></span>
+      </div>
+      <div class="title" translate="LOGIN.TITLE" >Log in to your account</div>
+      <div class="description" ng-if="vm.showError">
+        <span style="color: red;" translate="LOGIN.ERRORS.NO_LOGIN">Error</span>
+      </div>
+      <form name="loginForm" ng-submit="vm.login(loginForm)" novalidate>
+        <md-input-container class="md-icon-float md-block">
+          <label translate="LOGIN.EMAIL">Email</label>
+          <input type="email" name="email" ng-model="vm.user.email"
+            translate="LOGIN.EMAIL"
+            ng-pattern="/^.+@.+\..+$/" required>
+          <div ng-messages="loginForm.email.$error" role="alert" multiple>
+            <div ng-message="required">
+              <span translate="LOGIN.ERRORS.EMAIL_REQUIRED">Email field is required</span>
+            </div>
+            <div ng-message="pattern">
+              <span translate="LOGIN.ERRORS.EMAIL_MUST_VALID">Email must be a valid e-mail address</span>
+            </div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <input type="password" name="password" ng-model="vm.user.password" placeholder="Constraseña"
+            translate="LOGIN.PASSWORD"
+            required>
+          <div ng-messages="loginForm.password.$error" role="alert">
+            <div ng-message="required">
+              <span translate="LOGIN.ERRORS.PASSWORD_REQUIRED">Password field is required</span>
+            </div>
+          </div>
+        </md-input-container>
+        <div class="remember-forgot-password" layout="row" layout-sm="column"
+          layout-align="space-between center">
+          <!--<md-checkbox class="remember-me" ng-model="data.cb1" aria-label="Remember Me">
+            <span translate="LOGIN.REMEMBER_ME">Remember Me</span>
+          </md-checkbox>-->
+          <a ui-sref="app.user_forgot-password" class="forgot-password md-accent-color"
+            translate="LOGIN.FORGOT_PASSWORD">Forgot Password?</a>
+        </div>
+        <md-button type="submit" class="md-raised md-accent submit-button" aria-label="LOG IN"
+          ng-disabled="loginForm.$invalid || loginForm.$pristine"
+          translate="LOGIN.LOG_IN" translate-attr-aria-label="LOGIN.LOG_IN">
+          LOG IN
+        </md-button>
+      </form>
+    </div>
+  </div>
+</div>

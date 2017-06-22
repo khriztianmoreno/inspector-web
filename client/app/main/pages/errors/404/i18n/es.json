@@ -1,0 +1,8 @@
+{
+    "ERROR404": {
+        "CODE": "404",
+        "MESSAGE": "Lo sentimos pero no hemos podido encontrar la página que está buscando",
+        "SEARCH": "Search for anything",
+        "GO_BACK": "Regresa al dashboard"
+    }
+}

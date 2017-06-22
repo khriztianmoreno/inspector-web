@@ -1,0 +1,42 @@
+(function() {
+  'use strict';
+
+  angular
+    .module('app.pages.profile', [])
+    .config(config);
+
+  /** @ngInject */
+  function config($stateProvider, $translatePartialLoaderProvider, msApiProvider, msNavigationServiceProvider) {
+    $stateProvider.state('app.pages_profile', {
+      url: '/pages/profile',
+      views: {
+        'content@app': {
+          templateUrl: 'app/main/pages/profile/profile.html',
+          controller: 'ProfileController as vm'
+        }
+      },
+      resolve: {
+        Timeline: function(msApi) {
+          return msApi.resolve('profile.timeline@get');
+        },
+        About: function($http, ApiEndpoint) {
+          return $http.get(ApiEndpoint.profile.uri);
+        },
+        Me: function($http, ApiEndpoint) {
+          return $http.get(ApiEndpoint.profile.uri);
+        }
+      },
+      bodyClass: 'profile'
+    });
+
+    // Translation
+    $translatePartialLoaderProvider.addPart('app/main/pages/profile');
+
+    // Api
+    msApiProvider.register('profile.timeline', ['app/data/profile/timeline.json']);
+    msApiProvider.register('profile.about', ['app/data/profile/about.json']);
+    msApiProvider.register('profile.photosVideos', ['app/data/profile/photos-videos.json']);
+
+  }
+
+})();

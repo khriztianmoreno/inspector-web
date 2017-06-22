@@ -1,0 +1,73 @@
+<div class="product-detail-form-container md-background-bg">
+  <md-tabs md-selected="vm.selectedIndex" md-dynamic-height>
+    <md-tab ng-repeat="document in vm.vehicle.documents">
+      <md-tab-label>
+        <span>{{document.type | uppercase}}</span>
+      </md-tab-label>
+      <md-tab-body>
+        <div class="product-detail-form-container md-background-bg md-whiteframe-1dp">
+          <md-card md-theme="default" md-theme-watch>
+            <md-card-content>
+            <div layout-xs="column" layout="row">
+              <md-input-container class="md-block" flex-gt-sm>
+                <label translate="VEHICLES.DOCUMENT_NUMBER">NUMBER</label>
+                <input type="number" ng-model="document.number" required />
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-sm ng-if="document.type === 'RTM'">
+                <label translate="VEHICLES.DIAGNOSTICS_CENTER">DIAGNOSTICS CENTER</label>
+                <input type="text" ng-model="document.diagnosticsCenter" />
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-sm ng-if="document.type === 'SOAT'">
+                <label translate="VEHICLES.INSURANCE_COMPANY">Insurance Company</label>
+                <input type="text" ng-model="document.insuranceCompany" />
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-sm >
+                <md-icon md-font-icon="icon icon-currency-usd"></md-icon>
+                <label translate="VEHICLES.DOCUMENT_COST">COST</label>
+                <input type="number" ng-model="document.cost" />
+              </md-input-container>
+            </div>
+            <div layout-xs="column" layout="row">
+              <div flex class="date-container">
+                <label translate="VEHICLES.EXPEDITION_DATE">Start Date</label>
+                <md-datepicker flex ng-model="document.expeditionDate" md-placeholder="Start Date"></md-datepicker>
+              </div>
+              <div flex class="date-container">
+                <label translate="VEHICLES.EXPIRATION_DATE">Start Date</label>
+                <md-datepicker flex ng-model="document.expirationDate" md-placeholder="Start Date"></md-datepicker>
+              </div>
+            </div>
+            </md-content>
+            <md-card-actions layout="row">
+              <div>
+                <md-button class="md-warn" ng-click="vm.removeDocument(document)">
+                  <span translate="VEHICLES.DELETE">DELETE</span>
+                </md-button>
+              </div>
+            </md-card-actions>
+          </md-card>
+        </div>
+      </md-tab-body>
+    </md-tab>
+  </md-tabs>
+  <!-- ADD NEW DOCUMENTS -->
+  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+    <h3 flex="20">
+      <span translate="VEHICLES.ADD_OTHER_DOCUMENT">ADD_DOCUEMNT</span> :
+    </h3>
+    <md-input-container class="md-icon-float md-block" flex="30">
+      <label translate="VEHICLES.DOCUMENT_TYPE">DOCUMENT_TYPE</label>
+      <md-select ng-model="vm.documentType" >
+        <md-option
+          ng-repeat="document in vm.allDocuments"
+          ng-selected="$first">
+          {{document | uppercase }}
+        </md-option>
+      </md-select>
+    </md-input-container>
+    <md-button class="add-tab md-raised" ng-click="vm.addDocument(vm.documentType)" >
+      <span translate="VEHICLES.ADD_DOCUMENT">ADD_DOCUEMNT</span>
+    </md-button>
+  </section>
+  <!-- /ADD NEW DOCUMENTS -->
+</div>

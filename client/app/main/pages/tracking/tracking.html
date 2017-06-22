@@ -1,0 +1,186 @@
+<div id="scrumboard" class="page-layout simple fullwidth" layout="column">
+
+  <!-- HEADER -->
+  <div class="header md-accent-bg" ng-class="'md-'+vm.board.settings.color+'-bg'" layout="column">
+
+    <div class="header-content" layout="row" layout-align="space-between" layout-wrap flex>
+
+        <!-- BOARD NAME -->
+        <div class="header-board-name" layout="row" layout-align="center center" flex-order="2" flex-order-xs="1"
+          flex-xs="100">
+          <span>Seguimiento</span>
+        </div>
+        <!-- / BOARD NAME -->
+
+      <!-- TOOLBAR -->
+      <div class="toolbar" layout="row" layout-align="space-between center" flex-order="3">
+
+        <!-- CLEAR FILTERS BUTTON -->
+        <md-button ng-if="vm.filteringIsOn()"
+          class="md-icon-button"
+          ng-click="vm.clearFilters()"
+          aria-label="Clear Filters" translate translate-attr-aria-label="TRACKING.CLEAR_FILTERS">
+          <md-icon md-font-icon="icon-filter-remove"></md-icon>
+          <md-tooltip SB.CLEAR_FILTERS>Clear Filters</md-tooltip>
+        </md-button>
+        <!-- / CLEAR FILTERS BUTTON -->
+
+        <!-- FILTERS SIDENAV BUTTON -->
+        <md-button class="md-icon-button"
+          ng-click="vm.toggleSidenav('filters-sidenav')"
+          aria-label="Filter Cards" translate translate-attr-aria-label="TRACKING.FILTER_CARDS">
+          <md-icon md-font-icon="icon-filter-variant"></md-icon>
+          <md-tooltip><span translate="TRACKING.FILTER_CARDS">Filter Cards</span></md-tooltip>
+        </md-button>
+        <!-- / FILTERS SIDENAV BUTTON -->
+
+        <!-- BOARD SETTINGS BUTTON -->
+        <md-button class="md-icon-button"
+          ng-click="vm.toggleSidenav('settings-sidenav')"
+          aria-label="Settings" translate translate-attr-aria-label="TRACKING.SETTINGS">
+          <md-icon md-font-icon="icon-cog"></md-icon>
+          <md-tooltip><span translate="TRACKING.SETTINGS">Settings</span></md-tooltip>
+        </md-button>
+        <!-- / BOARD SETTINGS BUTTON -->
+      </div>
+      <!-- / TOOLBAR -->
+
+    </div>
+
+  </div>
+  <!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <md-content class="content" flex layout="column" ui-view="scrumboardContent"></md-content>
+  <!-- / CONTENT -->
+
+  <!-- SETTINGS SIDENAV -->
+  <md-sidenav class="settings-sidenav md-sidenav-right" md-component-id="settings-sidenav"
+    ng-include="'app/main/pages/tracking/sidenavs/settings/settings-sidenav.html'"
+    ng-controller="SettingsSidenavController as vm" ms-sidenav-helper>
+  </md-sidenav>
+  <!-- / SETTINGS SIDENAV -->
+
+  <!-- FILTERS SIDENAV -->
+  <md-sidenav class="filters-sidenav md-sidenav-right" md-component-id="filters-sidenav"
+    ng-include="'app/main/pages/tracking/sidenavs/filters/filters-sidenav.html'"
+    ng-controller="FiltersSidenavController as vm" ms-sidenav-helper>
+  </md-sidenav>
+  <!-- / FILTERS SIDENAV -->
+
+  <!-- BOARD -->
+  <div id="board"
+    ng-class="vm.trackingCards.warning.color+'-100-bg'"
+    layout="row">
+
+    <!-- LIST PENDIENTE DE GESTION-->
+    <div class="list-wrapper" ng-repeat="list in vm.boardList">
+
+      <div class="list md-whiteframe-1dp" layout="column">
+
+        <!-- LIST HEADER -->
+        <div class="list-header" layout="row" layout-align="space-between center">
+
+          <div class="list-header-name">
+            <span editable-text="list.name">{{ list.name}}</span>
+          </div>
+
+        </div>
+        <!-- / LIST HEADER -->
+
+        <!-- LIST CONTENT -->
+        <div class="list-content" layout="column">
+
+          <div class="list-cards ps-container"  ng-model="vm.trackingCards" ms-scroll>
+
+            <!-- CARD -->
+            <div  ng-repeat="card in vm.trackingCards"
+              ng-if="card.currentStatus.id == list.id"  role="button"
+              class="list-card md-whiteframe-2dp"
+              ng-click="vm.openCardDialog($event, card , card.currentStatus.id, vm.providers)">
+
+              <!-- CARD DETAILS -->
+              <div class="list-card-details" >
+
+                <!-- CARD SORT HANDLE -->
+                <div class="list-card-sort-handle">
+                  <md-icon md-font-icon="icon-cursor-move" class="icon s16"></md-icon>
+                </div>
+                <!-- /CARD SORT HANDLE -->
+
+                <!-- CARD LABELS -->
+                <div class="list-card-labels"
+                  layout="row" layout-wrap flex>
+                  <span class="list-card-label"
+                  style="background-color: {{ card.warning.color}}">
+                  </span>
+                  <h6 class="alert-name">- {{card.warning.name}}</h6>
+                </div>
+                <!-- / CARD LABELS -->
+
+                <!-- CARD NAME -->
+                <div class="list-card-name">{{card.vehicle.plate}}
+                  <div ng-if="card.currentStatus.id == 1" class="card-by">
+                    Asignada por: {{card.historyStatus[0].user.name }}
+                  </div>
+                </div>
+                <!-- / CARD NAME -->
+
+                <div class="list-card-badges" layout="row" layout-align="start center">
+                  <!-- CARD DUE -->
+                  <span class="badge due-date"
+                    ng-class=""
+                    layout="row"
+                    layout-align="start center">
+                    <i class="icon-clock s16"></i>
+                    <span>{{vm.trackingCards.due | date:'shortDate'}}</span>
+                  </span>
+                  <!-- / CARD DUE -->
+                </div>
+
+              </div>
+              <!-- / CARD DETAILS -->
+
+              <!-- CARD FOOTER -->
+              <div class="list-card-footer layout-row" layout="row"
+              layout-align="space-between center">
+
+                <div layout="row" layout-align="start center">
+                  <!-- CARD DETAILS -->
+                  <span ng-if="card.description !== null"
+                    class="list-card-footer-item" layout="row" layout-align="start center">
+                    <i class="icon-document s18"></i>
+                  </span>
+                  <!-- / CARD DETAILS -->
+                </div>
+
+                <div layout="row" layout-align="end center">
+                  <!-- CARD ATTACHMENT -->
+                  <span class="list-card-footer-item" ng-if="card.attachments"
+                    layout="row" layout-align="start center">
+                    <i class="icon-attachment s18"></i>
+                    <span class="value">{{card.attachments.length}}</span>
+                  </span>
+                  <!-- / CARD ATTACHMENT -->
+
+                  <!-- CARD COMMENTS -->
+                  <span class="list-card-footer-item" ng-if="card.comments"
+                    layout="row" layout-align="start center">
+                    <i class="icon-comment s18"></i>
+                    <span class="value">{{card.comments.length}}</span>
+                  </span>
+                  <!-- / CARD COMMENTS -->
+                </div>
+              </div>
+              <!-- CARD FOOTER -->
+            </div>
+            <!-- / CARD -->
+          </div>
+        </div>
+        <!-- / LIST CONTENT -->
+      </div>
+    </div>
+    <!-- / LIST PENDIENTE DE GESTION -->
+  </div>
+  <!-- / BOARD -->
+</div>

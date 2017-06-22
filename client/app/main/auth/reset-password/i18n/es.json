@@ -1,0 +1,19 @@
+{
+    "RESETPASSWORD": {
+        "TITLE": "Restablecer su contraseña",
+        "EMAIL_ADRESS": "Dirección de correo electrónico",
+        "PASSWORD": "Contraseña",
+        "PASSWORD_CONFIRM": "Confirmar contraseña",
+        "UPDATE_PASSWORD": "RESTABLECER MI CONTRASEÑA",
+        "GO_BACK": "Volver a iniciar sesión",
+        "GO_FORGOT": "Volver a solicitar contraseña",
+        "TOKEN_INVALID_OR_EXPIRED":"El token para restablecer la contraseña no es válido o ha caducado.",
+        "ERRORS": {
+            "EMAIL_REQUIRED": "Se requiere campo de correo electrónico",
+            "EMAIL_MUST_VALID": "El email debe ser una dirección de correo electrónico válida",
+            "PASSWORD_REQUIRED": "Se requiere campo de contraseña",
+            "PASSWORD_CONFIRM_REQUIRED": "Se requiere campo confirmar contraseña",
+            "NOT_EQUAL": "Sus contraseñas no coinciden"
+        }
+    }
+}

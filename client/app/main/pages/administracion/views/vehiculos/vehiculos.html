@@ -1,0 +1,131 @@
+<div id="administracion-vehiculos" class="administracion page-layout carded fullwidth" layout="row">
+	<!-- TOP BACKGROUND -->
+	<div class="top-bg md-accent-bg"></div>
+	<!-- / TOP BACKGROUND -->
+	<!-- CENTER -->
+	<div class="center" layout="column" flex>
+		<!-- CONTENT HEADER -->
+		<div class="header" layout="row" layout-align="space-between center">
+			<div class="white-fg" layout="column" layout-align="start start">
+				<div class="h1" layout="row" layout-align="start center">
+					<md-icon md-font-icon="icon-cube-outline"></md-icon>
+					<span translate="ADMIN.VEHICLES">Vehículos</span>
+					<md-button class="edit-button md-icon-button" ng-click="vm.gotoCreateVehicle()" aria-label="Add Vehicle" translate translate-attr-aria-label="ADMIN.ADD_VEHICLE">
+						<md-icon md-font-icon="icon-plus" class="s30"></md-icon>
+					</md-button>
+					<md-button class="edit-button md-icon-button" ng-click="vm.gotoUpload()" aria-label="Upload Vehicles">
+						<md-icon md-font-icon="icon-plus" class="s30"></md-icon>
+					</md-button>
+				</div>
+				<div class="product-count secondary-text">
+					<span translate="ADMIN.TOTAL">Total:</span>
+					<span>{{vm.paginationData.total}}</span>
+				</div>
+			</div>
+
+			<div class="search" layout="row" layout-align="start center" flex>
+				<md-icon md-font-icon="icon-magnify" class="white-text icon search-icon"></md-icon>
+				<input id="adminstracion-vehiculos-busqueda" ng-model="vm.search" class="search-input" type="text" placeholder="Search" translate
+								translate-attr-placeholder="ADMIN.SEARCH" flex>
+			</div>
+		</div>
+		<!-- / CONTENT HEADER -->
+		<!-- CONTENT CARD -->
+		<div class="content-card" layout="column" flex>
+			<!-- CONTENT TOOLBAR -->
+			<!-- / CONTENT TOOLBAR -->
+			<!-- CONTENT -->
+			<div class="content fullpage-datatable" layout="column" flex>
+				<table class="dataTable row-border hover" datatable="ng" dt-instance="vm.dtInstance" dt-options="vm.options">
+					<thead>
+						<tr>
+							<th class="secondary-text">
+								<div class="table-header">
+									<span class="column-title">Placa</span>
+								</div>
+							</th>
+							<th class="secondary-text">
+								<div class="table-header">
+									<span class="column-title">Marca</span>
+								</div>
+							</th>
+							<th class="secondary-text">
+								<div class="table-header">
+									<span class="column-title">Modelo</span>
+								</div>
+							</th>
+							<th class="secondary-text">
+								<div class="table-header">
+									<span class="column-title">Cilindraje</span>
+								</div>
+							</th>
+							<th class="secondary-text">
+								<div class="table-header">
+									<span class="column-title">Kilometraje</span>
+								</div>
+							</th>
+							<th class="secondary-text">
+								<div class="table-header">
+									<span class="column-title">Dueño</span>
+								</div>
+							</th>
+							<th class="secondary-text">
+								<div class="table-header">
+									<span class="column-title">Actions</span>
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="vehicle in vm.vehicles">
+							<td>{{ ::vehicle.plate.number }}</td>
+							<td>{{ ::vehicle.vehicleData.brand }}</td>
+							<td>{{ ::vehicle.vehicleData.model }}</td>
+							<td>{{ ::vehicle.vehicleData.cyl }}</td>
+							<td>{{ ::vehicle.vehicleData.mileage }}</td>
+							<td>{{ ::vehicle.vehicleData.owner.fullName }}</td>
+							<td>
+								<md-button class="md-icon-button" aria-label="More" translate translate-attr-aria-label="CONTACTS.MORE" ng-click="vm.gotoVehiclesDetail(vehicle._id)">
+									<md-tooltip md-direction="right">
+										<span translate="ADMIN.VEHICLE_DETAILS">Detail Vehicle</span>
+									</md-tooltip>
+									<md-icon md-font-icon="icon-clipboard-text">
+									</md-icon>
+								</md-button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+
+				<md-input-container>
+					<label>Show</label>
+					<md-select data-ng-model="vm.paginationData.rowsByPage" ng-change="vm.getVehiclesPaginated()">
+						<md-option data-ng-repeat="option in vm.pageSizes" data-ng-value="option.size" >
+							{{option.size}}
+						</md-option>
+					</md-select>
+				</md-input-container>
+				Rows
+
+				<md-button class="md-raised md-warn" ng-click="vm.paginationData.currentPage = 1; vm.getVehiclesPaginated()">
+					Inicio
+				</md-button>
+				<md-button class="md-raised" ng-click="vm.previousPage()" ng-disabled="vm.paginationData.currentPage === 1">
+					Anterior
+				</md-button>
+				<md-button class="md-raised" ng-click="vm.nextPage()" ng-disabled="vm.paginationData.currentPage === vm.paginationData.pagesLength">
+					Siguiente
+				</md-button>
+				<md-button class="md-raised md-warn" ng-click="vm.paginationData.currentPage = vm.paginationData.pagesLength; vm.getVehiclesPaginated()">
+					Fin
+				</md-button>
+			</section>
+			<!-- / CONTENT -->
+		</div>
+		<!-- / CONTENT CARD -->
+	</div>
+	<!-- / CENTER -->
+</div>

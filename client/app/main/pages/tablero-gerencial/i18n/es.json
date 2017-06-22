@@ -1,0 +1,12 @@
+{
+    "TABLERO": {
+        "TABLERO_NAV": "Tablero gerencial"
+    },
+    "DASHBOARD":{
+      "TODAY":"Hoy",
+      "MONTH": "Mes",
+      "REVIEWS":"Revisiones",
+      "PAYMENT":"Facturación",
+      "REVIEWS_BY_DAY": "Revisiones por día"
+    }
+}

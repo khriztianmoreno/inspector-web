@@ -1,0 +1,106 @@
+// Whiteframes
+
+$shadow-key-umbra-opacity:      0.2 !default;
+$shadow-key-penumbra-opacity:   0.14 !default;
+$shadow-ambient-shadow-opacity: 0.12 !default;
+
+// NOTE(shyndman): gulp-sass seems to be failing if I split the shadow defs across
+//    multiple lines. Ugly. Sorry.
+$whiteframe-shadow-1dp: 0px 1px 3px 0px rgba(0, 0, 0, $shadow-key-umbra-opacity), 0px 1px 1px 0px rgba(0, 0, 0, $shadow-key-penumbra-opacity), 0px 2px 1px -1px rgba(0, 0, 0, $shadow-ambient-shadow-opacity) !default;
+
+$whiteframe-shadow-8dp: 0px 5px 5px -3px rgba(0, 0, 0, $shadow-key-umbra-opacity), 0px 8px 10px 1px rgba(0, 0, 0, $shadow-key-penumbra-opacity), 0px 3px 14px 2px rgba(0, 0, 0, $shadow-ambient-shadow-opacity) !default;
+
+#mi-flota {
+
+    > .center {
+
+        > .header {
+            height: 160px;
+            min-height: 160px;
+            max-height: 160px;
+            padding-bottom: 0;
+
+            .selected-project {
+                background: rgba(0, 0, 0, 0.12);
+                color: #FFFFFF;
+                padding: 8px 16px;
+                height: 40px;
+                line-height: 24px;
+                font-size: 16px;
+            }
+
+            .project-selector {
+                margin-left: 1px;
+                border-radius: 0;
+                background: rgba(0, 0, 0, 0.12);
+
+                md-icon {
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        > .content {
+            background: none;
+            padding: 0;
+
+            > md-tabs {
+
+                > md-tabs-wrapper {
+                    background: #FFFFFF;
+                    box-shadow: $whiteframe-shadow-1dp;
+                    padding: 0 24px;
+
+                    md-tabs-canvas {
+                        height: 56px;
+
+                        md-pagination-wrapper {
+                            height: 56px;
+                        }
+
+                        .md-tab {
+                            padding: 16px 24px;
+                            text-transform: none;
+                        }
+                    }
+                }
+
+                &:not(.md-dynamic-height) {
+
+                    md-tabs-content-wrapper {
+                        top: 56px;
+                    }
+                }
+
+                > md-tabs-content-wrapper {
+
+                    md-tab-content {
+                        padding: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    > .sidenav {
+        width: 330px;
+        min-width: 330px;
+        max-width: 330px;
+        padding: 0;
+        z-index: 51;
+        box-shadow: $whiteframe-shadow-8dp;
+
+        &._md-locked-open {
+            width: 250px;
+            min-width: 250px;
+            max-width: 250px;
+            z-index: 2;
+            box-shadow: none;
+            background: material-color('grey', '200');
+        }
+    }
+
+    #widgets {
+
+    }
+}

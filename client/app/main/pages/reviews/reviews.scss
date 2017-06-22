@@ -1,0 +1,281 @@
+#inspections {
+
+    // Center
+    .center {
+
+        .header {
+            padding: 24px 0;
+
+            .sidenav-toggle {
+                margin: 0;
+                width: 56px;
+                height: 56px;
+                background: #FFFFFF;
+                border-radius: 0;
+                border-right: 1px solid rgba(0, 0, 0, 0.12);
+            }
+
+            .search {
+                height: 56px;
+                line-height: 56px;
+                padding: 18px;
+                background: #FFFFFF;
+
+                .icon {
+                    margin: 0;
+                }
+
+                input {
+                    padding-left: 16px;
+                    height: 56px;
+                    color: rgba(0, 0, 0, 0.54);
+                }
+            }
+        }
+
+        .content-card {
+
+            .toolbar {
+                padding: 8px 16px;
+                position: relative;
+            }
+
+            .content {
+                padding: 0;
+                overflow: hidden;
+
+                .todo-list-pane {
+                    background: #FAFAFA;
+                }
+
+            }
+        }
+    }
+}
+
+#findVehicle{
+
+  .product-detail-form-container {
+      padding: 24px;
+
+      #product-image-uploader {
+          position: relative;
+
+          &.dropping {
+
+              .drop-text {
+                  display: flex;
+              }
+          }
+
+          .drop-text {
+              display: none;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              padding: 16px;
+              text-align: center;
+              border: 2px dashed rgba(0, 0, 0, 0.12);
+              background: #FFFFFF;
+              font-size: 20px;
+              z-index: 100;
+          }
+
+          .upload-button {
+              margin-bottom: 16px;
+          }
+
+          .product-image {
+              position: relative;
+              width: 200px;
+              height: 200px;
+              border: 1px solid rgba(0, 0, 0, 0.12);
+              margin: 8px;
+
+              &.uploading {
+
+                  .overlay {
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      left: 0;
+                      background: rgba(0, 0, 0, 0.87);
+                  }
+              }
+
+              .media {
+                  max-height: 100%;
+              }
+          }
+      }
+  }
+  
+}
+
+#scrumboard {
+    height: 100%;
+
+    > .header {
+        position: relative;
+        height: 96px;
+        min-height: 96px;
+        max-height: 96px;
+        background-image: none;
+        z-index: 49;
+
+        .header-content {
+
+            .header-boards-button {
+                margin: 0;
+            }
+
+            .header-board-name {
+                font-size: 16px;
+
+                .board-subscribe {
+                    margin-right: 8px;
+                }
+
+                .editable-buttons {
+
+                    md-icon {
+                        color: #FFFFFF !important;
+                    }
+                }
+            }
+
+            .right-side {
+
+                > .md-button:last-child {
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
+
+    #board-selector {
+        position: absolute;
+        top: 96px;
+        right: 0;
+        left: 0;
+        height: 192px;
+        z-index: 48;
+        padding: 24px;
+        opacity: 1;
+
+        .board-list-item {
+            width: 128px;
+            height: 192px;
+            padding: 16px;
+            cursor: pointer;
+            position: relative;
+
+            .board-name {
+                text-align: center;
+                padding: 16px 0;
+            }
+
+            .selected-icon {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 32px;
+                height: 32px;
+                margin-left: -16px;
+                border-radius: 50%;
+                text-align: center;
+                color: white;
+
+                i {
+                    line-height: 32px !important;
+                }
+            }
+
+            &.add-new-board {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .content {
+        padding: 0;
+        background: transparent;
+    }
+
+    .editable-click {
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        border-bottom: none;
+    }
+
+    .editable-wrap {
+        display: block;
+        position: relative;
+
+        .editable-controls {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+
+            .editable-input {
+                width: inherit;
+                background-color: white;
+                padding: 8px;
+                border: 1px solid rgba(0, 0, 0, 0.12);
+            }
+
+            .editable-buttons {
+                display: inherit;
+
+                .md-button {
+                    margin: 0;
+
+                    &:first-of-type {
+                        padding-right: 0;
+                    }
+
+                    .icon-cancel {
+                        color: rgba(0, 0, 0, 0.32);
+                    }
+                }
+            }
+        }
+    }
+
+    .board-selector-backdrop {
+        z-index: 47;
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: $layout-breakpoint-xs) {
+
+    #scrumboard {
+
+        .header {
+            height: 120px;
+            max-height: 120px;
+            min-height: 120px;
+
+        }
+
+        #board-selector {
+            top: 120px;
+        }
+    }
+}
+
+.icon-white{
+  color: #ffffff !important;
+  margin-right: 15px;
+}
+
+.input--mileage{
+  border: 2px solid #fb8c00 !important;
+}

@@ -1,0 +1,23 @@
+{
+    "REVIEW":{
+      "REVIEW": "Revisiones",
+      "ALL_CATEGORIES":"Todas las categorías",
+      "CATEGORIES": "Categorías",
+      "SAVE":"Guardar",
+      "SEARCH": "Buscar una categoría o un elemento",
+      "PLATE": "Número de la placa",
+      "BACK": "Atrás",
+      "NEXT": "Siguiente",
+      "SUBMIT":"Enviar",
+      "SEARCH_VEHICLE": "Buscar vehículo",
+      "INFO_VEHICLE": "Información del vehículo",
+      "PICTURES":"Imagenes del vehículo",
+      "PICTURES_HEADER": "Imagen frontal y trasera del vehículo",
+      "PICTURE_LIMIT":"También puede arrastrar imágenes aquí para subir. Solamente PNG, JPG - Max. 8MB",
+      "COMMENTS": "Comentarios",
+      "TYPE": "Revisón a realizar",
+      "TYPE_HEADER": "Seleccione la revisión que va a realizar",
+      "REVIEW": "Revisión",
+      "NEXT" : "Continuar"
+    }
+}

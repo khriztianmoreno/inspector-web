@@ -1,0 +1,101 @@
+<!-- SIDENAV HEADER -->
+<md-toolbar class="md-accent" ng-class="'md-'+vm.board.settings.color+'-bg'">
+    <div class="md-toolbar-tools">
+        <span flex class="menu-title" translate="TRACKING.FILTER_CARDS">Filter Cards</span>
+        <md-button ng-if="vm.filteringIsOn()" ng-click="vm.clearFilters()" class="md-icon-button"
+                   aria-label="clear filters">
+            <md-icon md-font-icon="icon-filter-remove"></md-icon>
+            <md-tooltip>
+                <span translate="TRACKING.CLEAR_FILTER">Clear Filters</span>
+            </md-tooltip>
+        </md-button>
+    </div>
+</md-toolbar>
+<!-- / SIDENAV HEADER -->
+
+<!-- CONTENT -->
+<form name="searchInfo">
+<md-content class="" ms-scroll>
+    <md-list>
+        <!-- FILTER BY NAME -->
+        <md-subheader class="md-no-sticky" layout="row"  translate="TRACKING.FILTER_BY_CARD_NAME">Filter by Dates</md-subheader>
+            <div class="text-left" layout-xs="column" layout="row" layout-align="start">
+                <div flex class="date-container">
+                    <label translate="INFORMES.START_DATE">Start Date</label>
+                    <md-datepicker flex ng-model="vm.startDate" md-placeholder="Desde"></md-datepicker>
+                </div>                
+            </div>
+            <div class="text-left" layout-xs="column" layout="row" layout-align="start">
+                <div flex class="date-container">
+                    <label translate="INFORMES.END_DATE">End Date</label>
+                    <md-datepicker flex ng-model="vm.endDate" md-placeholder="Hasta"></md-datepicker>
+                </div>
+            </div>    
+        <!-- / FILTER BY NAME -->
+
+        <md-divider></md-divider>
+
+        <!-- FILTER BY LABELS -->
+        <md-subheader class="md-no-sticky" translate="TRACKING.FILTER_BY_LABELS">Filter by Fleet</md-subheader>
+        <div layout-xs="column" layout="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Flota</label>
+                <md-select ng-model="vm.distributorSelected">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="distributor in vm.distributors" ng-value="distributor._id">
+                        {{distributor.name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>                
+        </div>
+        <!-- / FILTER BY LABELS -->
+
+        <md-divider></md-divider>
+
+        <!-- FILTER BY MEMBERS -->
+        <md-subheader class="md-no-sticky" translate="TRACKING.FILTER_BY_MEMBERS">Filter by Plate</md-subheader>
+        <div layout-xs="column" layout="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label translate="INFORMES.PLATE">Plate</label>
+                <input type="text" name="plateNumber" placeholder="ABC234" ng-minlength="6" ng-model="vm.plateNumber" />
+                <div ng-messages="searchInfo.plateNumber.$error">
+                    <div ng-message="minlength">Your entry is not long enough.</div>
+                </div>
+            </md-input-container>
+        </div>
+
+        <md-divider></md-divider>
+
+        <!-- FILTER BY MEMBERS -->
+        <md-subheader class="md-no-sticky" translate="TRACKING.FILTER_BY_MEMBERS">Filter by Providers</md-subheader>
+        <div layout-xs="column" layout="row">
+            <md-autocomplete flex
+                md-input-name="autocompleteField"
+                md-input-minlength="2"
+                md-input-maxlength="18"
+                md-no-cache="vm.noCache"
+                md-selected-item="vm.technicalSelected"
+                 md-search-text="vm.searchTechnical"
+                 md-items="item in vm.querySearchTechnical(vm.searchTechnical)"
+                md-item-text="item.name" md-require-match md-floating-label="{{'INFORMES.TECHNICAL'|translate}}">
+                <md-item-template>
+                    <span md-highlight-text="vm.searchTechnical">{{item.name}}</span>
+                </md-item-template>
+                <md-not-found>
+                    No existem.
+                </md-not-found>
+            </md-autocomplete>
+        </div>
+    </md-list>
+</md-content>   
+    <div class="text-center" layout="row" layout-align="center">
+        <md-button class="md-raised reference-button" ng-click="vm.findReviews()">
+            <md-icon md-font-icon="icon-magnify"></md-icon>
+            <span>Consultar</span>
+        </md-button>
+    </div>
+    <!-- / FILTER BY MEMBERS -->
+    
+
+</form>
+<!-- / CONTENT -->

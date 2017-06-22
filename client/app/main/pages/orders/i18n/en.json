@@ -1,0 +1,28 @@
+{
+  "ORDERS": {
+    "TITLE": "Orders",
+    "TOTAL_ORDERS": "Total Orders",
+    "SEARCH": "Search",
+    "ORDER_DETAILS": "Order details",
+    "CLOSE_DIALOG": "Close dialog",
+    "TABLE": {
+      "HEARQUARTER": "Hearquarter",
+      "REFERENCE": "Reference",
+      "SERVICE": "Service",
+      "NAME": "Name",
+      "PHONE": "Phone",
+      "STATUS": "Status",
+      "DATE": "Date",
+      "ACTIONS": "Actions"
+    },
+    "DIALOG": {
+      "CUSTOMER_NAME": "Customer",
+      "CUSTOMER_EMAIL": "Email",
+      "CUSTOMER_PHONE": "Phone",
+      "COMMENT": "Comment",
+      "STATUS": "Status",
+      "SAVE": "Save",
+      "CANCEL": "Cancel"
+    }
+  }
+}

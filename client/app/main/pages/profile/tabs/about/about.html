@@ -1,0 +1,78 @@
+<div layout="row" layout-wrap>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="65">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title" translate="PROFILE.GENERAL_INFORMATION">General Information</div>
+      </header>
+      <div class="content">
+        <div class="info-line">
+          <div class="title" translate="PROFILE.ADDRESS">Address</div>
+          <div class="info">{{vm.about.additionalData.address}}</div>
+        </div>
+        <div class="info-line">
+          <div class="title" translate="PROFILE.LOCATIONS">Locations</div>
+          <div class="info location">
+            <span>{{vm.about.additionalData.city}}, {{vm.about.additionalData.country}}</span>
+            <md-icon md-font-icon="icon-map-marker" class="s16"></md-icon>
+          </div>
+        </div>
+        <div class="info-line">
+          <div class="title" translate="PROFILE.TEL">Tel.</div>
+          <div class="info">
+            <span>{{vm.about.additionalData.phoneNumber}}</span>
+          </div>
+          <div class="info">
+            <span>{{vm.about.additionalData.cellPhoneNumber}}</span>
+          </div>
+        </div>
+        <div class="info-line">
+          <div class="title" translate="PROFILE.EMAILS">Email</div>
+          <div class="info">
+            <span>{{vm.about.email}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="35">
+    <div class="profile-box info-box work md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title" translate="PROFILE.WORK">Work</div>
+      </header>
+      <div class="content">
+        <div class="info-line">
+          <div class="title" translate="PROFILE.OCCUPATION">Occupation</div>
+          <div class="info">{{vm.about.additionalData.position}}</div>
+        </div>
+        <div class="info-line">
+          <div class="title" translate="PROFILE.JOBS">Jobs</div>
+          <table class="info jobs">
+            <tr class="job">
+              <!--TODO: Poner a mostrar la empresa CUSTOMER,
+                hacer el backend q devuelva eso
+               -->
+              <td class="company">{{vm.about.company}}SAPCO</td>
+              <td class="date">{{vm.about.createdAt | date:'medium'}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="profile-box info-box work md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">Mobi Business</div>
+      </header>
+      <div class="content">
+        <div layout="row">
+          <div class="info-line" flex="70">
+            <div class="title" translate="PROFILE.PLAN">Plan</div>
+            <div class="info">Loop</div>
+          </div>
+          <div class="info-line">
+            <img src="./assets/images/logos/loop_logo.png" alt="loop" style="width:45px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

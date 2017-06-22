@@ -1,0 +1,63 @@
+<div id="consolidado" class="page-layout simple fullwidth doc-page element-doc-page">
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="md-title mb-32">Consolidado</div>
+    <div class="white-bg md-whiteframe-4dp">
+      <table class="dataTable row-border hover">
+        <thead>
+          <tr>
+            <th class="secondary-text">
+              <div class="table-header">
+                <span class="column-title">Fecha</span>
+              </div>
+            </th>
+            <th class="secondary-text">
+              <div class="table-header">
+                <span class="column-title">Hora</span>
+              </div>
+            </th>
+            <th class="secondary-text">
+              <div class="table-header">
+                <span class="column-title">Flota</span>
+              </div>
+            </th>
+            <th class="secondary-text">
+              <div class="table-header">
+                <span class="column-title">Técnico</span>
+              </div>
+            </th>
+            <th class="secondary-text">
+              <div class="table-header">
+                <span class="column-title">Tipo Revisión</span>
+              </div>
+            </th>
+            <th class="secondary-text">
+              <div class="table-header">
+                <span class="column-title">Detalle</span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="review in vm.reviews" data-id="{{review._id}}">
+            <td>{{ review.createdAt | date:'mediumDate' }}</td>
+            <td>{{ review.createdAt | date:'shortTime' }}</td>
+            <td>{{ review.customer.localName }}</td>
+            <td>{{ review.userReview.name | uppercase }}</td>
+            <td>{{ review.type }}</td>
+            <td>
+              <md-button class="md-icon-button" aria-label="More" translate
+                translate-attr-aria-label="CONTACTS.MORE" ng-click="vm.gotoDetail(review._id)">
+                <md-tooltip md-direction="right">
+                  Ver detalle
+                </md-tooltip>
+                <md-icon md-font-icon="icon-clipboard-text" ></md-icon>
+              </md-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- / CONTENT -->
+</div>

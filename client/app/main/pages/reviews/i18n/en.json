@@ -1,0 +1,23 @@
+{
+    "REVIEW":{
+      "REVIEW": "Review",
+      "ALL_CATEGORIES":"All Categories",
+      "CATEGORIES": "Categories",
+      "SAVE":"Save",
+      "SEARCH": "Search for a category or item",
+      "PLATE": "Number plate",
+      "BACK": "Back",
+      "NEXT": "Next",
+      "SUBMIT":"Submit",
+      "SEARCH_VEHICLE": "Search Vehicle",
+      "INFO_VEHICLE": "Information Vehicle",
+      "PICTURES":"Images",
+      "PICTURES_HEADER": "Front and rear image of the vehicle",
+      "PICTURE_LIMIT":"You can also drop images here to upload. Only PNG, JPG - Max. 8MB",
+      "COMMENTS": "Comments",
+      "TYPE": "Review",
+      "TYPE_HEADER": "Select the review",
+      "REVIEW": "Review",
+      "NEXT" : "Next"
+    }
+}

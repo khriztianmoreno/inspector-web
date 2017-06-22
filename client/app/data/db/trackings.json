@@ -1,0 +1,212 @@
+{ 
+    "_id" : ObjectId("583f40b332236f1d443b468d"), 
+    "updatedAt" : ISODate("2016-11-30T21:12:19.042+0000"), 
+    "createdAt" : ISODate("2016-11-30T21:12:19.042+0000"), 
+    "warning" : {
+        "name" : "MOTOR", 
+        "localId" : "58331424cd46817d30f36a95", 
+        "color" : "#0EC1BE", 
+        "type" : "VEHICLE_PART", 
+        "periodicity" : NumberInt(2000), 
+        "nextReviewMileage" : NumberInt(3970), 
+        "nextReviewDate" : NumberInt(0), 
+        "actualMileage" : NumberInt(1970), 
+        "dateReview" : ISODate("2016-11-30T21:12:19.019+0000")
+    }, 
+    "description" : null, 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "provider" : null, 
+    "attachments" : [
+
+    ], 
+    "comments" : [
+
+    ], 
+    "historyStatus" : [
+        {
+            "id" : NumberInt(1), 
+            "name" : "PENDING", 
+            "color" : "#0EC1BE", 
+            "user" : {
+                "localId" : "0000", 
+                "name" : "MOBI BUSINESS"
+            }, 
+            "time" : ISODate("2016-11-30T21:12:19.010+0000")
+        }
+    ], 
+    "active" : true, 
+    "currentStatus" : {
+        "id" : NumberInt(1), 
+        "name" : "PENDING"
+    }, 
+    "vehicle" : {
+        "localId" : "582e39528fb233c49e13e9ce", 
+        "plate" : "ABC123"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583f4c790521302f95540b12"), 
+    "updatedAt" : ISODate("2016-11-30T22:02:34.000+0000"), 
+    "createdAt" : ISODate("2016-11-30T22:02:34.000+0000"), 
+    "warning" : {
+        "name" : "MOTOR", 
+        "localId" : "58331424cd46817d30f36a95", 
+        "color" : "#0EC1BE", 
+        "type" : "VEHICLE_PART", 
+        "periodicity" : NumberInt(2000), 
+        "nextReviewMileage" : NumberInt(3970), 
+        "nextReviewDate" : NumberInt(0), 
+        "actualMileage" : NumberInt(1970), 
+        "dateReview" : ISODate("2016-11-30T22:02:33.971+0000")
+    }, 
+    "description" : null, 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "provider" : null, 
+    "attachments" : [
+
+    ], 
+    "comments" : [
+
+    ], 
+    "historyStatus" : [
+        {
+            "id" : NumberInt(1), 
+            "name" : "PENDING", 
+            "color" : "#0EC1BE", 
+            "user" : {
+                "localId" : "0000", 
+                "name" : "MOBI BUSINESS"
+            }, 
+            "time" : ISODate("2016-11-30T22:02:33.954+0000")
+        }
+    ], 
+    "active" : true, 
+    "currentStatus" : {
+        "id" : NumberInt(1), 
+        "name" : "PENDING"
+    }, 
+    "vehicle" : {
+        "localId" : "582e39528fb233c49e13e9ce", 
+        "plate" : "ABC123"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5852ef9adb4036d0a307ea88"), 
+    "updatedAt" : ISODate("2016-12-15T19:31:38.279+0000"), 
+    "createdAt" : ISODate("2016-12-15T19:31:38.279+0000"), 
+    "description" : "estan muy claritas ome.", 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "warning" : {
+        "name" : "COLOR LUCES", 
+        "localId" : "5852ef99db4036d0a307ea86", 
+        "color" : "#FB8C00", 
+        "type" : "VEHICLE_PART", 
+        "periodicity" : NumberInt(0), 
+        "nextReviewMileage" : NumberInt(0), 
+        "nextReviewDate" : NumberInt(0), 
+        "actualMileage" : NumberInt(127), 
+        "dateReview" : ISODate("2016-12-15T19:31:38.260+0000")
+    }, 
+    "provider" : null, 
+    "attachments" : [
+
+    ], 
+    "comments" : [
+
+    ], 
+    "historyStatus" : [
+        {
+            "id" : NumberInt(1), 
+            "name" : "PENDING", 
+            "color" : "#FB8C00", 
+            "user" : {
+                "name" : "MOBI BUSINESS"
+            }, 
+            "time" : ISODate("2016-12-15T19:31:38.262+0000")
+        }
+    ], 
+    "active" : true, 
+    "currentStatus" : {
+        "id" : NumberInt(1), 
+        "name" : "PENDING"
+    }, 
+    "vehicle" : {
+        "plate" : "ERT123", 
+        "localId" : "582f1ad197ad328ccc2704a0"
+    }
+}
+{ 
+    "_id" : ObjectId("5852ef9adb4036d0a307ea89"), 
+    "updatedAt" : ISODate("2016-12-15T19:31:38.280+0000"), 
+    "createdAt" : ISODate("2016-12-15T19:31:38.280+0000"), 
+    "description" : "quebradas", 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "warning" : {
+        "name" : "LUCES ESTACIONAMIENTO", 
+        "localId" : "5852ef99db4036d0a307ea86", 
+        "color" : "#FB8C00", 
+        "type" : "VEHICLE_PART", 
+        "periodicity" : NumberInt(0), 
+        "nextReviewMileage" : NumberInt(0), 
+        "nextReviewDate" : NumberInt(0), 
+        "actualMileage" : NumberInt(127), 
+        "dateReview" : ISODate("2016-12-15T19:31:38.268+0000")
+    }, 
+    "provider" : null, 
+    "attachments" : [
+
+    ], 
+    "comments" : [
+
+    ], 
+    "historyStatus" : [
+        {
+            "id" : NumberInt(1), 
+            "name" : "PENDING", 
+            "color" : "#FB8C00", 
+            "user" : {
+                "name" : "MOBI BUSINESS"
+            }, 
+            "time" : ISODate("2016-12-15T19:31:38.269+0000")
+        }
+    ], 
+    "active" : true, 
+    "currentStatus" : {
+        "id" : NumberInt(1), 
+        "name" : "PENDING"
+    }, 
+    "vehicle" : {
+        "plate" : "ERT123", 
+        "localId" : "582f1ad197ad328ccc2704a0"
+    }
+}

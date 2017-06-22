@@ -1,0 +1,12 @@
+{
+    "TABLERO": {
+        "TABLERO_NAV": "Management Board"
+    },
+    "DASHBOARD":{
+      "TODAY":"Today",
+      "MONTH": "Month",
+      "REVIEWS":"Reviews",
+      "PAYMENT":"Payment",
+      "REVIEWS_BY_DAY": "Reviews by days"
+    }
+}

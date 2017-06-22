@@ -1,0 +1,27 @@
+<!-- SIDENAV HEADER -->
+<div class="header md-padding" layout="row" layout-align="start center">
+  <!-- USER -->
+  <span class="font-weight-500 font-size-14">{{vm.getCurrentUser().name}}</span>
+  <!-- / USER -->
+</div>
+<!-- / SIDENAV HEADER -->
+<md-divider></md-divider>
+<!-- SIDENAV CONTENT -->
+<div ms-scroll class="content">
+  <md-list>
+    <md-subheader class="md-no-sticky">Tipos de Clientes</md-subheader>
+    <md-list-item ng-if="vm.customerTypes" ng-repeat="type in vm.customerTypes" ng-click="vm.filterChange(type)"
+      ng-class="{'selected':vm.listType.name === type.name}">
+      <p class="pl-8">
+        {{type.name | renameCustomer}}
+      </p>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item ng-click="vm.filterChange('all')" ng-class="{'selected':vm.listType ==='all'}">
+      <p translate="CUSTOMERS.ALL_CONTACTS">
+        All contacts
+      </p>
+    </md-list-item>
+  </md-list>
+</div>
+<!-- / SIDENAV CONTENT -->

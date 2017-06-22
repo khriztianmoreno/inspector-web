@@ -1,0 +1,19 @@
+{
+  "REQUEST_PROVIDER":{
+    "TITLE": "Solicitud de nuevos proveedores",
+    "TOTAL":"Total",
+    "SEARCH":"Buscar",
+    "ADD": "Agregar",
+    "DELETE": "Eliminar",
+    "DETAIL": "Editar",
+    "SAVE": "Guardar",
+    "TABLE":{
+      "DATE": "Fecha",
+      "NAME": "Nombre",
+      "EMAIL": "Corre Electrónico",
+      "PHONE": "Teléfono",
+      "ACTIVE": "Estado",
+      "NO_MANAGMENT": "Sin gestión"
+    }
+  }
+}

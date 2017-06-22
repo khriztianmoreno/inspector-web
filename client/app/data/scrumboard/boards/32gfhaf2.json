@@ -1,0 +1,240 @@
+{
+    "data": {
+        "id": "32gfhaf2",
+        "name": "ACME Frontend Application",
+        "uri": "acme-frontend-application",
+        "settings": {
+            "color": "",
+            "subscribed": false,
+            "cardCoverImages": true
+        },
+        "lists": [
+            {
+                "id": "56027cf5a2ca3839a5d36103",
+                "name": "Pendiente Gestión",
+                "idCards": [
+                    "5603a2a3cab0c8300f6096b3"
+                ]
+            },
+            {
+                "id": "56127cf2a2ca3539g7d36103",
+                "name": "Entregado al Proveedor",
+                "idCards": [
+                    "2837273da9b93dd84243s0f9",
+                    "5787b7e4740c57bf0dffd5b6"
+                ]
+            },
+            {
+                "id": "faf244627326f1249525763d",
+                "name": "Cotizado",
+                "idCards": []
+            },
+            {
+                "id": "ad7d.9fffac5dff412.c83bca6853767.8fd7549b2b1ca.ceda8a01774c4.a5cf3976e87e4.ce79eeeea",
+                "name": "En proceso",
+                "idCards": []
+            },
+            {
+                "id": "a5cf3976e87e4.ce79eeeea",
+                "name": "Terminado",
+                "idCards": []
+            }
+        ],
+        "cards": [
+            {
+                "id": "2837273da9b93dd84243s0f9",
+                "name": "EWQ123",
+                "description": "Current generator doesn't support Node.js 6 and above.",
+                "idAttachmentCover": "",
+                "idMembers": [
+                    "26027s1930450d8bf7b10828"
+                ],
+                "idLabels": [
+                    "26022e4129ad3a5sc28b36cd"
+                ],
+                "attachments": [],
+                "subscribed": false,
+                "checklists": [],
+                "checkItems": 0,
+                "checkItemsChecked": 0,
+                "comments": [
+                    {
+                        "idMember": "36027j1930450d8bf7b10158",
+                        "message": "AngularCLI could be a nice alternative.",
+                        "time": "now"
+                    }
+                ],
+                "activities": [],
+                "due": null
+            },
+            {
+                "id": "5603a2a3cab0c8300f6096b3",
+                "name": "EDG123",
+                "description": "",
+                "idAttachmentCover": "67027cahbe3b52ecf2dc631c",
+                "idMembers": [  ],
+                "idLabels": [
+                    "56027e4119ad3a5dc28b36cd",
+                    "26022e4129ad3a5sc28b36cd"
+                ],
+                "attachments": [
+                    {
+                        "id": "67027cahbe3b52ecf2dc631c",
+                        "name": "mail.jpg",
+                        "src": "assets/images/scrumboard/mail.jpg",
+                        "time": "Added Nov 3 at 15:22AM",
+                        "type": "image"
+                    },
+                    {
+                        "id": "56027cfcbe1b72ecf1fc452a",
+                        "name": "calendar.jpg",
+                        "src": "assets/images/scrumboard/calendar.jpg",
+                        "time": "Added Nov 1 at 12:34PM",
+                        "type": "image"
+                    }
+                ],
+                "subscribed": true,
+                "checklists": [
+                    {
+                        "id": "63021cfdbe1x72wcf1fc451v",
+                        "name": "Checklist",
+                        "checkItemsChecked": 1,
+                        "checkItems": [
+                            {
+                                "name": "Implement a calendar library",
+                                "checked": false
+                            },
+                            {
+                                "name": "Replace event colors with Material Design colors",
+                                "checked": true
+                            },
+                            {
+                                "name": "Replace icons with Material Design icons",
+                                "checked": false
+                            },
+                            {
+                                "name": "Use moment.js",
+                                "checked": false
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Checklist 2",
+                        "id": "74031cfdbe1x72wcz1dc166z",
+                        "checkItemsChecked": 1,
+                        "checkItems": [
+                            {
+                                "name": "Replace event colors with Material Design colors",
+                                "checked": true
+                            },
+                            {
+                                "name": "Replace icons with Material Design icons",
+                                "checked": false
+                            },
+                            {
+                                "name": "Use moment.js",
+                                "checked": false
+                            }
+                        ]
+                    }
+                ],
+                "checkItems": 7,
+                "checkItemsChecked": 2,
+                "comments": [
+                    {
+                        "idMember": "56027c1930450d8bf7b10758",
+                        "message": "We should be able to add moment.js without any problems",
+                        "time": "12 mins. ago"
+                    },
+                    {
+                        "idMember": "36027j1930450d8bf7b10158",
+                        "message": "I added a link for a page that might help us deciding the colors",
+                        "time": "30 mins. ago"
+                    }
+                ],
+                "activities": [
+                    {
+                        "idMember": "56027c1930450d8bf7b10758",
+                        "message": "added a comment",
+                        "time": "12 mins. ago"
+                    },
+                    {
+                        "idMember": "36027j1930450d8bf7b10158",
+                        "message": "added a comment",
+                        "time": "30 mins. ago"
+                    },
+                    {
+                        "idMember": "36027j1930450d8bf7b10158",
+                        "message": "attached a link",
+                        "time": "45 mins. ago"
+                    }
+                ],
+                "due": "1452229200000"
+            },
+            {
+                "id": "5787b7e4740c57bf0dffd5b6",
+                "name": "QWE123",
+                "description": "We need to fix the console asap!",
+                "idAttachmentCover": "",
+                "idMembers": [],
+                "idLabels": [
+                    "26022e4129ad3a5sc28b36cd",
+                    "5640635e19ad3a5dc21416b2"
+                ],
+                "attachments": [],
+                "subscribed": true,
+                "checklists": [],
+                "checkItems": 0,
+                "checkItemsChecked": 0,
+                "comments": [
+                    {
+                        "idMember": "36027j1930450d8bf7b10158",
+                        "message": "I'm on it!",
+                        "time": "now"
+                    }
+                ],
+                "activities": [],
+                "due": "1580428800000"
+            }
+        ],
+        "members": [
+            {
+                "id": "56027c1930450d8bf7b10758",
+                "name": "Proveedor 1",
+                "avatar": "assets/images/avatars/alice.jpg"
+            },
+            {
+                "id": "26027s1930450d8bf7b10828",
+                "name": "Proveedor 2",
+                "avatar": "assets/images/avatars/danielle.jpg"
+            },
+            {
+                "id": "76027g1930450d8bf7b10958",
+                "name": "Proveedor 3",
+                "avatar": "assets/images/avatars/james.jpg"
+            },
+            {
+                "id": "36027j1930450d8bf7b10158",
+                "name": "Proveedor 4",
+                "avatar": "assets/images/avatars/vincent.jpg"
+            }
+        ],
+        "labels": [
+            {
+                "id": "26022e4129ad3a5sc28b36cd",
+                "name": "CAMBIO DE ACEITE",
+                "color": "blue"
+            },
+            {
+                "id": "56027e4119ad3a5dc28b36cd",
+                "name": "CAMBIO DE LLANTAS",
+                "color": "red"
+            },
+            {
+                "id": "5640635e19ad3a5dc21416b2",
+                "name": "LAVADA",
+                "color": "green"
+            }
+        ]
+    }
+}

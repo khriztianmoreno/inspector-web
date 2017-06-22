@@ -1,0 +1,37 @@
+<div layout="row" layout-wrap>
+  <div class="about" layout="column" flex="100">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title" translate="PROFILE.GENERAL_INFORMATION">General Information</div>
+      </header>
+      <div class="content">
+        <div class="info-line">
+          <div class="title" translate="PROFILE.ADDRESS">Address</div>
+          <div class="info">{{vm.about.additionalData.address}}</div>
+        </div>
+        <div class="info-line">
+          <div class="title" translate="PROFILE.LOCATIONS">Locations</div>
+          <div class="info location">
+            <span>{{vm.about.additionalData.city}}, {{vm.about.additionalData.country}}</span>
+            <md-icon md-font-icon="icon-map-marker" class="s16"></md-icon>
+          </div>
+        </div>
+        <div class="info-line">
+          <div class="title" translate="PROFILE.TEL">Tel.</div>
+          <div class="info">
+            <span>{{vm.about.additionalData.phoneNumber}}</span>
+          </div>
+          <div class="info">
+            <span>{{vm.about.additionalData.cellPhoneNumber}}</span>
+          </div>
+        </div>
+        <div class="info-line">
+          <div class="title" translate="PROFILE.EMAILS">Email</div>
+          <div class="info">
+            <span>{{vm.about.email}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

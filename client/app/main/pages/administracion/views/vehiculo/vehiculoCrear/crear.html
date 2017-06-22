@@ -1,0 +1,39 @@
+<div id="create--vehicle" class="page-layout simple fullwidth doc-page" layout="column">
+  <!-- HEADER -->
+  <div class="header md-accent-bg" layout="row" layout-align="space-between">
+    <div class="white-fg" layout="row" layout-align="start center" flex>
+      <md-button class="goto-products-button md-icon-button" aria-label="Go to products"
+        translate translate-attr-aria-label="EC.GO_TO_PRODUCTS">
+        <md-icon md-font-icon="icon-arrow-left"></md-icon>
+      </md-button>
+      <div layout="row" layout-align="start center">
+        <div layout="column" layout-align="start start">
+          <div class="h2">
+            Crear Vehículo
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / HEADER -->
+  <!-- CONTENT -->
+  <div class="content" layout="column">
+    <div class="md-title mt-10">Instrucciones</div>
+    <div class="pb-16">Complete los siguientes campos para la creación del vehículo.</div>
+    <!-- VERTICAL STEPPER -->
+    <form name="createVehicle" ms-vertical-stepper ng-submit="vm.addNewVehicle()"
+          ng-model="vm.verticalStepper" novalidate>
+      <ms-vertical-stepper-step ng-form="verticalStep1" step="1" step-title="'VEHICLES.BASIC_INFO' | translate ">
+        <div ng-include="'app/main/pages/administracion/views/vehiculo/vehiculoCrear/stepper-steps/vertical/step-1.html'"></div>
+      </ms-vertical-stepper-step>
+      <ms-vertical-stepper-step ng-form="verticalStep2" step="2" step-title="'VEHICLES.OWNER' | translate ">
+        <div ng-include="'app/main/pages/administracion/views/vehiculo/vehiculoCrear/stepper-steps/vertical/step-2.html'"></div>
+      </ms-vertical-stepper-step>
+      <ms-vertical-stepper-step ng-form="verticalStep3" step="3" step-title="'VEHICLES.DOCUMENTS' | translate ">
+        <div ng-include="'app/main/pages/administracion/views/vehiculo/vehiculoCrear/stepper-steps/vertical/step-3.html'"></div>
+      </ms-vertical-stepper-step>
+    </form>
+    <!-- / VERTICAL STEPPER -->
+  </div>
+  <!-- / CONTENT -->
+</div>

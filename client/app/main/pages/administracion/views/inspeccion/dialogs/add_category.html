@@ -1,0 +1,52 @@
+<md-dialog class="task-dialog" aria-label="New Category">
+  <form name="taskForm" class="md-inline-form" novalidate>
+      <md-toolbar class="md-accent md-hue-2">
+          <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+              <span class="title" translate="INSPECTION.ADD_CATEGORY">New category</span>
+              <md-button class="md-icon-button" ng-click="vm.closeDialog()">
+                  <md-icon md-font-icon="icon-close" aria-label="Close dialog"></md-icon>
+              </md-button>
+          </div>
+      </md-toolbar>
+
+      <md-dialog-content>
+
+          <md-input-container class="md-block">
+              <label translate="INSPECTION.TITLE">Title</label>
+              <input name="title" ng-model="vm.category.name" required md-autofocus>
+              <div ng-messages="taskForm.title.$error" ng-show="taskForm.title.$touched" role="alert">
+                  <div ng-message="required">
+                      <span >Título es requerido</span>
+                  </div>
+              </div>
+          </md-input-container>
+
+          <div flex></div>
+
+          <md-input-container class="md-block">
+            <label translate="INSPECTION.COLOR">Color</label>
+            <color-picker ng-model="vm.category.color" options="vm.options"></color-picker>
+          </md-input-container>
+
+          <div flex></div>
+      </md-dialog-content>
+
+      <md-dialog-actions layout="row" >
+          <div layout="row" layout-align="start center">
+            <button onclick="alert('hola');" ng-click="vm.hola()">
+              hola
+            </button>
+              <md-button type="submit"  ng-click="vm.saveCategory()"
+                  class="send-button md-accent md-raised"
+                  ng-disabled="taskForm.$invalid"
+                  aria-label="SAVE" translate="INSPECTION.SAVE" translate-attr-aria-label="INSPECTION.SAVE">
+                  SAVE
+              </md-button>
+              <button ng-click="vm.saveCategory()">
+                save
+              </button>
+          </div>
+      </md-dialog-actions>
+  </form>
+
+</md-dialog>

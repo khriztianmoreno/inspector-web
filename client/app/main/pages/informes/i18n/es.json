@@ -1,0 +1,9 @@
+{
+    "INFORMES": {
+        "INFORMES_NAV": "Informes",
+        "START_DATE": "Desde",
+        "END_DATE": "Hasta",
+        "TECHNICAL": "Nombre del técnico",
+        "PLATE": "Número de Placa"
+    }
+}

@@ -1,0 +1,99 @@
+<div id="informes" class="page-layout simple fullwidth doc-page element-doc-page">
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="center start">
+            <!--<div class="breadcrumb" layout="row" layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent">Tables</span>
+            </div>-->
+            <div class="title">Informes</div>
+        </div>
+        <!-- TOOLBAR -->
+          <div class="toolbar" layout="row" layout-align="space-between center" flex-order="3">
+
+            <!-- CLEAR FILTERS BUTTON -->
+            <md-button
+              class="md-icon-button"
+              ng-click="vm.clearFilters()"
+              aria-label="Clear Filters" translate translate-attr-aria-label="TRACKING.CLEAR_FILTERS">
+              <md-icon md-font-icon="icon-filter-remove"></md-icon>
+              <md-tooltip SB.CLEAR_FILTERS>Clear Filters</md-tooltip>
+            </md-button>
+            <!-- / CLEAR FILTERS BUTTON -->
+
+            <!-- FILTERS SIDENAV BUTTON -->
+            <md-button class="md-icon-button"
+              ng-click="vm.toggleSidenav('filters-sidenav')"
+              aria-label="Filter Cards" translate translate-attr-aria-label="TRACKING.FILTER_CARDS">
+              <md-icon md-font-icon="icon-filter-variant"></md-icon>
+              <md-tooltip><span translate="TRACKING.FILTER_CARDS">Filter Cards</span></md-tooltip>
+            </md-button>
+            <!-- / FILTERS SIDENAV BUTTON -->
+
+            <!-- BOARD SETTINGS BUTTON -->
+            <md-button class="md-icon-button"
+              ng-click="vm.toggleSidenav('settings-sidenav')"
+              aria-label="Settings" translate translate-attr-aria-label="TRACKING.SETTINGS">
+              <md-icon md-font-icon="icon-cog"></md-icon>
+              <md-tooltip><span translate="TRACKING.SETTINGS">Settings</span></md-tooltip>
+            </md-button>
+            <!-- / BOARD SETTINGS BUTTON -->
+          </div>
+          <!-- / TOOLBAR -->
+
+        <div layout="row" layout-align="start center">
+            <md-button class="md-raised reference-button" ng-show="vm.disabledExport">
+                <md-icon md-font-icon="icon-file-excel-box"></md-icon>
+                <span>Download</span>
+            </md-button>
+        </div>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+    <div class="content">
+       
+    </div>
+    <!-- / CONTENT -->
+
+    <!-- SETTINGS SIDENAV -->
+      <md-sidenav class="settings-sidenav md-sidenav-right" md-component-id="settings-sidenav"
+        ng-include="'app/main/pages/informes/sidenavs/settings/settings-sidenav.html'"
+        ng-controller="SettingsSidenavController as vm" ms-sidenav-helper>
+      </md-sidenav>
+      <!-- / SETTINGS SIDENAV -->
+
+      <!-- FILTERS SIDENAV -->
+      <md-sidenav class="filters-sidenav md-sidenav-right" md-component-id="filters-sidenav"
+        ng-include="'app/main/pages/informes/sidenavs/filters/filters-sidenav.html'"
+        ng-controller="FiltersSidenavController as vm" ms-sidenav-helper>
+      </md-sidenav>
+    <!-- / FILTERS SIDENAV -->
+
+    <div class="content">
+        <!--<div ui-grid="vm.gridOptions" ui-grid-selection ui-grid-exporter class="myGrid"></div>-->
+        <table class="dataTable row-border hover">
+          <thead>
+            <tr>
+              <th><span class="column-title">Fecha</span></th>
+              <th><span class="column-title">Placa</span></th>
+              <th><span class="column-title">Técnico</span></th>
+              <th><span class="column-title">Flota</span></th>
+              <th><span class="column-title">Tipo Revisión</span></th>
+            </tr>
+          </thead>
+          <tbod>
+            <tr ng-repeat="review in vm.dataReport">
+              <td>{{review.createdAt | date: 'medium'}}</td>
+              <td>{{review.vehicle.plate | uppercase}}</td>
+              <td>{{review.userReview.name | uppercase}}</td>
+              <td>{{review.customer.localName}}</td>
+              <td>{{review.type}}</td>
+            </tr>
+          </tbod>
+        </table>
+    </div>
+
+</div>

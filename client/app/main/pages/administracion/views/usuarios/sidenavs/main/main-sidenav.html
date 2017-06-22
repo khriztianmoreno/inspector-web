@@ -1,0 +1,27 @@
+<!-- SIDENAV HEADER -->
+<div class="header md-padding" layout="row" layout-align="start center">
+  <!-- USER -->
+  <span class="font-weight-500 font-size-14">{{vm.getCurrentUser().name}}</span>
+  <!-- / USER -->
+</div>
+<!-- / SIDENAV HEADER -->
+<md-divider></md-divider>
+<!-- SIDENAV CONTENT -->
+<div ms-scroll class="content">
+  <md-list>
+    <md-list-item ng-click="vm.filterChange('all')" ng-class="{'selected':vm.listType ==='all'}">
+      <p translate="CONTACTS.ALL_CONTACTS">
+        All contacts
+      </p>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-subheader class="md-no-sticky">Roles</md-subheader>
+    <md-list-item ng-if="vm.listRoles" ng-repeat="roles in vm.listRoles" ng-click="vm.filterChange(roles)"
+      ng-class="{'selected':vm.listType.name === roles}">
+      <p class="pl-8">
+        {{roles | renameUsers}}
+      </p>
+    </md-list-item>
+  </md-list>
+</div>
+<!-- / SIDENAV CONTENT -->

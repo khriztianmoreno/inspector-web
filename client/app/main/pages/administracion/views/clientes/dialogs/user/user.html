@@ -1,0 +1,87 @@
+<div>
+  <md-input-container class="md-icon-float md-block">
+    <label translate="CONTACTS.NAME_REQUIRED">Name (required)</label>
+    <md-icon md-font-icon="icon-account" class="name"></md-icon>
+    <input name="username" ng-model="vm.contact.name" type="text" required md-autofocus />
+    <div ng-messages="userForm.username.$error">
+      <div ng-message="required">Esto es necesario.</div>
+    </div>
+  </md-input-container>
+
+  <md-input-container class="md-icon-float md-block">
+    <label translate="CONTACTS.EMAIL">Email</label>
+    <md-icon md-font-icon="icon-email" class="email"></md-icon>
+    <input name="email" ng-model="vm.contact.email" type="email" placeholder="Email" translate
+      translate-attr-placeholder="CONTACTS.EMAIL" required/>
+    <div ng-messages="userForm.email.$error">
+      <div ng-message="required">Esto es necesario.</div>
+    </div>
+  </md-input-container>
+  <!--<md-input-container class="md-icon-float md-block">
+    <label translate="CONTACTS.ROLE">Role</label>
+    <md-icon></md-icon>
+    <md-select ng-model="vm.roleSelected"  style="min-width: 200px;" required>
+      <md-option ng-value="role"
+        ng-repeat="role in vm.listRoles"
+        ng-selected="$first"
+        ng-click="vm.loadCustomers(role)"
+        >
+        {{role | uppercase }}
+      </md-option>
+    </md-select>
+    <br/>
+  </md-input-container>-->
+
+  <md-input-container class="md-block">
+    <md-icon md-font-icon="icon-phone"></md-icon>
+    <input ng-model="vm.contact.additionalData.phoneNumber" type="text"
+      placeholder="{{ 'CONTACTS.PHONE_NUMBER' | translate }}" translate
+      translate-attr-placeholder="CONTACTS.PHONE_NUMBER">
+  </md-input-container>
+  <md-input-container class="md-block">
+    <md-icon md-font-icon="icon-worker"></md-icon>
+    <input ng-model="vm.contact.additionalData.position" type="text"
+      placeholder="{{ 'CONTACTS.JOB_TITLE' | translate }}" translate
+      translate-attr-placeholder="CONTACTS.JOB_TITLE">
+  </md-input-container>
+  <md-input-container class="md-block">
+    <md-icon md-font-icon="icon-home"></md-icon>
+    <input ng-model="vm.contact.additionalData.address" type="text"
+      placeholder="{{ 'CONTACTS.ADDRESS' | translate }}" translate
+      translate-attr-placeholder="CONTACTS.ADDRESS">
+  </md-input-container>
+  <div layout="row" layout-xs="column">
+    <div flex>
+      <md-input-container class="md-block">
+        <md-icon md-font-icon="icon-account-key"></md-icon>
+        <label translate="CUSTOMERS.IDENTIFICATION">Identification</label>
+        <md-icon></md-icon>
+        <input ng-model="vm.contact.additionalData.identification.number" type="text">
+      </md-input-container>
+    </div>
+    <div flex>
+      <md-input-container class="md-block">
+        <label translate="CUSTOMERS.TYPE">Type</label>
+        <md-icon></md-icon>
+        <md-select ng-model="vm.contact.additionalData.identification.type">
+          <md-option
+            ng-repeat="type in vm.identificationTypes"
+            ng-selected="type.value === vm.contact.additionalData.identification.type ? true : false"
+            value="{{type.value}}" >
+            {{type.value}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+  </div>
+
+  <div layout="row" layout-align="end">
+    <md-button type="submit" ng-click="vm.addNewContact()"
+      class="send-button md-accent md-raised"
+      ng-disabled="userForm.$invalid || userForm.$pristine || userForm.$isEmpty "
+      aria-label="Add Task" translate="CONTACTS.ADD_CONTACT"
+      translate-attr-aria-label="CONTACTS.ADD_CONTACT">
+      ADD CONTACT
+    </md-button>
+  </div>
+</div>

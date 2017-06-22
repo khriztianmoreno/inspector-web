@@ -1,0 +1,74 @@
+<div class="md-inline-form">
+    <!--<p>Información de la placa.</p>-->
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="20">
+            <label>Número de Placa</label>
+            <input type="text" name="placa" ng-model="vm.verticalStepper.step1.plate" placeholder="" aria-label="Placa" capitalize ng-required="true">
+
+        </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+            <label>Lugar de Expedición</label>
+            <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.plate_origin.selectedItem" md-search-text-change="vm.searchTextChange(vm.plate_origin.searchText)" md-search-text="vm.plate_origin.searchText" md-selected-item-change="vm.selectedItemChange(itemSoatOrigin, 'plate_origin')"
+                md-items="itemSoatOrigin in vm.querySearch(vm.plate_origin.searchText, 'plate_origin')" md-selected-item="itemSoatOrigin" md-item-text="itemSoatOrigin.display" md-item md-min-length="0" placeholder="">
+                <md-item-template>
+                    <span md-highlight-text="vm.plate_origin.searchText" md-highlight-flags="^i">{{itemSoatOrigin.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    Ningún lugar de expedición coincide con
+                    <<{{vm.plate_origin.searchText}}>>.
+                </md-not-found>
+            </md-autocomplete>
+        </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+            <label>CDA</label>
+            <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.cda.selectedItem" md-search-text-change="vm.searchTextChange(vm.cda.searchText)" md-search-text="vm.cda.searchText" md-selected-item-change="vm.selectedItemChange(itemCDA, 'cda')" md-items="itemCDA in vm.querySearch(vm.cda.searchText, 'cda')"
+                md-selected-item="itemCDA" md-item-text="itemCDA.display" md-item md-min-length="0" placeholder="">
+                <md-item-template>
+                    <span md-highlight-text="vm.cda.searchText" md-highlight-flags="^i">{{itemCDA.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    Ningún CDA coincide con
+                    <<{{vm.cda.searchText}}>>.
+                </md-not-found>
+            </md-autocomplete>
+        </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+            <label>Sede</label>
+            <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.sede.selectedItem" md-search-text-change="vm.searchTextChange(vm.sede.searchText)" md-search-text="vm.sede.searchText" md-selected-item-change="vm.selectedItemChange(itemSede, 'sede')" md-items="itemSede in vm.querySearch(vm.sede.searchText, 'sede')"
+                md-selected-item="itemSede" md-item-text="itemSede.display" md-item md-min-length="0" placeholder="">
+                <md-item-template>
+                    <span md-highlight-text="vm.sede.searchText" md-highlight-flags="^i">{{itemSede.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    Ninguna sede coincide con
+                    <<{{vm.sede.searchText}}>>.
+                </md-not-found>
+            </md-autocomplete>
+        </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+            <label>Flota</label>
+            <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.flota.selectedItem" md-search-text-change="vm.searchTextChange(vm.flota.searchText)" md-search-text="vm.flota.searchText" md-selected-item-change="vm.selectedItemChange(itemFlota, 'flota')"
+                md-items="itemFlota in vm.querySearch(vm.flota.searchText, 'flota')" md-selected-item="itemFlota" md-item-text="itemFlota.display" md-item md-min-length="0" placeholder="">
+                <md-item-template>
+                    <span md-highlight-text="vm.flota.searchText" md-highlight-flags="^i">{{itemFlota.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    Ninguna flota coincide con
+                    <<{{vm.flota.searchText}}>>.
+                </md-not-found>
+            </md-autocomplete>
+        </md-input-container>
+    </div>
+</div>

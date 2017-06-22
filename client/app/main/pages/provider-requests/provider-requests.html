@@ -1,0 +1,92 @@
+<div id="request-providers" class="administracion page-layout carded fullwidth" layout="row">
+  <!-- TOP BACKGROUND -->
+  <div class="top-bg md-accent-bg"></div>
+  <!-- / TOP BACKGROUND -->
+  <!-- CENTER -->
+  <div class="center" layout="column" flex>
+    <!-- CONTENT HEADER -->
+    <div class="header" layout="row" layout-align="space-between center">
+      <div class="white-fg" layout="column" layout-align="start start">
+        <div class="h1" layout="row" layout-align="start center">
+          <md-icon md-font-icon="icon-email"></md-icon>
+          <span translate="REQUEST_PROVIDER.TITLE">Provides</span>
+        </div>
+        <div class="product-count secondary-text">
+          <span translate="REQUEST_PROVIDER.TOTAL">Total</span>:
+          <span>{{vm.requests.length}}</span>
+        </div>
+      </div>
+      <div class="search" layout="row" layout-align="start center" flex>
+        <md-icon md-font-icon="icon-magnify" class="white-text icon search-icon"></md-icon>
+        <input id="adminstracion-vehiculos-busqueda" ng-model="vm.search" class="search-input" 
+          type="text" placeholder="Search" translate translate-attr-placeholder="PROVIDER.SEARCH" flex>
+      </div>
+    </div>
+    <!-- / CONTENT HEADER -->
+    <!-- CONTENT CARD -->
+    <div class="content-card" layout="column" flex>
+      <!-- CONTENT TOOLBAR -->
+      <!-- / CONTENT TOOLBAR -->
+      <!-- CONTENT -->
+      <div class="content fullpage-datatable" layout="column" flex>
+        <table class="dataTable row-border hover">
+          <thead>
+            <tr>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title" translate="REQUEST_PROVIDER.TABLE.NAME">Nombre</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title" translate="REQUEST_PROVIDER.TABLE.EMAIL">EMAIL</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title" translate="REQUEST_PROVIDER.TABLE.PHONE">CELLPHONE</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title" translate="REQUEST_PROVIDER.TABLE.ACTIVE">ACTIVE</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title" translate="REQUEST_PROVIDER.TABLE.DATE">DATE</span>
+                </div>
+              </th>
+              <!--<th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Detalle</span>
+                </div>
+              </th>-->
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="request in vm.requests | filter:vm.search" data-id="{{request._id}}">
+              <td>{{ request.name | uppercase}}</td>
+              <td>{{ request.email }}</td>
+              <td>{{ request.phoneNumber }}</td>
+              <td><span translate="REQUEST_PROVIDER.TABLE.NO_MANAGMENT">NO_MANAGMENT</span></td>
+              <td>{{ request.createdAt | date:'longDate'}}</td>
+              <!--<td>
+                <md-button class="md-icon-button" aria-label="More" ng-click="vm.goToDetail(request._id)"
+									translate translate-attr-aria-label="CONTACTS.MORE" >
+                  <md-tooltip md-direction="right">
+                    Gestión Realizada
+                  </md-tooltip>
+                  <md-icon md-font-icon="icon-check"></md-icon>
+                </md-button>
+              </td>-->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- / CONTENT -->
+    </div>
+    <!-- / CONTENT CARD -->
+  </div>
+  <!-- / CENTER -->
+</div>

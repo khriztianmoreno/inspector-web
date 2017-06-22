@@ -1,0 +1,14 @@
+{
+    "FORGOTPASSWORD": {
+        "TITLE": "Recover your password",
+        "EMAIL_ADRESS": "Email address",
+        "SEND_RESET_LINK": "SEND RESET LINK",
+        "GO_BACK": "Go back to login",
+        "RESET_OK": "We have sent your email the instructions to reset your password.",
+        "RESET_NOT_FOUND_EMAIL": "The email address is not found.",
+        "ERRORS": {
+            "EMAIL_REQUIRED": "Email field is required",
+            "EMAIL_MUST_VALID": "Email must be a valid e-mail address"
+        }
+    }
+}

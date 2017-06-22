@@ -1,0 +1,248 @@
+<div id="findVehicle" class="page-layout simple fullwidth doc-page" layout="column">
+   <!-- HEADER -->
+   <div class="header md-accent-bg" layout="row" layout-align="start center">
+      <div layout="row" layout-align="space-between">
+         <!--<md-icon md-font-icon="icon-calendar-check" class="icon-white" aria-hidden="true">
+
+         </md-icon>-->
+         <div class="title" translate="REVIEW.REVIEW">Reviews</div>
+      </div>
+   </div>
+   <!-- / HEADER -->
+   <!-- CONTENT -->
+   <div class="content" layout="column">
+      <!--<div class="md-title">Stepper</div>
+      <div class="pb-16">
+         <b>ms-stepper</b> is a custom made form wizard directive. It follows Google's Material Design specifications
+         and we recommend you to use it. If for some reason, it's not suitable for your project, you can always use
+         the Form Wizard that we put together using md-tabs and forms.
+      </div>-->
+      <!-- HORIZONTAL STEPPER -->
+      <md-tabs md-selected="vm.selectedIndex" md-dynamic-height md-border-bottom>
+        <md-tab>
+          <md-tab-label>
+            <span translate="REVIEW.SEARCH_VEHICLE">SEARCH_VEHICLE</span>
+          </md-tab-label>
+          <md-tab-body>
+            <md-content class="md-padding">
+              <h3>Ingrese la <span class="text-bold">placa</span> de un vehículo para buscar.</h3>
+              <form name="searchForm">
+                <div layout="row" layout-align="star center">
+                  <md-input-container flex="100" flex-gt-xs="40">
+                     <input type="text" name="plateNumber" ng-model="vm.searchVehicle"
+                        placeholder="Número de la placa" ng-minlength="6" required />
+                     <div ng-messages="horizontalStep1.plateNumber.$error"
+                        ng-show="horizontalStep1.plateNumber.$touched"
+                        role="alert">
+                        <div ng-message="required">
+                           <span translate="REVIEW.NOT_FOUND">NO SE ENCONTRO</span>
+                        </div>
+                     </div>
+                  </md-input-container>
+                  <md-content>
+                     <md-button class="md-raised md-primary"
+                       ng-disabled="searchForm.$invalid"
+                       ng-click="vm.findVehicle()">
+                       Buscar
+                     </md-button>
+                  </md-content>
+                </div>
+              </form>
+              <div ng-show="vm.noVehicle">
+                 <span>Plate field is required.</span>
+              </div>
+            </md-content>
+          </md-tab-body>
+        </md-tab>
+        <md-tab ng-disabled="vm.secondLocked">
+          <md-tab-label >
+            <span translate="REVIEW.INFO_VEHICLE">INFO_VEHICLE</span>
+          </md-tab-label>
+          <md-tab-body>
+            <md-content class="md-padding">
+              <h3>A continuació se detalla la información actual del vehículo,
+                <span class="text-bold">debe ingresar el kilometraje actual</span>.</h3>
+              <form name="vehicleInfoForm">
+                <div class="md-padding md-background-bg md-whiteframe-1dp">
+                  <div layout-gt-sm="row" layout-align="start center">
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.MILEAGE" class="text-bold">MILEAGE</label>
+                      <input type="number" class="input--mileage" ng-model="vm.vehicle.vehicleData.mileage" required  autofocus/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.MODEL">Height</label>
+                      <input type="number" ng-model="vm.vehicle.vehicleData.model" disabled />
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.BRAND">Depth</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.brand" disabled />
+                      </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.CYL">CYL</label>
+                      <input type="number" ng-model="vm.vehicle.vehicleData.cyl" disabled />
+                    </md-input-container>
+                  </div>
+                  <div layout-gt-sm="row" layout-align="start center">
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.COLOR">COLOR</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.color" disabled/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.BODYWORK">BODYWORK</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.bodyWork" disabled/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.SERVICE">SERVICE</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.service" disabled/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.CLASS">Depth</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.class" disabled/>
+                      </md-input-container>
+                  </div>
+                  <div layout-gt-sm="row" layout-align="start center">
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.LINE">LINE</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.line" disabled/>
+                      </md-input-container>
+                    </md-autocomplete>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.CAPACITY">CAPACITY</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.capacity" disabled/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.FUEL">FUEL</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.fuel" disabled/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.MOTOR">MOTOR</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.motor" required />
+                    </md-input-container>
+                  </div>
+                  <div layout-gt-sm="row" layout-align="start center">
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.SERIE">SERIE</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.serie" disabled/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.CHASSIS">CHASSIS</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.chassis" disabled/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.VIN">VIN</label>
+                      <input type="text" ng-model="vm.vehicle.vehicleData.vin" required />
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                      <label translate="VEHICLES.PLATE">Width</label>
+                      <input type="text" ng-model="vm.vehicle.plate.number" disabled />
+                    </md-input-container>
+                  </div>
+                  <md-button type="submit" class="md-raised md-primary"
+                      ng-disabled="vehicleInfoForm.$invalid || (vm.vehicle.vehicleData.mileage <= vm.beforeMileage)"
+                    aria-label="Save" ng-click="vm.updateVehicle()">
+                    <span translate="VEHICLES.SAVE">SAVE</span>
+                  </md-button>
+                </div>
+              </form>
+
+            </md-content>
+          </md-tab-body>
+        </md-tab>
+        <md-tab ng-disabled="vm.inspectionTypeLocked" >
+          <md-tab-label>
+            <span translate="REVIEW.TYPE">INFO_VEHICLE</span>
+          </md-tab-label>
+          <md-tab-body>
+            <md-content class="md-padding">
+              <h3 translate="REVIEW.TYPE_HEADER">
+                Seleccione la revisión que va a realizar
+              </h3>
+              <form name="reviewType">
+                <div layout="row" layout-align="star center">
+                  <md-input-container flex="60" flex-gt-xs="40">
+                    <label translate="REVIEW.REVIEW">
+                      REVIEW
+                    </label>
+                    <md-select ng-model="vm.reviewType">
+                      <md-option ng-repeat="review in vm.inspections"
+                        ng-value="review" ng-selected="$first">
+                        {{review.name}}
+                      </md-option>
+                    </md-select>
+                  </md-input-container>
+                  <md-input-container>
+                    <md-button class="md-raised md-primary"
+                      ng-disabled="reviewType.$invalid"
+                      ng-click="vm.selectInspectionType()">
+                      <span translate="REVIEW.NEXT">Continuar</span>
+                    </md-button>
+                  </md-input-container>
+                </div>
+              </form>
+            </md-content>
+          </md-tab-body>
+        </md-tab>
+        <md-tab ng-disabled="vm.thirdLocked" ng-if="vm.showImagesTab">
+          <md-tab-label>
+            <span translate="REVIEW.PICTURES">INFO_VEHICLE</span>
+          </md-tab-label>
+          <md-tab-body>
+            <md-content class="md-padding">
+              <h3>
+                <span translate="REVIEW.PICTURES_HEADER">Imagen frontal y trasera del vehículo</span>
+              </h3>
+              <md-input-container>
+                <md-button class="md-raised md-primary"
+                  ng-click="vm.goToReview()">
+                  <span translate="REVIEW.NEXT">Continuar</span>
+                </md-button>
+              </md-input-container>
+              <div class="product-detail-form-container md-background-bg md-whiteframe-1dp">
+                <div id="product-image-uploader"
+                  flow-init="vm.ngFlowOptions"
+                  flow-name="vm.ngFlow.flow"
+                  flow-files-submitted="vm.upload()"
+                  flow-file-added="vm.fileAdded($file)"
+                  flow-file-success="vm.fileSuccess($file, $message)"
+                  flow-complete="vm.uploadComplete()"
+                  flow-drop
+                  flow-drag-enter="vm.dropping=true"
+                  flow-drag-leave="vm.dropping=false"
+                  ng-class="{'dropping':vm.dropping}">
+                  <div class="drop-text hint-text" layout="row" layout-align="center center">
+                    <span>Drop to upload</span>
+                  </div>
+                  <div class="upload-button" layout="column" layout-align="center center">
+                    <md-button class="md-accent md-raised" flow-btn
+                      ng-disabled="vm.disabledImages">
+                      Upload
+                    </md-button>
+                    <span class="secondary-text mt-8" translate="REVIEW.PICTURE_LIMIT">PICTURE_LIMIT</span>
+                  </div>
+                  <div layout="row" layout-align="start start" layout-wrap>
+                    <div ng-repeat="image in vm.images" ng-switch="image.type">
+                      <div class="product-image uploading" ng-switch-when="uploading" layout="row"
+                        layout-align="center center">
+                        <div class="overlay" layout="column" layout-align="center center">
+                          <md-progress-linear md-mode="determinate"
+                            value="{{image.file.progress() * 100}}">
+                          </md-progress-linear>
+                        </div>
+                        <img class="media" flow-img="image.file">
+                      </div>
+                      <div class="product-image" ng-switch-when="image" layout="row"
+                        layout-align="center center">
+                        <img class="media" ng-src="{{image.url}}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </md-content>
+          </md-tab-body>
+        </md-tab>
+      </md-tabs>
+      <!-- / HORIZONTAL STEPPER -->
+   </div>
+   <!-- / CONTENT -->
+</div>

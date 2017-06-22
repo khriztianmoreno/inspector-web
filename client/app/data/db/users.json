@@ -1,0 +1,200 @@
+{ 
+    "_id" : ObjectId("57a2669ac419d84c2af371ab"), 
+    "salt" : "iP5jNoysTwbmkm6hgc27Kw==", 
+    "provider" : "local", 
+    "name" : "CRISTIAN MORENO", 
+    "email" : "ingenieria.creativa@sapco.co", 
+    "password" : "AJ4zbhlXEuH/6V3Pbr9oAaNMn7kxdRDWXNdNnpQmFFoaZxoFotMoDpq5r7CLombBglauQN5yo4gvd0TPQF5H8w==", 
+    "updateAt" : ISODate("2016-08-03T21:48:09.663+0000"), 
+    "createAt" : ISODate("2016-08-03T21:48:09.663+0000"), 
+    "additionalData" : {
+        "address" : "534 MAUJER STREET, EBRO, NORTH DAKOTA, 5955", 
+        "phoneNumber" : "+1 (846) 411-3925", 
+        "cellPhoneNumber" : "+1 (864) 498-3358", 
+        "position" : "BIG BOSS", 
+        "picture" : "http://placehold.it/32x32", 
+        "timeZone" : "America/Bogota", 
+        "language" : "es", 
+        "city" : "MEDELLIN", 
+        "country" : "COLOMBIA"
+    }, 
+    "customer" : {
+        "localId" : "57a21bdca61de23136d1741f", 
+        "localName" : "SAPCO", 
+        "channelId" : null, 
+        "channelName" : null, 
+        "distributorId" : null, 
+        "distributorName" : null
+    }, 
+    "role" : "admin", 
+    "__v" : NumberInt(0), 
+    "active" : true
+}
+{ 
+    "_id" : ObjectId("582e2e7b8fb233c49e13e9c4"), 
+    "salt" : "Zf94ScZWEECNp5lKYvEJbg==", 
+    "updatedAt" : ISODate("2016-11-17T22:27:40.892+0000"), 
+    "createdAt" : ISODate("2016-11-17T22:26:03.290+0000"), 
+    "email" : "cda@sapco.co", 
+    "name" : "KHRIZTIAN MORENO", 
+    "provider" : "local", 
+    "password" : "Ci7LIbYasdlffZsymSsOAYdMBtkKJ1dGjVlSiXTKw0FGJD6QJcCAnfAVE7I7tSLsYi2LwG4tTxTsSknI5LFzGg==", 
+    "active" : true, 
+    "additionalData" : {
+        "address" : "CRA 57 # 68-60", 
+        "position" : "DEVELOPER", 
+        "phoneNumber" : "4219461", 
+        "identification" : {
+            "origin" : "CO", 
+            "type" : "CC", 
+            "number" : "1020425614"
+        }, 
+        "timeZone" : "America/Bogota", 
+        "language" : "es", 
+        "city" : "MEDELLIN", 
+        "country" : "COLOMBIA"
+    }, 
+    "customer" : {
+        "localName" : "SAPCO", 
+        "localId" : "582e2e4a8fb233c49e13e9c2", 
+        "distributorName" : null, 
+        "distributorId" : null, 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "role" : "cda", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("582e30358fb233c49e13e9c5"), 
+    "salt" : "ybD0/pSG2ipz5nI7/XeGnA==", 
+    "updatedAt" : ISODate("2016-11-17T22:33:25.610+0000"), 
+    "createdAt" : ISODate("2016-11-17T22:33:25.610+0000"), 
+    "email" : "i@sapco.co", 
+    "name" : "TECNICO", 
+    "provider" : "local", 
+    "password" : "vFoRTt1euELFvyiZxZKKlC6XtyHLsemj0BFv4LhgGfWwdM6hIHNo8diKxY22cfcqkPyfG910l0HuGbTxv683iA==", 
+    "active" : true, 
+    "additionalData" : {
+        "address" : "CALLE 23252", 
+        "phoneNumber" : "23552", 
+        "position" : "TECNICO", 
+        "identification" : {
+            "origin" : "CO", 
+            "type" : "NIT", 
+            "number" : "1003252"
+        }, 
+        "timeZone" : "America/Bogota", 
+        "language" : "es", 
+        "city" : "MEDELLIN", 
+        "country" : "COLOMBIA"
+    }, 
+    "customer" : {
+        "localName" : "SAPCO", 
+        "localId" : "582e2e4a8fb233c49e13e9c2", 
+        "distributorName" : null, 
+        "distributorId" : null, 
+        "channelName" : "SAPCO COLOMBIA", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "role" : "tecnico", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("582e30c08fb233c49e13e9c6"), 
+    "salt" : "eyLrft71VFfQO9MPOaVbCA==", 
+    "updatedAt" : ISODate("2016-11-17T22:35:44.596+0000"), 
+    "createdAt" : ISODate("2016-11-17T22:35:44.596+0000"), 
+    "email" : "sede@sapco.co", 
+    "name" : "SEDE - USUARIO", 
+    "provider" : "local", 
+    "password" : "tkhuZdc4pmfFTcL+xG2yGe3c3S8tn0qe2v2YY8kBVgPMzpixK/nMjf5n3rV04OUDGfubkiRUitn7RJM3FEhc/A==", 
+    "active" : true, 
+    "additionalData" : {
+        "address" : "C53", 
+        "position" : "DIRECTOR DE SEDE", 
+        "phoneNumber" : "345363", 
+        "identification" : {
+            "origin" : "CO", 
+            "type" : "NIT", 
+            "number" : "5423522"
+        }, 
+        "timeZone" : "America/Bogota", 
+        "language" : "es", 
+        "city" : "MEDELLIN", 
+        "country" : "COLOMBIA"
+    }, 
+    "customer" : {
+        "localName" : "SAPCO MEDELLIN", 
+        "localId" : "582e2e4a8fb233c49e13e9c3", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO COLOMBIA", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "role" : "sede", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("582e34048fb233c49e13e9c8"), 
+    "salt" : "I+eccpeywIQLxfLJOyLP9w==", 
+    "updatedAt" : ISODate("2016-11-17T22:49:40.163+0000"), 
+    "createdAt" : ISODate("2016-11-17T22:49:40.163+0000"), 
+    "email" : "r@sapco.co", 
+    "name" : "FLOTA - USER", 
+    "provider" : "local", 
+    "password" : "Z5Qjs6MrqL1GW932/uXUbcflICvPgutiMbAwKijoac99PaJRJTwDcnmFL5GPKDVC40GWKWxXBTL8oYrsdEV7CA==", 
+    "active" : true, 
+    "additionalData" : {
+        "position" : "LIDER", 
+        "phoneNumber" : "3436346", 
+        "identification" : {
+            "origin" : "CO", 
+            "type" : "NIT", 
+            "number" : "235252"
+        }, 
+        "timeZone" : "America/Bogota", 
+        "language" : "es", 
+        "city" : "MEDELLIN", 
+        "country" : "COLOMBIA"
+    }, 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "role" : "flota", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("58545350b2c181750f9ed54b"), 
+    "salt" : "kFK29jkGODmKvahGn6bPPA==", 
+    "updatedAt" : ISODate("2016-12-16T20:49:20.319+0000"), 
+    "createdAt" : ISODate("2016-12-16T20:49:20.319+0000"), 
+    "email" : "david.higuita.75@gmail.com", 
+    "name" : "DAVID HIGUITA", 
+    "provider" : "local", 
+    "password" : "LJijQP+K0KdnKF11W6wPlpfzA2V6xFN4wd1iKqYojFJrIPUQfNHAzNgixiYoqawl0wGlKKfXbAl3pHKcBNJ/ig==", 
+    "passwordResetToken" : "2a3834894b724b001aafd8b51735ecaf", 
+    "passwordResetExpires" : ISODate("2016-12-17T20:49:20.300+0000"), 
+    "active" : true, 
+    "additionalData" : {
+        "timeZone" : "America/Bogota", 
+        "language" : "es", 
+        "city" : "MEDELLIN", 
+        "country" : "COLOMBIA"
+    }, 
+    "customer" : {
+        "localName" : "SAPCO COLOMBIA", 
+        "localId" : "582e2e4a8fb233c49e13e9c2", 
+        "distributorName" : null, 
+        "distributorId" : null, 
+        "channelName" : "SAPCO COLOMBIA", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "role" : "cda", 
+    "__v" : NumberInt(0)
+}

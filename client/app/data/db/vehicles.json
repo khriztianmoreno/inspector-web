@@ -1,0 +1,148 @@
+{ 
+    "_id" : ObjectId("582e39528fb233c49e13e9ce"), 
+    "updatedAt" : ISODate("2016-12-15T18:06:08.369+0000"), 
+    "createdAt" : ISODate("2016-11-17T23:12:18.654+0000"), 
+    "contacts" : [
+
+    ], 
+    "active" : true, 
+    "reviews" : [
+        {
+            "type" : "ENLISTMENT", 
+            "localId" : "58376b13403bf240255b7790", 
+            "mileage" : NumberInt(1851), 
+            "date" : ISODate("2016-11-20T22:34:59.914+0000")
+        }, 
+        {
+            "type" : "ENLISTMENT", 
+            "localId" : "5838655f120aa86b4f2f4d19", 
+            "mileage" : NumberInt(1970), 
+            "date" : ISODate("2016-11-25T16:22:55.640+0000")
+        }
+    ], 
+    "documents" : [
+        {
+            "type" : "SOAT", 
+            "number" : NumberInt(235252), 
+            "insuranceCompany" : "SURA", 
+            "cost" : NumberInt(100000), 
+            "expeditionDate" : ISODate("2016-11-17T05:00:00.000+0000"), 
+            "expirationDate" : ISODate("2017-11-17T05:00:00.000+0000"), 
+            "_id" : ObjectId("582e39528fb233c49e13e9cf"), 
+            "active" : true
+        }
+    ], 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2", 
+        "channelName" : "SAPCO", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "distributorName" : "SAPCO MEDELLIN"
+    }, 
+    "plate" : {
+        "number" : "ABC123", 
+        "origin" : "CO"
+    }, 
+    "vehicleData" : {
+        "brand" : "AUDI", 
+        "class" : "AUTOMOVIL", 
+        "line" : "A3", 
+        "model" : NumberInt(2016), 
+        "cyl" : NumberInt(3500), 
+        "color" : "PLATA", 
+        "bodyWork" : "CERRADA", 
+        "service" : "PARTICULAR", 
+        "capacity" : NumberInt(2), 
+        "fuel" : "EXTRA", 
+        "motor" : "12423", 
+        "serie" : "453463", 
+        "chassis" : "3463", 
+        "vin" : "3463", 
+        "mileage" : NumberInt(1971), 
+        "owner" : {
+            "fullName" : "CRISTIAN MORENO", 
+            "identification" : {
+                "number" : "10205267"
+            }
+        }
+    }, 
+    "warnings" : [
+        {
+            "name" : "MOTOR", 
+            "localId" : "58331424cd46817d30f36a95", 
+            "warningMileage" : NumberInt(1970), 
+            "nextMileage" : NumberInt(3970), 
+            "date" : ISODate("2016-11-17T05:00:00.000+0000")
+        }
+    ], 
+    "__v" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("582f1ad197ad328ccc2704a0"), 
+    "updatedAt" : ISODate("2016-12-15T19:31:38.183+0000"), 
+    "createdAt" : ISODate("2016-11-18T15:14:25.904+0000"), 
+    "contacts" : [
+
+    ], 
+    "active" : true, 
+    "reviews" : [
+        {
+            "type" : "PREVENTIVE", 
+            "localId" : "5852ef99db4036d0a307ea86", 
+            "mileage" : NumberInt(127), 
+            "date" : ISODate("2016-12-15T19:31:38.171+0000")
+        }
+    ], 
+    "documents" : [
+        {
+            "type" : "SOAT", 
+            "number" : NumberInt(21423534), 
+            "insuranceCompany" : "SURA", 
+            "cost" : NumberInt(10020), 
+            "expeditionDate" : ISODate("2016-11-17T05:00:00.000+0000"), 
+            "expirationDate" : ISODate("2017-11-18T05:00:00.000+0000"), 
+            "_id" : ObjectId("582f1ad197ad328ccc2704a1"), 
+            "active" : true
+        }
+    ], 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2", 
+        "channelName" : "SAPCO", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "distributorName" : "SAPCO MEDELLIN"
+    }, 
+    "plate" : {
+        "number" : "ERT123", 
+        "origin" : "CO"
+    }, 
+    "vehicleData" : {
+        "brand" : "AUDI", 
+        "class" : "AUTOMOVIL", 
+        "line" : "A3", 
+        "model" : NumberInt(2016), 
+        "cyl" : NumberInt(3400), 
+        "color" : "AZUL MARINO", 
+        "bodyWork" : "CERRADA", 
+        "service" : "PARTICULAR", 
+        "capacity" : NumberInt(4), 
+        "fuel" : "EXTRA", 
+        "motor" : "36456754", 
+        "serie" : "4564564", 
+        "chassis" : "46745745", 
+        "vin" : "142354564", 
+        "mileage" : NumberInt(127), 
+        "owner" : {
+            "fullName" : "CAMILO MORENO", 
+            "identification" : {
+                "number" : "230534634"
+            }
+        }
+    }, 
+    "__v" : NumberInt(2), 
+    "warnings" : [
+
+    ]
+}

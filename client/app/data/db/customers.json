@@ -1,0 +1,288 @@
+{ 
+    "_id" : ObjectId("582e2e4a8fb233c49e13e9c2"), 
+    "updatedAt" : ISODate("2016-11-17T22:25:14.402+0000"), 
+    "createdAt" : ISODate("2016-11-17T22:25:14.154+0000"), 
+    "name" : "SAPCO COLOMBIA", 
+    "active" : true, 
+    "distributorName" : null, 
+    "distributorId" : null, 
+    "channelName" : "SAPCO COLOMBIA", 
+    "channelId" : "582e2e4a8fb233c49e13e9c2", 
+    "services" : [
+
+    ], 
+    "loc" : [
+
+    ], 
+    "payment" : {
+        "email" : "sapco@example.com", 
+        "businessName" : "Servicio Automotriz", 
+        "phoneNumber" : "346360363"
+    }, 
+    "identification" : {
+        "number" : "1423523523", 
+        "type" : "NIT", 
+        "origin" : "CO"
+    }, 
+    "type" : {
+        "id" : "1", 
+        "name" : "CHANNEL"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("582e2e4a8fb233c49e13e9c3"), 
+    "updatedAt" : ISODate("2016-11-17T22:25:14.527+0000"), 
+    "createdAt" : ISODate("2016-11-17T22:25:14.438+0000"), 
+    "name" : "SAPCO MEDELLIN", 
+    "active" : true, 
+    "distributorName" : "SAPCO MEDELLIN", 
+    "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+    "channelName" : "SAPCO COLOMBIA", 
+    "channelId" : "582e2e4a8fb233c49e13e9c2", 
+    "services" : [
+
+    ], 
+    "loc" : [
+
+    ], 
+    "payment" : {
+        "email" : "sapco@example.com", 
+        "businessName" : "Servicio Automotriz", 
+        "phoneNumber" : "346360363"
+    }, 
+    "identification" : {
+        "number" : "1423523523", 
+        "type" : "NIT", 
+        "origin" : "CO"
+    }, 
+    "type" : {
+        "id" : "2", 
+        "name" : "DISTRIBUTOR"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("582e33d88fb233c49e13e9c7"), 
+    "updatedAt" : ISODate("2016-12-07T20:00:04.456+0000"), 
+    "createdAt" : ISODate("2016-11-17T22:48:56.581+0000"), 
+    "name" : "RENTING", 
+    "active" : true, 
+    "distributorName" : "SAPCO MEDELLIN", 
+    "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+    "channelName" : "SAPCO", 
+    "channelId" : "582e2e4a8fb233c49e13e9c2", 
+    "services" : [
+
+    ], 
+    "loc" : [
+
+    ], 
+    "payment" : {
+        "email" : "renting@example.com", 
+        "businessName" : "Renting", 
+        "phoneNumber" : "3235", 
+        "cost" : NumberInt(10000)
+    }, 
+    "identification" : {
+        "number" : "235235", 
+        "type" : "NIT", 
+        "origin" : "CO"
+    }, 
+    "type" : {
+        "id" : "3", 
+        "name" : "CLIENT"
+    }, 
+    "__v" : NumberInt(0), 
+    "customerCreateId" : "582e2e4a8fb233c49e13e9c2", 
+    "customerCreateName" : "SAPCO"
+}
+{ 
+    "_id" : ObjectId("58507aa46debf7419cd57ad9"), 
+    "updatedAt" : ISODate("2016-12-13T22:48:04.320+0000"), 
+    "createdAt" : ISODate("2016-12-13T22:48:04.249+0000"), 
+    "name" : "TALLER FUSE", 
+    "representative" : {
+        "fullName" : "ALAN FUSE", 
+        "email" : "ala@fuse.com", 
+        "phoneNumber" : NumberInt(4025678), 
+        "cellPhoneNumber" : 3048761234.0, 
+        "address" : "calle 89"
+    }, 
+    "active" : true, 
+    "services" : [
+
+    ], 
+    "loc" : [
+
+    ], 
+    "customerCreateName" : "RENTING", 
+    "customerCreateId" : "582e33d88fb233c49e13e9c7", 
+    "distributorName" : null, 
+    "distributorId" : null, 
+    "channelName" : "TALLER FUSE", 
+    "channelId" : "58507aa46debf7419cd57ad9", 
+    "payment" : {
+        "businessName" : "FUSE DISCOVERY", 
+        "phoneNumber" : "3048761234", 
+        "email" : "ala@fuse.com"
+    }, 
+    "identification" : {
+        "number" : "1020", 
+        "type" : "NIT"
+    }, 
+    "type" : {
+        "id" : "4", 
+        "name" : "PROVIDER"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("58507aca6debf7419cd57ada"), 
+    "updatedAt" : ISODate("2016-12-13T22:48:43.121+0000"), 
+    "createdAt" : ISODate("2016-12-13T22:48:42.956+0000"), 
+    "name" : "FUSE MEDELLIN", 
+    "city" : "MEDELLIN", 
+    "address" : "CRA 80 # 67-60", 
+    "representative" : {
+        "fullName" : "ALAN FUSE", 
+        "email" : "ala@fuse.com", 
+        "phoneNumber" : NumberInt(4025678), 
+        "cellPhoneNumber" : 3048761234.0, 
+        "address" : "calle 89"
+    }, 
+    "active" : true, 
+    "services" : [
+
+    ], 
+    "loc" : [
+        6.203318, 
+        -75.5722866
+    ], 
+    "customerCreateName" : "TALLER FUSE", 
+    "customerCreateId" : "58507aa46debf7419cd57ad9", 
+    "distributorName" : "FUSE MEDELLIN", 
+    "distributorId" : "58507aca6debf7419cd57ada", 
+    "channelName" : "TALLER FUSE", 
+    "channelId" : "58507aa46debf7419cd57ad9", 
+    "payment" : {
+        "businessName" : "FUSE DISCOVERY", 
+        "phoneNumber" : "3458967", 
+        "email" : "mede@fuse.com"
+    }, 
+    "identification" : {
+        "number" : "1020", 
+        "type" : "NIT"
+    }, 
+    "type" : {
+        "id" : "2", 
+        "name" : "DISTRIBUTOR"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5852a80134f46c80f4cd2c6a"), 
+    "updatedAt" : ISODate("2016-12-15T14:26:09.465+0000"), 
+    "createdAt" : ISODate("2016-12-15T14:26:09.372+0000"), 
+    "name" : "FOOSE", 
+    "representative" : {
+        "fullName" : "IVAN FOOSE", 
+        "email" : "i@foose.com", 
+        "phoneNumber" : "4564", 
+        "cellPhoneNumber" : "23534", 
+        "address" : "pol"
+    }, 
+    "active" : true, 
+    "services" : [
+
+    ], 
+    "loc" : [
+
+    ], 
+    "customerCreateName" : "RENTING", 
+    "customerCreateId" : "582e33d88fb233c49e13e9c7", 
+    "distributorName" : null, 
+    "distributorId" : null, 
+    "channelName" : "FOOSE", 
+    "channelId" : "5852a80134f46c80f4cd2c6a", 
+    "payment" : {
+        "businessName" : "FOOSE", 
+        "phoneNumber" : "23534", 
+        "email" : "i@foose.com"
+    }, 
+    "identification" : {
+        "number" : "100", 
+        "type" : "NIT"
+    }, 
+    "type" : {
+        "id" : "4", 
+        "name" : "PROVIDER"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5852a81d34f46c80f4cd2c6b"), 
+    "updatedAt" : ISODate("2016-12-15T14:26:37.437+0000"), 
+    "createdAt" : ISODate("2016-12-15T14:26:37.243+0000"), 
+    "name" : "POBLADO", 
+    "city" : "MEDELLIN", 
+    "address" : "CALLE 10 A", 
+    "representative" : {
+        "fullName" : "IVAN FOOSE", 
+        "email" : "i@foose.com", 
+        "phoneNumber" : "4564", 
+        "cellPhoneNumber" : "23534", 
+        "address" : "pol"
+    }, 
+    "active" : true, 
+    "services" : [
+        {
+            "_id" : ObjectId("57acc861ba02509575b00ac1"), 
+            "name" : "LAVADO", 
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit...", 
+            "cost" : NumberInt(40000), 
+            "type" : "CARWASH", 
+            "active" : true
+        }, 
+        {
+            "_id" : ObjectId("57ec1aa2ea7093b68ad574fd"), 
+            "name" : "GRÚA", 
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit...", 
+            "cost" : NumberInt(70000), 
+            "type" : "CRANE", 
+            "active" : true
+        }, 
+        {
+            "_id" : ObjectId("57fae2f2973f113d86e8508e"), 
+            "name" : "REPARACIÓN", 
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit...", 
+            "cost" : NumberInt(140000), 
+            "type" : "MECHANICAL", 
+            "active" : true
+        }
+    ], 
+    "loc" : [
+        6.2033104, 
+        -75.5723368
+    ], 
+    "customerCreateName" : "FOOSE", 
+    "customerCreateId" : "5852a80134f46c80f4cd2c6a", 
+    "distributorName" : "POBLADO", 
+    "distributorId" : "5852a81d34f46c80f4cd2c6b", 
+    "channelName" : "FOOSE", 
+    "channelId" : "5852a80134f46c80f4cd2c6a", 
+    "payment" : {
+        "businessName" : "FOOSE", 
+        "phoneNumber" : "34563", 
+        "email" : "po@foose.com"
+    }, 
+    "identification" : {
+        "number" : "100", 
+        "type" : "NIT"
+    }, 
+    "type" : {
+        "id" : "2", 
+        "name" : "DISTRIBUTOR"
+    }, 
+    "__v" : NumberInt(0)
+}

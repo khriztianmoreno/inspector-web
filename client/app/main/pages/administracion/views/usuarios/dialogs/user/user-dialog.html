@@ -1,0 +1,228 @@
+<!-- DIALOG -->
+<md-dialog class="contact-dialog" aria-label="New Task">
+  <form name="contactForm" class="md-inline-form" novalidate ng-submit="vehicleForm.$valid">
+    <!-- DIALOG TOOLBAR -->
+    <md-toolbar class="md-accent md-tall" layout="column">
+      <!-- TOOLBAR TOP -->
+      <div class="md-toolbar-tools md-toolbar-tools-top" layout="row" layout-align="space-between center">
+        <span class="title">{{vm.title}}</span>
+        <md-button class="md-icon-button" ng-click="vm.closeDialog()" aria-label="Close dialog" translate
+          translate-attr-aria-label="CONTACTS.CLOSE_DIALOG">
+          <md-icon md-font-icon="icon-close"></md-icon>
+        </md-button>
+      </div>
+      <!-- / TOOLBAR TOP -->
+      <!-- TOOLBAR MIDDLE -->
+      <div class="md-toolbar-tools md-toolbar-tools-middle" flex layout="column" layout-align="center center">
+        <div layout="column" layout-align="center center">
+          <div class="contact-name">{{vm.contact.name}}</div>
+        </div>
+      </div>
+      <!-- / TOOLBAR MIDDLE -->
+      <!--  TOOLBAR BOTTOM -->
+      <div class="md-toolbar-tools md-toolbar-tools-bottom" layout="row" layout-align="center center">
+        <div flex layout="row" layout-align="center center">
+          <label>{{vm.contact.role | uppercase}}</label>
+        </div>
+      </div>
+      <!-- / TOOLBAR BOTTOM -->
+    </md-toolbar>
+    <!-- / DIALOG TOOLBAR -->
+    <!-- DIALOG CONTENT -->
+    <md-dialog-content ms-scroll>
+      <md-input-container class="md-icon-float md-block">
+        <label translate="CONTACTS.NAME_REQUIRED">Name (required)</label>
+        <md-icon md-font-icon="icon-account" class="name"></md-icon>
+        <input name="username" ng-model="vm.contact.name" type="text" required md-autofocus />
+        <div ng-messages="contactForm.username.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-icon-float md-block">
+        <label translate="CONTACTS.EMAIL">Email</label>
+        <md-icon md-font-icon="icon-email" class="email"></md-icon>
+        <input name="email" ng-model="vm.contact.email" type="email" placeholder="Email" translate
+          translate-attr-placeholder="CONTACTS.EMAIL" required/>
+        <div ng-messages="contactForm.email.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-icon-float md-block">
+        <label translate="CONTACTS.ROLE">Role</label>
+        <md-icon></md-icon>
+        <md-select ng-model="vm.roleSelected"  style="min-width: 200px;">
+          <md-option ng-value="role"
+            ng-repeat="role in vm.listRoles"
+            ng-selected="role === vm.contact.role ? true : false"
+            ng-click="vm.loadCustomers(role)"
+            >
+            {{role | uppercase }}
+          </md-option>
+        </md-select>
+        <br/>
+      </md-input-container>
+
+      <!-- ADMIN -->
+      <md-input-container class="md-icon-float md-block" ng-if="vm.showAdmin">
+        <md-icon md-font-icon="icon-clipboard"></md-icon>
+        <label translate="CUSTOMERS.CONTACTS">CUstomer</label>
+        <md-icon></md-icon>
+        <md-select name="customerSelected" ng-model="vm.customerSelected"  style="min-width: 200px;" >
+          <md-option ng-value="customer"
+            ng-repeat="customer in vm.customerRoots"
+            ng-selected="$first"
+            >
+            {{customer.name}}
+          </md-option>
+        </md-select>
+        <div ng-messages="contactForm.customerSelected.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+        <br/>
+      </md-input-container>
+
+      <!-- CDA -->
+      <md-input-container class="md-icon-float md-block" ng-if="vm.showCda">
+        <md-icon md-font-icon="icon-clipboard"></md-icon>
+        <label translate="CUSTOMERS.CONTACTS">CUstomer</label>
+        <md-icon></md-icon>
+        <md-select name="customerSelected" ng-model="vm.customerSelected"  style="min-width: 200px;" >
+          <md-option ng-value="customer"
+            ng-repeat="customer in vm.customerChannels"
+            ng-selected="customer.name === vm.contact.customer.channelName ? true : false"
+            >
+            {{customer.name}}
+          </md-option>
+        </md-select>
+        <div ng-messages="contactForm.customerSelected.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+        <br/>
+      </md-input-container>
+
+      <!-- sede -->
+      <md-input-container class="md-icon-float md-block" ng-if="vm.showSede">
+        <md-icon md-font-icon="icon-clipboard"></md-icon>
+        <label translate="CUSTOMERS.CONTACTS">CUstomer</label>
+        <md-icon></md-icon>
+        <md-select name="customerSelected" ng-model="vm.customerSelected"  style="min-width: 200px;" >
+          <md-option ng-value="customer"
+            ng-repeat="customer in vm.customerDistribuitors"
+            ng-selected="customer.name === vm.contact.customer.distributorName ? true : false"
+            >
+            {{customer.name}}
+          </md-option>
+        </md-select>
+        <div ng-messages="contactForm.customerSelected.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+        <br/>
+      </md-input-container>
+
+      <!-- flota -->
+      <md-input-container class="md-icon-float md-block" ng-if="vm.showFlota">
+        <md-icon md-font-icon="icon-clipboard"></md-icon>
+        <label translate="CUSTOMERS.CONTACTS">CUstomer</label>
+        <md-icon></md-icon>
+        <md-select name="customerSelected" ng-model="vm.customerSelected"
+          style="min-width: 200px;"  >
+          <md-option ng-value="customer"
+            ng-repeat="customer in vm.customerClients"
+            ng-selected="customer.name === vm.contact.customer.localName ? true : false"
+            >
+            {{customer.name}}
+          </md-option>
+        </md-select>
+        <div ng-messages="contactForm.customerSelected.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+        <br/>
+      </md-input-container>
+
+
+      <div ng-if="!vm.allFields" layout="row" layout-align="center center">
+        <md-button class="md-accent" ng-click="vm.allFields = true" translate="CONTACTS.SHOW_ALL_FIELDS">Show
+          All Fields
+        </md-button>
+      </div>
+      <div ng-if="vm.allFields">
+        <md-input-container class="md-block">
+          <md-icon md-font-icon="icon-phone"></md-icon>
+          <input ng-model="vm.contact.additionalData.phoneNumber" type="text"
+            placeholder="{{ 'CONTACTS.PHONE_NUMBER' | translate }}" translate
+            translate-attr-placeholder="CONTACTS.PHONE_NUMBER">
+        </md-input-container>
+        <md-input-container class="md-block">
+          <md-icon md-font-icon="icon-worker"></md-icon>
+          <input ng-model="vm.contact.additionalData.position" type="text"
+            placeholder="{{ 'CONTACTS.JOB_TITLE' | translate }}" translate
+            translate-attr-placeholder="CONTACTS.JOB_TITLE">
+        </md-input-container>
+        <md-input-container class="md-block">
+          <md-icon md-font-icon="icon-home"></md-icon>
+          <input ng-model="vm.contact.additionalData.address" type="text"
+            placeholder="{{ 'CONTACTS.ADDRESS' | translate }}" translate
+            translate-attr-placeholder="CONTACTS.ADDRESS">
+        </md-input-container>
+        <div layout="row" layout-xs="column">
+          <div flex>
+            <md-input-container class="md-block">
+              <md-icon md-font-icon="icon-account-key"></md-icon>
+              <label translate="CUSTOMERS.IDENTIFICATION">Identification</label>
+              <md-icon></md-icon>
+              <input ng-model="vm.contact.additionalData.identification.number" type="text">
+            </md-input-container>
+          </div>
+          <div flex>
+            <md-input-container class="md-block">
+              <label translate="CUSTOMERS.TYPE">Type</label>
+              <md-icon></md-icon>
+              <md-select ng-model="vm.contact.additionalData.identification.type">
+                <md-option
+                  ng-repeat="type in vm.identificationTypes"
+                  ng-selected="type.value === vm.contact.additionalData.identification.type ? true : false"
+                  value="{{type.value}}" >
+                  {{type.value}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+        </div>
+        <div layout="row" layout-align="center center">
+          <md-button class="md-accent" ng-click="vm.allFields = false" translate="CONTACTS.FEWER_FIELDS">Fewer
+            Fields
+          </md-button>
+        </div>
+      </div>
+    </md-dialog-content>
+    <!-- / DIALOG CONTENT -->
+    <!-- DIALOG ACTIONS -->
+    <md-dialog-actions layout="row" layout-align="space-between center">
+      <div layout="row" layout-align="start center">
+        <md-button type="submit" ng-if="!vm.newContact" ng-click="vm.saveContact()"
+          class="send-button md-accent md-raised"
+          ng-disabled="contactForm.$invalid || contactForm.$pristine"
+          aria-label="SAVE" translate="CONTACTS.SAVE" translate-attr-aria-label="CONTACTS.SAVE">
+          SAVE
+        </md-button>
+        <md-button type="submit" ng-if="vm.newContact" ng-click="vm.addNewContact()"
+          class="send-button md-accent md-raised"
+          ng-disabled="contactForm.$invalid || contactForm.$pristine || contactForm.$isEmpty "
+          aria-label="Add Task" translate="CONTACTS.ADD_CONTACT"
+          translate-attr-aria-label="CONTACTS.ADD_CONTACT">
+          ADD CONTACT
+        </md-button>
+      </div>
+      <div layout="row">
+        <md-button class="md-icon-button" ng-click="vm.deleteContactConfirm($event)" aria-label="Delete"
+          translate translate-attr-aria-label="CONTACTS.DELETE">
+          <md-icon md-font-icon="icon-delete"></md-icon>
+          <md-tooltip><span translate="CONTACTS.DELETE">DELETE</span></md-tooltip>
+        </md-button>
+      </div>
+    </md-dialog-actions>
+    <!-- / DIALOG ACTIONS -->
+  </form>
+</md-dialog>
+<!-- / DIALOG -->

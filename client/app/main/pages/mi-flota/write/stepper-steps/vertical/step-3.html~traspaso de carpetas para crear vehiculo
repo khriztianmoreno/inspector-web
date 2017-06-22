@@ -1,0 +1,92 @@
+<md-content class="md-padding">
+    <md-tabs md-selected="vm.selectedIndex" md-dynamic-height md-border-bottom md-autoselect>
+        <md-tab ng-repeat="tab in vm.tabs" ng-disabled="tab.disabled" label="{{tab.title}}" ng-click="vm.changeTab($index%4)">
+            <div class="demo-tab tab" style="padding: 25px; text-align: center; text-align: left;">
+                <div class="md-inline-form">
+                    <div class="form-wrapper md-whiteframe-1dp" flex>
+                        <div class="form-title">{{tab.title}}</div>
+                        <div layout="column" layout-gt-xs="row" flex>
+                            <md-input-container flex="100" flex-gt-xs="50">
+                                <input type="number" name="document_number" ng-model="vm.verticalStepper.step3.document_number[$index%4]" placeholder="Número" ng-required="false">
+                            </md-input-container>
+                            <md-input-container flex="100" flex-gt-xs="50">
+                                <input type="number" name="document_cost" ng-model="vm.verticalStepper.step3.document_cost[$index%4]" placeholder="Valor ($)">
+                            </md-input-container>
+                        </div>
+                        <div layout="column" layout-gt-xs="row" flex>
+                            <md-input-container flex="100" flex-gt-xs="100">
+                                <input type="number" name="document_officeCode" ng-model="vm.verticalStepper.step3.document_officeCode[$index%4]" placeholder="Código de Oficina">
+                            </md-input-container>
+                        </div>
+                        <div layout="column" layout-gt-xs="row" flex>
+                            <md-content flex="100" flex-gt-xs="20">
+                                <label>Fecha de Expedición</label>
+                                <md-datepicker ng-model="vm.verticalStepper.step3.document_expeditionDate[$index%4]" md-placeholder="Seleccione" md-open-on-focus></md-datepicker>
+                            </md-content>
+                            <md-content flex="100" flex-gt-xs="20">
+                                <label>Fecha de Vencimiento</labelh4>
+                                <md-datepicker ng-model="vm.verticalStepper.step3.document_expirationDate[$index%4]" md-placeholder="Seleccione" md-open-on-focus></md-datepicker>
+                            </md-content>
+                        </div>
+                        <!-- ROW -->
+                        <div layout="column" layout-gt-xs="row" flex ng-if="$index%4 === 1">
+                            <md-input-container flex flex-gt-xs="100">
+                                <label>Centro de Diagnósticos</label>
+                                <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.diagnosticsCenter.selectedItem" md-search-text-change="vm.searchTextChange(vm.diagnosticsCenter.searchText)" md-search-text="vm.diagnosticsCenter.searchText" md-selected-item-change="vm.selectedItemChangeWithIndex(itemCenter, $index%4)"
+                                    md-items="itemCenter in vm.querySearch(vm.diagnosticsCenter.searchText, 'center')" md-item-text="itemCenter.display" md-min-length="0" placeholder="">
+                                    <md-item-template>
+                                        <span md-highlight-text="vm.diagnosticsCenter.searchText" md-highlight-flags="^i">{{itemCenter.display}}</span>
+                                    </md-item-template>
+                                    <md-not-found>
+                                        Ningún centro de diagnósticos coincide con
+                                        <<{{vm.diagnosticsCenter.searchText}}>>.
+                                            <a ng-click="vm.newDiagnosticsCenter(vm.diagnosticsCenter.searchText)">¡Crear uno nuevo!</a>
+                                    </md-not-found>
+                                </md-autocomplete>
+                                </md-input-container>
+                        </div>
+                        <div layout="column" layout-gt-xs="row" flex ng-if="$index%4 === 0">
+                            <md-input-container flex flex-gt-xs="100">
+                                <label>Aseguradora</label>
+                                <md-autocomplete md-no-cache="vm.noCache" md-selected-item="vm.insuranceCompany.selectedItem" md-search-text-change="vm.searchTextChange(vm.insuranceCompany.searchText)" md-search-text="vm.insuranceCompany.searchText" md-selected-item-change="vm.selectedItemChangeWithIndex(itemInsurance, $index%4)"
+                                    md-items="itemInsurance in vm.querySearch(vm.insuranceCompany.searchText, 'company')" md-item-text="itemInsurance.display" md-min-length="0" placeholder="">
+                                    <md-item-template>
+                                        <span md-highlight-text="vm.insuranceCompany.searchText" md-highlight-flags="^i">{{itemInsurance.display}}</span>
+                                    </md-item-template>
+                                    <md-not-found>
+                                        Ninguna compañía aseguradora coincide con
+                                        <<{{vm.insuranceCompany.searchText}}>>.
+                                            <a ng-click="vm.newInsuranceCompany(vm.insuranceCompany.searchText)">¡Crear uno nuevo!</a>
+                                    </md-not-found>
+                                </md-autocomplete>
+                            </md-input-container>
+                        </div>
+                        <div layout="column" layout-gt-xs="row" flex>
+                            <md-input-container flex="50" flex-gt-xs="50">
+                                <md-switch ng-model="vm.verticalStepper.step3.document_active[$index%4]" aria-label="Activo">
+                                    ¿Activo? {{vm.verticalStepper.step3.document_active[$index%4] | bool}}
+                                </md-switch>
+                            </md-input-container>
+                        </div>
+                        <!-- <div ng-bind="tab.content"></div>-->
+                    </div>
+                </div>
+            </div>
+        </md-tab>
+    </md-tabs>
+</md-content>
+
+<form name="addTab" layout="column" class="md-padding" style="padding-top: 0;">
+    <div layout="row" layout-sm="column">
+        <div flex style="position: relative;">
+            <h2 class="md-subhead" style="position: absolute; bottom: 0; left: 0; margin: 0; font-weight: 500; text-transform: uppercase; line-height: 35px; white-space: nowrap;">Agregar un nuevo documento: <br/>
+                        <md-button class="md-primary md-raised" ng-click="vm.removeTab( tab )" ng-disabled="true">Eliminar Tipo de Documento</md-button> <!-- ng-disabled="vm.tabs.length <= 1" -->
+                    </h2>
+        </div>
+        <md-input-container>
+            <label for="label">Ingrese el nombre</label>
+            <input type="text" id="label" ng-model="vm.tTitle">
+        </md-input-container>
+        <md-button class="add-tab md-primary md-raised" ng-disabled="!vm.tTitle" ng-click="vm.addTab(vm.tTitle)" style="margin-right: 0;">Agregar Documento</md-button>
+    </div>
+</form>

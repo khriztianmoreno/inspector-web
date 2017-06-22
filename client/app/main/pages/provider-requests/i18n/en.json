@@ -1,0 +1,19 @@
+{
+  "REQUEST_PROVIDER":{
+    "TITLE": "Request new provider",
+    "TOTAL":"Total",
+    "SEARCH":"Search",
+    "ADD": "Add",
+    "DELETE": "Delete",
+    "DETAIL": "Detail",
+    "SAVE": "Save",
+    "TABLE":{
+      "DATE": "Date",
+      "NAME": "Name",
+      "EMAIL": "Email",
+      "PHONE": "Phone",
+      "ACTIVE": "Status",
+      "NO_MANAGMENT": "No management"
+    }
+  }
+}

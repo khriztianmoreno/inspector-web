@@ -1,0 +1,852 @@
+{ 
+    "_id" : ObjectId("58376b13403bf240255b7790"), 
+    "updatedAt" : ISODate("2016-11-20T22:34:59.840+0000"), 
+    "createdAt" : ISODate("2016-11-20T22:34:59.840+0000"), 
+    "inspectionId" : "57ec1aa2ea7093b68ad574fd", 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2", 
+        "channelName" : "SAPCO", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "distributorName" : "SAPCO MEDELLIN"
+    }, 
+    "result" : {
+        "check" : [
+            {
+                "category" : "REVISIÓN LUCES", 
+                "fields" : [
+                    {
+                        "name" : "COLOR LUCES", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES ESTACIONAMIENTO", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES DIRECCIONALES", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES BAJAS Y ALTAS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES MEDIAS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES FRENO", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES REVERSA", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES INTERIORES", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN DIRECCIÓN", 
+                "fields" : [
+                    {
+                        "name" : "JUEGOS Y FIJACIÓN ELEMENTOS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "FUGAS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "GUARDAPOLVOS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "LLANTAS", 
+                "fields" : [
+                    {
+                        "name" : "CAUCHO", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "VIDRIOS", 
+                "fields" : [
+                    {
+                        "name" : "ESPEJOS LATERALES", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "ESPEJOS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }
+        ], 
+        "images" : [
+
+        ]
+    }, 
+    "vehicle" : {
+        "localId" : "582e39528fb233c49e13e9ce", 
+        "plate" : "ABC123", 
+        "class" : "AUTOMOVIL", 
+        "mileage" : NumberInt(1851)
+    }, 
+    "userReview" : {
+        "localId" : "582e30358fb233c49e13e9c5", 
+        "name" : "TECNICO"
+    }, 
+    "cost" : NumberInt(1), 
+    "type" : "PREVENTIVE", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5838655f120aa86b4f2f4d19"), 
+    "updatedAt" : ISODate("2016-11-25T16:22:55.341+0000"), 
+    "createdAt" : ISODate("2016-11-25T16:22:55.341+0000"), 
+    "inspectionId" : "57ec1aa2ea7093b68ad574fd", 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2", 
+        "channelName" : "SAPCO", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "distributorName" : "SAPCO MEDELLIN"
+    }, 
+    "result" : {
+        "check" : [
+            {
+                "category" : "REVISIÓN LUCES", 
+                "fields" : [
+                    {
+                        "name" : "COLOR LUCES", 
+                        "value" : "MALO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES ESTACIONAMIENTO", 
+                        "value" : "MALO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES DIRECCIONALES", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES BAJAS Y ALTAS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES MEDIAS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES FRENO", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES REVERSA", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES INTERIORES", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN DIRECCIÓN", 
+                "fields" : [
+                    {
+                        "name" : "JUEGOS Y FIJACIÓN ELEMENTOS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "FUGAS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "GUARDAPOLVOS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "LLANTAS", 
+                "fields" : [
+                    {
+                        "name" : "CAUCHO", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "VIDRIOS", 
+                "fields" : [
+                    {
+                        "name" : "ESPEJOS LATERALES", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "ESPEJOS", 
+                        "value" : "BUENO", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }
+        ], 
+        "images" : [
+
+        ]
+    }, 
+    "vehicle" : {
+        "localId" : "582e39528fb233c49e13e9ce", 
+        "plate" : "ABC123", 
+        "class" : "AUTOMOVIL", 
+        "mileage" : NumberInt(1970)
+    }, 
+    "userReview" : {
+        "localId" : "582e30358fb233c49e13e9c5", 
+        "name" : "TECNICO"
+    }, 
+    "cost" : NumberInt(1), 
+    "type" : "PREVENTIVE", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5852ef99db4036d0a307ea86"), 
+    "updatedAt" : ISODate("2016-12-15T19:31:37.944+0000"), 
+    "createdAt" : ISODate("2016-12-15T19:31:37.944+0000"), 
+    "inspectionId" : "57acc861ba02509575b00ac1", 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "result" : {
+        "check" : [
+            {
+                "category" : "REVISIÓN LUCES", 
+                "fields" : [
+                    {
+                        "name" : "COLOR LUCES", 
+                        "value" : "FAIL", 
+                        "image" : null, 
+                        "comment" : "estan muy claritas ome."
+                    }, 
+                    {
+                        "name" : "LUCES ESTACIONAMIENTO", 
+                        "value" : "FAIL", 
+                        "image" : null, 
+                        "comment" : "quebradas"
+                    }, 
+                    {
+                        "name" : "LUCES DIRECCIONALES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES BAJAS Y ALTAS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES MEDIAS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES FRENO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES REVERSA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LUCES INTERIORES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN INTERIOR", 
+                "fields" : [
+                    {
+                        "name" : "BOCINA O PITO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "ELEMENTOS DETERIORADOS Y SUELTOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "CINTURONES DE SEGURIDAD", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "SALIDA DE EMERGENCIA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "CHAPAS Y SEGUROS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "SILLAS, CARTERAS Y PORTAEQUIPAJES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "STIKER \"COMO CONDUZCO\"", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "DISPOSITIVO CONTROL DE VELOCIDAD", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "TIMBRE", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN VIDRIOS", 
+                "fields" : [
+                    {
+                        "name" : "ESPEJOS RETROVISORES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "ELEVADORES VIDRIOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LIMPIA PARABRISAS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "PARABRISAS DELANTERO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "VIDRIOS MÓVILES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "VIDRIOS FIJOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "CAMPO VISUAL", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "VIDRIOS TRANSPARENTES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN EXTERIOR", 
+                "fields" : [
+                    {
+                        "name" : "CARROCERÍA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "CHASIS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "PUERTAS, BAÚL Y CAPO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "SISTEMA DE ESCAPE", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "TERCERA PLACA Y LATERALES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "ANCLAJES CONTENEDORES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "SUJECIÓN CARROCERÍA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "PARACHOQUES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "ROCE LLANTAS Y GUARDABARROS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "PELDAÑOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "PUERTAS DE CARGA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN EQUIPO DE CARRETERA", 
+                "fields" : [
+                    {
+                        "name" : "BOTIQUÍN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "EXTINTOR", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "MARTILLOS FRAGMENTACIÓN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "CRUCETA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "CAJA DE HERRAMIENTAS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "GATO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "SEÑALES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "TACOS DE BLOQUEO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LINTERNA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN MOTOR", 
+                "fields" : [
+                    {
+                        "name" : "BATERÍA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "CABLEADO ELÉCTRICO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "FUGAS ACEITE", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "SISTEMA DE REFRIGERACIÓN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "SISTEMA COMBUSTIBLE", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN RINES Y LLANTAS", 
+                "fields" : [
+                    {
+                        "name" : "BANDA RODAMIENTO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "BANDAS LATERALES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "DEFORMACIONES Y FISURA RINES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LABRADO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "LLANTA REPUESTO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "TUERCAS Y PERNOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "RINES Y LLANTAS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN SUSPENSIÓN", 
+                "fields" : [
+                    {
+                        "name" : "BARRA ESTABILIZADORA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "BRAZOS SUSPENSIÓN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "MUELLES, RESORTES, TIJERAS, ESPIRALES, BALLESTAS Y BARRAS DE TORSIÓN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "AMORTIGUADORES", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "ELEMENTOS SUSPENSIÓN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN FRENOS", 
+                "fields" : [
+                    {
+                        "name" : "CILINDRO MANDO", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "FRENO EMERGENCIA", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "FUGAS Y FIJACIÓN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "FUNDAS, CABLES, GUAYAS Y VARILLAS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "RETORNO PEDAL", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "TUBOS Y MANGUERAS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "TAPA LÍQUIDO FRENOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "MORDAZAS Y DISCOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "DEPÓSITOS DE PRESIÓN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "SERVOFRENO (BOOSTER)", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "NIVEL LÍQUIDO FRENOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "VÁLVULA FRENO AIRE", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN TRASMISIÓN", 
+                "fields" : [
+                    {
+                        "name" : "FUGAS ACEITE", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "HOLGURAS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "JUNTAS CARDAN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "PROTECTOR CARDAN", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }, 
+            {
+                "category" : "REVISIÓN DIRECCIÓN", 
+                "fields" : [
+                    {
+                        "name" : "JUEGOS Y FIJACIÓN ELEMENTOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "FUGAS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }, 
+                    {
+                        "name" : "GUARDAPOLVOS", 
+                        "value" : "PASS", 
+                        "image" : null, 
+                        "comment" : null
+                    }
+                ]
+            }
+        ], 
+        "images" : [
+            "https://sapco.blob.core.windows.net/images/582e2e4a8fb233c49e13e9c2-1481830252178.jpeg", 
+            "https://sapco.blob.core.windows.net/images/582e2e4a8fb233c49e13e9c2-1481830252659.jpeg"
+        ]
+    }, 
+    "vehicle" : {
+        "localId" : "582f1ad197ad328ccc2704a0", 
+        "plate" : "ERT123", 
+        "class" : "AUTOMOVIL", 
+        "mileage" : NumberInt(127)
+    }, 
+    "userReview" : {
+        "localId" : "582e30358fb233c49e13e9c5", 
+        "name" : "TECNICO"
+    }, 
+    "cost" : NumberInt(10000), 
+    "type" : "PREVENTIVE", 
+    "__v" : NumberInt(0)
+}

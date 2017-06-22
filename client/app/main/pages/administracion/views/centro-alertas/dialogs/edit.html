@@ -1,0 +1,163 @@
+<!-- DIALOG -->
+<md-dialog class="contact-dialog" aria-label="Warning Form">
+  <form name="alertForm" class="md-inline-form" novalidate ng-submit="vehicleForm.$valid">
+    <!-- DIALOG TOOLBAR -->
+    <md-toolbar class="md-accent md-tall" layout="column">
+      <!-- TOOLBAR TOP -->
+      <div class="md-toolbar-tools md-toolbar-tools-top" layout="row" layout-align="space-between center">
+        <span class="title">{{vm.title}}</span>
+        <md-button class="md-icon-button" ng-click="vm.closeDialog()" aria-label="Close dialog" translate
+          translate-attr-aria-label="CONTACTS.CLOSE_DIALOG">
+          <md-icon md-font-icon="icon-close"></md-icon>
+        </md-button>
+      </div>
+      <!-- / TOOLBAR TOP -->
+      <!-- TOOLBAR MIDDLE -->
+      <div class="md-toolbar-tools md-toolbar-tools-middle" flex layout="column" layout-align="center center">
+        <div layout="column" layout-align="center center">
+          <div class="contact-name">{{vm.warning.name | uppercase}}</div>
+        </div>
+      </div>
+      <!-- / TOOLBAR MIDDLE -->
+    </md-toolbar>
+    <!-- / DIALOG TOOLBAR -->
+    <!-- DIALOG CONTENT -->
+    <md-dialog-content ms-scroll>
+      <div layout="row">
+        <md-input-container class="md-icon-float md-block" flex="50">
+          <label translate="WARNING_CENTER.TYPE">TYpe</label>
+          <md-select ng-model="vm.typeSelected" ng-disabled="!vm.isEditable" required>
+            <md-option ng-selected="vm.warning.type === 'VEHICLE_PART'" value="VEHICLE_PART">
+              <span>Parte del Vehículo</span>
+            </md-option>
+            <md-option ng-selected="vm.warning.type === 'DOCUMENT'" value="DOCUMENT">
+              <span>Documento</span>
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block" flex="50">
+          <label translate="WARNING_CENTER.CLASS">Class</label>
+          <md-select ng-model="vm.classSelected" ng-disabled="!vm.isEditable">
+            <md-option ng-selected="true"><em>TODOS</em></md-option>
+            <md-option ng-value="class"
+              ng-repeat="class in vm.classVehicle"
+              ng-selected="class === vm.warning.vehicleClass ? true : false"  >
+              {{class | uppercase }}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+      <md-input-container class="md-icon-float md-block" ng-if="vm.typeSelected === 'VEHICLE_PART'">
+        <label translate="CONTACTS.NAME_REQUIRED">Name (required)</label>
+        <input name="username" ng-model="vm.warning.name" type="text" required md-autofocus
+          ng-disabled="!vm.isEditable"/>
+        <div ng-messages="contactForm.username.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-icon-float md-block" ng-if="vm.typeSelected === 'DOCUMENT'">
+        <label translate="WARNING_CENTER.DOCUMENTS">Document</label>
+        <md-select ng-model="vm.documentSelected" ng-disabled="!vm.isEditable">
+          <md-option ng-value="document"
+            ng-repeat="document in vm.documents"
+            ng-selected="$first"  >
+            {{document | uppercase }}
+          </md-option>
+        </md-select>
+        <br/>
+      </md-input-container>
+
+      <md-input-container class="md-icon-float md-block">
+        <label translate="WARNING_CENTER.COLOR">Color</label>
+        <color-picker options="vm.colorPickerOptions" ng-model="vm.warning.color"
+          ng-disabled="!vm.isEditable"></color-picker>
+        <div ng-messages="alertForm.color.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+        <br/>
+      </md-input-container>
+      <md-input-container class="md-icon-float md-block" ng-if="vm.typeSelected === 'VEHICLE_PART'">
+        <label translate="WARNING_CENTER.MILLAGE">MILLAGE</label>
+        <input name="millage" ng-model="vm.warning.mileage" type="number"
+          ng-disabled="!vm.isEditable" required />
+        <div ng-messages="alertForm.millage.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-icon-float md-block" ng-if="vm.typeSelected === 'DOCUMENT'">
+        <label translate="WARNING_CENTER.DAYS">DAYS</label>
+        <input name="days" ng-model="vm.warning.days"
+          ng-disabled="!vm.isEditable" type="number" required />
+        <div ng-messages="alertForm.days.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+      </md-input-container>
+
+      <!-- ADMIN -->
+      <md-input-container class="md-icon-float md-block" ng-if="vm.showAdmin">
+        <md-icon md-font-icon="icon-clipboard"></md-icon>
+        <label translate="CUSTOMERS.CONTACTS">CUstomer</label>
+        <md-icon></md-icon>
+        <md-select name="customerSelected" ng-model="vm.customerSelected"  style="min-width: 200px;" >
+          <md-option ng-value="customer"
+            ng-repeat="customer in vm.customerRoots"
+            ng-selected="$first"
+            >
+            {{customer.name | uppercase}}
+          </md-option>
+        </md-select>
+        <div ng-messages="contactForm.customerSelected.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+        <br/>
+      </md-input-container>
+
+      <!-- CDA -->
+      <md-input-container class="md-icon-float md-block" ng-if="vm.showCda">
+        <md-icon md-font-icon="icon-clipboard"></md-icon>
+        <label translate="CUSTOMERS.CONTACTS">CUstomer</label>
+        <md-icon></md-icon>
+        <md-select name="customerSelected" ng-model="vm.customerSelected"  style="min-width: 200px;" >
+          <md-option ng-value="customer"
+            ng-repeat="customer in vm.customerChannels"
+            ng-selected="customer.name === vm.contact.customer.channelName ? true : false"
+            >
+            {{customer.name}}
+          </md-option>
+        </md-select>
+        <div ng-messages="contactForm.customerSelected.$error">
+          <div ng-message="required">Esto es necesario.</div>
+        </div>
+        <br/>
+      </md-input-container>
+
+
+
+    </md-dialog-content>
+    <!-- / DIALOG CONTENT -->
+    <!-- DIALOG ACTIONS -->
+    <md-dialog-actions layout="row" layout-align="space-between center">
+      <div layout="row" layout-align="start center">
+        <md-button class="md-icon-button" ng-click="vm.deleteContactConfirm($event)" aria-label="Delete"
+          translate translate-attr-aria-label="CONTACTS.DELETE">
+          <md-icon md-font-icon="icon-delete"></md-icon>
+          <md-tooltip md-direction="right">
+            <span translate="CONTACTS.DELETE">DELETE</span>
+          </md-tooltip>
+        </md-button>
+      </div>
+      <div layout="row">
+        <md-button type="submit" ng-if="vm.isEditable" ng-click="vm.saveAlert()"
+          class="send-button md-accent md-raised"
+          ng-disabled="alertForm.$invalid || alertForm.$pristine "
+          aria-label="SAVE" translate="CONTACTS.SAVE" translate-attr-aria-label="CONTACTS.SAVE">
+          SAVE
+        </md-button>
+      </div>
+    </md-dialog-actions>
+    <!-- / DIALOG ACTIONS -->
+  </form>
+</md-dialog>
+<!-- / DIALOG -->

@@ -1,0 +1,99 @@
+<div id="service--edit--dialog">
+  <!-- DIALOG -->
+  <md-dialog class="contact-dialog" aria-label="New Task">
+    <form name="contactForm" class="md-inline-form" novalidate ng-submit="vehicleForm.$valid">
+      <!-- DIALOG TOOLBAR -->
+      <md-toolbar class="md-accent md-tall" layout="column">
+        <!-- TOOLBAR TOP -->
+        <div class="md-toolbar-tools md-toolbar-tools-top" layout="row" layout-align="space-between center">
+          <span class="title">{{vm.title}}</span>
+          <md-button class="md-icon-button" ng-click="vm.closeDialog()" aria-label="Close dialog" translate translate-attr-aria-label="CONTACTS.CLOSE_DIALOG">
+            <md-icon md-font-icon="icon-close"></md-icon>
+          </md-button>
+        </div>
+        <!-- / TOOLBAR TOP -->
+        <!-- TOOLBAR MIDDLE -->
+        <div class="md-toolbar-tools md-toolbar-tools-middle" flex layout="column" layout-align="center center">
+          <div layout="column" layout-align="center center">
+            <div class="contact-name">{{vm.service.name}}</div>
+          </div>
+        </div>
+        <!-- / TOOLBAR MIDDLE -->
+      </md-toolbar>
+      <!-- / DIALOG TOOLBAR -->
+      <!-- DIALOG CONTENT -->
+      <md-dialog-content ms-scroll>
+        <form action="serviceForm">
+          <div layout-gt-sm="row" layout-align="start center">
+            <md-input-container class="md-icon-float md-block" flex="70">
+              <label translate="PROVIDER.SERVICE.NAME">Name</label>
+              <md-icon md-font-icon="icon-account" class="name"></md-icon>
+              <input name="name" ng-model="vm.service.name" type="text" required md-autofocus />
+              <div ng-messages="serviceForm.name.$error">
+                <div ng-message="required">Esto es necesario.</div>
+              </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+              <label translate="PROVIDER.SERVICE.COST">COST</label>
+              <md-icon md-font-icon="icon-currency-usd" class="name"></md-icon>
+              <input name="cost" type="number" ng-model="vm.service.cost" required />
+              <div ng-messages="serviceForm.cost.$error">
+                <div ng-message="required">Esto es necesario.</div>
+              </div>
+            </md-input-container>
+          </div>
+          <md-input-container class="md-icon-float md-block">
+            <md-icon md-font-icon="icon-clipboard-account"></md-icon>
+            <label translate="PROVIDER.SERVICE.TYPE">Categoria</label>
+            <md-icon></md-icon>
+            <md-select name="customerType" ng-model="vm.service.type"  >
+              <md-option ng-value="type" ng-repeat="type in vm.serviceType track by $index"
+                ng-selected="(vm.service.type === type ? true : false) || $first">
+                {{ ('PROVIDER.SERVICE.' + type) | translate | uppercase   }}
+              </md-option>
+            </md-select>
+            <br/>
+            <div ng-messages="serviceForm.description.$error" ng-show="serviceForm.description.$dirty">
+              <div ng-message="required">Esto es necesario.</div>
+              <div ng-message="md-maxlength">No puedes exceder los 150 caracteres.</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-icon-float md-block">
+            <label translate="PROVIDER.SERVICE.DESCRIPTION">DESCRIPTION</label>
+            <textarea name="description" ng-model="vm.service.description" 
+              required md-maxlength="500" maxlength="500">
+            </textarea>
+            <div ng-messages="serviceForm.description.$error" ng-show="serviceForm.description.$dirty">
+              <div ng-message="required">Esto es necesario.</div>
+              <div ng-message="md-maxlength">No puedes exceder los 150 caracteres.</div>
+            </div>
+          </md-input-container>
+        </form>
+      </md-dialog-content>
+      <!-- / DIALOG CONTENT -->
+      <!-- DIALOG ACTIONS -->
+      <md-dialog-actions layout="row" layout-align="space-between center">
+        <div layout="row" layout-align="start center">
+          <md-button class="md-icon-button" ng-click="vm.deleteContactConfirm($event)" aria-label="Delete" translate translate-attr-aria-label="CONTACTS.DELETE">
+            <md-icon md-font-icon="icon-delete"></md-icon>
+            <md-tooltip><span translate="CONTACTS.DELETE">DELETE</span></md-tooltip>
+          </md-button>
+        </div>
+        <div layout="row">
+          <md-button type="submit" ng-if="vm.newService" ng-click="vm.addService()" class="send-button md-accent md-raised" 
+            ng-disabled="serviceForm.$invalid || serviceForm.$pristine"
+            aria-label="SAVE" translate="PROVIDER.SERVICE.ADD" translate-attr-aria-label="PROVIDER.SERVICE.ADD">
+            ADD SERVICE
+          </md-button>
+          <md-button type="submit" ng-if="!vm.newService" ng-click="vm.updateService()" class="send-button md-accent md-raised" 
+            ng-disabled="serviceForm.$invalid || serviceForm.$pristine || serviceForm.$isEmpty "
+            aria-label="Add Task" translate="PROVIDER.SERVICE.UPDATE" translate-attr-aria-label="PROVIDER.SERVICE.UPDATE">
+            SERVICE UPDATE
+          </md-button>
+        </div>
+      </md-dialog-actions>
+      <!-- / DIALOG ACTIONS -->
+    </form>
+  </md-dialog>
+  <!-- / DIALOG -->
+</div>

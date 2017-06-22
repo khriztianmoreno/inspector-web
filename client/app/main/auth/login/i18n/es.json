@@ -1,0 +1,24 @@
+{
+    "LOGIN": {
+        "INTRO_TITLE": "Bienvenido a MOBI Business!",
+        "INTRO_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum pellentesque. Sed mollis velit facilisis facilisis viverra.",
+        "TITLE": "Ingresa a tu cuenta",
+        "DESCRIPTION": "Sed mollis velit facilisis facilisis viverra",
+        "EMAIL": "Email",
+        "PASSWORD": "Contraseña",
+        "REMEMBER_ME": "Recordarme",
+        "FORGOT_PASSWORD": "¿Se te olvidó tu contraseña?",
+        "LOG_IN": "INICIAR SESIÓN",
+        "OR": "OR",
+        "WITH_GOOGLE": "Log in with Google",
+        "WITH_FACEBOOK": "Log in with Facebook",
+        "DONT_HAVE_ACCOUNT": "Don't have an account?",
+        "CREATE_ACCOUNT": "Create an account",
+        "ERRORS": {
+            "EMAIL_REQUIRED": "Se requiere campo de correo electrónico",
+            "EMAIL_MUST_VALID": "El email debe ser una dirección de correo electrónico válida",
+            "PASSWORD_REQUIRED": "Se requiere campo de contraseña",
+            "NO_LOGIN" : "Correo o contraseña no válidas."
+        }
+    }
+}

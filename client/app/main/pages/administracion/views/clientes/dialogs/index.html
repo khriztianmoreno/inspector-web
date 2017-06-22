@@ -1,0 +1,78 @@
+<div id="detalles-vehiculo" class="page-layout simple tabbed" layout="column">
+
+  <!-- HEADER -->
+  <div class="header md-accent-bg" layout="row" layout-align="start center">
+    <div class="white-fg" layout="row" layout-align="start center" flex>
+      <md-button class="goto-products-button md-icon-button" aria-label="Go to customers"
+        ng-click="vm.goToCustomers()"
+        translate translate-attr-aria-label="EC.GO_TO_PRODUCTS">
+        <md-icon md-font-icon="icon-arrow-left"></md-icon>
+      </md-button>
+      <div layout="row" layout-align="start center">
+        <div layout="column" layout-align="start start">
+          <div class="h2">
+            <span translate="CUSTOMERS.CONTACTS">Customer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / HEADER -->
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <md-tabs md-selected="vm.selectedIndex" md-dynamic-height md-border-bottom>
+
+          <md-tab ng-disabled="vm.customerLocked">
+            <md-tab-label>
+              <span>Cliente</span>
+            </md-tab-label>
+            <md-tab-body>
+              <md-content class="md-padding">
+                <div ng-if="vm.loading" layout="row" layout-align="center">
+                  <md-progress-circular class="md-accent md-hue-1" md-diameter="60">
+                  </md-progress-circular>
+                </div>
+                <h3>Ingrese la información del cliente que vas a crear.</h3>
+                <br/>
+                <form name="contactForm" class="md-inline-form" novalidate>
+                  <div ng-include="'app/main/pages/administracion/views/clientes/dialogs/contact/contact.html'"></div>
+                </form>
+              </md-content>
+            </md-tab-body>
+          </md-tab>
+
+          <md-tab ng-disabled="vm.userLocked">
+            <md-tab-label>
+              <span>Usuario</span>
+            </md-tab-label>
+            <md-tab-body>
+              <md-content class="md-padding">
+                <h3>Ahora ingresa la información del usuario para: </h3>
+                <br/>
+                <form name="userForm" class="md-inline-form" novalidate>
+                  <div ng-include="'app/main/pages/administracion/views/clientes/dialogs/user/user.html'"></div>
+                </form>
+              </md-content>
+            </md-tab-body>
+          </md-tab>
+          <!--<md-tab ng-disabled="vm.vehicleLocked">
+            <md-tab-label>
+              <span>Vehículo</span>
+            </md-tab-label>
+            <md-tab-body>
+              <md-content class="md-padding">
+                <h3 translate="VEHICLES.BASIC_INFO">Basic Info</h3>
+                <div ng-include="'app/main/pages/administracion/views/clientes/dialogs/vehicle/vehicle.html'"></div>
+              </md-content>
+            </md-tab-body>
+          </md-tab>-->
+
+
+        </md-tabs>
+
+    </div>
+    <!-- / CONTENT -->
+
+</div>

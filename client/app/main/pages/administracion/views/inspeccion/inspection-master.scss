@@ -1,0 +1,36 @@
+#inspection--master {
+  .page-layout.carded.left-sidenav > .sidenav .content {
+    padding: 0 !important;
+  }
+
+  .page-layout.carded.left-sidenav > .sidenav._md-locked-open {
+      width: 220px;
+      min-width: 200px;
+      max-width: 220px;
+      z-index: 2;
+      background: transparent;
+      box-shadow: none;
+  }
+
+  .page-layout.carded.left-sidenav > .center .content-card .toolbar {
+    padding: 8px 24px;
+    min-height: 100px !important;
+    max-height: 64px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+
+}
+
+.color-picker-input-wrapper{
+  width: 100% !important;
+}
+
+.color-picker-wrapper{
+  width: 400px;
+}
+
+
+.demo-sidenav .add-category-button {
+  padding: 5px 32px 5px;
+}

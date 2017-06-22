@@ -1,0 +1,122 @@
+{
+    "data": {
+        "id": "32gfhaf2",
+        "name": "ACME Frontend Application",
+        "uri": "acme-frontend-application",
+        "settings": {
+            "color": "",
+            "subscribed": false,
+            "cardCoverImages": true
+        },
+        "trackings": [
+        { 
+            "id" : "583f40b332236f1d443b468d", 
+            "updatedAt" : "2016-11-30T21:12:19.042+0000", 
+            "createdAt" : "2016-11-30T21:12:19.042+0000", 
+            "warning" : {
+                "name" : "MOTOR", 
+                "localId" : "58331424cd46817d30f36a95", 
+                "color" : "#0EC1BE", 
+                "type" : "VEHICLE_PART", 
+                "periodicity" : "2000", 
+                "nextReviewMileage" : "3970", 
+                "nextReviewDate" : "0", 
+                "actualMileage" : "1970", 
+                "dateReview" : "2016-11-30T21:12:19.019+0000"
+            }, 
+            "description" : "null", 
+            "customer" : {
+                "localName" : "RENTING", 
+                "localId" : "582e33d88fb233c49e13e9c7", 
+                "distributorName" : "SAPCO MEDELLIN", 
+                "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+                "channelName" : "SAPCO", 
+                "channelId" : "582e2e4a8fb233c49e13e9c2"
+            }, 
+            "provider" : "null", 
+            "attachments" : [
+
+            ], 
+            "comments" : [
+
+            ], 
+            "historyStatus" : [
+                {
+                    "id" : "1", 
+                    "name" : "PENDING", 
+                    "color" : "#0EC1BE", 
+                    "user" : {
+                        "localId" : "0000", 
+                        "name" : "MOBI BUSINESS"
+                    }, 
+                    "time" : "2016-11-30T21:12:19.010+0000"
+                }
+            ], 
+            "active" : "true", 
+            "currentStatus" : {
+                "id" : "1", 
+                "name" : "PENDING"
+            }, 
+            "vehicle" : {
+                "localId" : "582e39528fb233c49e13e9ce", 
+                "plate" : "ABC123"
+            }, 
+            "__v" :"0"
+        },
+        { 
+            "id" : "583f4c790521302f95540b12", 
+            "updatedAt" : "2016-11-30T22:02:34.000+0000", 
+            "createdAt" : "2016-11-30T22:02:34.000+0000", 
+            "warning" : {
+                "name" : "MOTOR", 
+                "localId" : "58331424cd46817d30f36a95", 
+                "color" : "#0EC1BE", 
+                "type" : "VEHICLE_PART", 
+                "periodicity" : "2000", 
+                "nextReviewMileage" : "3970", 
+                "nextReviewDate" : "0", 
+                "actualMileage" : "1970", 
+                "dateReview" : "2016-11-30T22:02:33.971+0000"
+            }, 
+            "description" : "null", 
+            "customer" : {
+                "localName" : "RENTING", 
+                "localId" : "582e33d88fb233c49e13e9c7", 
+                "distributorName" : "SAPCO MEDELLIN", 
+                "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+                "channelName" : "SAPCO", 
+                "channelId" : "582e2e4a8fb233c49e13e9c2"
+            }, 
+            "provider" : "null", 
+            "attachments" : [
+
+            ], 
+            "comments" : [
+
+            ], 
+            "historyStatus" : [
+                {
+                    "id" : "1", 
+                    "name" : "PENDING", 
+                    "color" : "#0EC1BE", 
+                    "user" : {
+                        "localId" : "0000", 
+                        "name" : "MOBI BUSINESS"
+                    }, 
+                    "time" : "2016-11-30T22:02:33.954+0000"
+                }
+            ], 
+            "active" : "true", 
+            "currentStatus" : {
+                "id" : "1", 
+                "name" : "PENDING"
+            }, 
+            "vehicle" : {
+                "localId" : "582e39528fb233c49e13e9ce", 
+                "plate" : "ABC123"
+            }, 
+            "__v" : "0"
+        }
+        ]
+    }
+}

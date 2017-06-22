@@ -1,0 +1,107 @@
+<div id="e-commerce-orders" class="page-layout carded fullwidth" layout="row">
+  <!-- TOP BACKGROUND -->
+  <div class="top-bg md-accent-bg"></div>
+  <!-- / TOP BACKGROUND -->
+  <!-- CENTER -->
+  <div class="center" layout="column" flex>
+    <!-- CONTENT HEADER -->
+    <div class="header" layout="row" layout-align="space-between center">
+      <div class="white-fg" layout="column" layout-align="start start">
+        <div class="h1" layout="row" layout-align="start center">
+          <md-icon md-font-icon="icon-cart-outline"></md-icon>
+          <span translate="ORDERS.TITLE">Orders</span>
+        </div>
+        <div class="order-count secondary-text">
+          <span translate="ORDERS.TOTAL_ORDERS">Total orders:</span>
+          <span>{{vm.orders.length}}</span>
+        </div>
+      </div>
+      <div class="search" layout="row" layout-align="start center" flex>
+        <md-icon md-font-icon="icon-magnify" class="white-text icon search-icon"></md-icon>
+        <input ng-model="vm.search" id="e-commerce-products-search" class="search-input" type="text" placeholder="Search" 
+            translate translate-attr-placeholder="ORDERS.SEARCH"flex>
+      </div>
+    </div>
+    <!-- / CONTENT HEADER -->
+    <!-- CONTENT CARD -->
+    <div class="content-card" layout="column" flex>
+      <!-- CONTENT TOOLBAR -->
+      <!-- / CONTENT TOOLBAR -->
+      <!-- CONTENT -->
+      <div class="content" layout="column" flex>
+        <scrollable-table watch="visibleProjects">
+          <table class="dataTable row-border hover">
+            <thead>
+              <tr>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title" translate="ORDERS.TABLE.HEARQUARTER">Hearquarter</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title" translate="ORDERS.TABLE.REFERENCE">Reference</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title" translate="ORDERS.TABLE.SERVICE">Service</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title" translate="ORDERS.TABLE.NAME">Name</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title" translate="ORDERS.TABLE.PHONE">Phone</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title" translate="ORDERS.TABLE.STATUS">Status</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title" translate="ORDERS.TABLE.DATE">Date</span>
+                  </div>
+                </th>
+                <th class="secondary-text">
+                  <div class="table-header">
+                    <span class="column-title" translate="ORDERS.TABLE.ACTIONS">Actions</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="order in vm.orders | filter:vm.search" row-id="{{ order._id }}">
+                <td>{{::order.provider.distributorName}}</td>
+                <td>{{::order.reference}}</td>
+                <td>{{::order.service.name}}</td>
+                <td>{{::order.customer.name}}</td>
+                <td>{{::order.customer.phone}}</td>
+                <td>
+                    <span ng-if="order.status === 'ACCEPTED'" class="status md-green-500-bg">{{order.status}}</span>
+                    <span ng-if="order.status === 'PENDING'" class="status md-purple-300-bg">{{order.status}}</span>
+                    <span ng-if="order.status === 'CANCELED'" class="status md-red-900-bg">{{order.status}}</span>
+                </td>
+                <td class="date">{{order.createdAt | date:'medium'}}</td>
+                <td>
+                  <md-button class="edit-button md-icon-button" ng-click="vm.managmentOrder($event, order)" aria-label="Order details" translate
+                    translate-attr-aria-label="ORDER.ORDER_DETAILS">
+                    <md-icon md-font-icon="icon-dots-horizontal" class="s16"></md-icon>
+                  </md-button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </scrollable-table>
+      </div>
+      <!-- / CONTENT -->
+    </div>
+    <!-- / CONTENT CARD -->
+  </div>
+  <!-- / CENTER -->
+</div>

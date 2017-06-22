@@ -1,0 +1,28 @@
+{
+  "ORDERS": {
+    "TITLE": "Ordenes de servicio",
+    "TOTAL_ORDERS": "Total Ordenes",
+    "SEARCH": "Buscar",
+    "ORDER_DETAILS": "Detalle de la orden",
+    "CLOSE_DIALOG": "Cerrar ventana",
+    "TABLE": {
+      "HEARQUARTER": "Sede",
+      "REFERENCE": "Referencia",
+      "SERVICE": "Servicio",
+      "NAME": "Cliente",
+      "PHONE": "Teléfono",
+      "STATUS": "Estado",
+      "DATE": "Fecha",
+      "ACTIONS": "Acciones"
+    },
+    "DIALOG": {
+      "CUSTOMER_NAME": "Cliente",
+      "CUSTOMER_EMAIL": "Email",
+      "CUSTOMER_PHONE": "Teléfono",
+      "COMMENT": "Comentarios",
+      "STATUS": "Estado",
+      "SAVE": "Guardar",
+      "CANCEL": "Cancelar"
+    }
+  }
+}

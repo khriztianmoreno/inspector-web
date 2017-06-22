@@ -1,0 +1,100 @@
+{ 
+    "_id" : ObjectId("58331424cd46817d30f36a95"), 
+    "updatedAt" : ISODate("2016-11-22T15:03:28.072+0000"), 
+    "createdAt" : ISODate("2016-11-21T15:35:00.217+0000"), 
+    "name" : "MOTOR", 
+    "color" : "#0EC1BE", 
+    "mileage" : NumberInt(2000), 
+    "vehicleClass" : "TODOS", 
+    "type" : "VEHICLE_PART", 
+    "active" : true, 
+    "__v" : NumberInt(0), 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }
+}
+{ 
+    "_id" : ObjectId("583314e7cd46817d30f36a97"), 
+    "updatedAt" : ISODate("2016-11-22T15:04:45.360+0000"), 
+    "createdAt" : ISODate("2016-11-21T15:38:15.656+0000"), 
+    "color" : "#7B16EF", 
+    "days" : NumberInt(10), 
+    "vehicleClass" : "AUTOMOVIL", 
+    "name" : "SOAT", 
+    "type" : "DOCUMENT", 
+    "active" : true, 
+    "__v" : NumberInt(0), 
+    "customer" : {
+        "localName" : "RENTING", 
+        "localId" : "582e33d88fb233c49e13e9c7", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }
+}
+{ 
+    "_id" : ObjectId("583462eb9af5c00377280f3d"), 
+    "updatedAt" : ISODate("2016-11-22T15:23:23.331+0000"), 
+    "createdAt" : ISODate("2016-11-22T15:23:23.331+0000"), 
+    "name" : "SUSPENSION", 
+    "color" : "#0EEA3F", 
+    "mileage" : NumberInt(1800), 
+    "vehicleClass" : "CAMION", 
+    "customer" : {
+        "localName" : "SAPCO", 
+        "localId" : "582e2e4a8fb233c49e13e9c2", 
+        "distributorName" : null, 
+        "distributorId" : null, 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "type" : "VEHICLE_PART", 
+    "active" : true, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5834723bd18fb40a17c96b67"), 
+    "updatedAt" : ISODate("2016-11-22T16:28:44.037+0000"), 
+    "createdAt" : ISODate("2016-11-22T16:28:44.037+0000"), 
+    "color" : "#B212D4", 
+    "days" : NumberInt(4), 
+    "vehicleClass" : "AUTOMOVIL", 
+    "name" : "GAS", 
+    "customer" : {
+        "localName" : "SAPCO", 
+        "localId" : "582e2e4a8fb233c49e13e9c2", 
+        "distributorName" : null, 
+        "distributorId" : null, 
+        "channelName" : "SAPCO", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "type" : "DOCUMENT", 
+    "active" : true, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583474abd18fb40a17c96b68"), 
+    "updatedAt" : ISODate("2016-11-22T16:39:07.248+0000"), 
+    "createdAt" : ISODate("2016-11-22T16:39:07.248+0000"), 
+    "name" : "PISTONES", 
+    "color" : "#EF4D13", 
+    "mileage" : NumberInt(1800), 
+    "vehicleClass" : "TODOS", 
+    "customer" : {
+        "localName" : "SAPCO MEDELLIN", 
+        "localId" : "582e2e4a8fb233c49e13e9c3", 
+        "distributorName" : "SAPCO MEDELLIN", 
+        "distributorId" : "582e2e4a8fb233c49e13e9c3", 
+        "channelName" : "SAPCO COLOMBIA", 
+        "channelId" : "582e2e4a8fb233c49e13e9c2"
+    }, 
+    "type" : "VEHICLE_PART", 
+    "active" : true, 
+    "__v" : NumberInt(0)
+}

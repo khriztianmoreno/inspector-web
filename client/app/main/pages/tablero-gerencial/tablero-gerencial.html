@@ -1,0 +1,127 @@
+<div id="tablero-gerencial" class="page-layout simple doc-page" layout="row">
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+    <!-- CONTENT -->
+    <div class="content">
+      <!-- WIDGET GROUP -->
+      <div class="widget-group" layout="row" flex="100" layout-wrap>
+        <!-- WIDGET 1 -->
+        <ms-widget flippable="true" layout="column" flex="100" flex-gt-xs="50" flex-gt-md="25">
+          <!-- Reviews Today -->
+          <ms-widget-front class="white-bg">
+            <div class="ph-8 pv-16 h-55" layout="row" layout-align="space-between center">
+              <span class="font-size-16" translate="DASHBOARD.TODAY">TODAY</span>
+            </div>
+            <div class="pt-8 pb-32" layout="column" layout-align="center center">
+              <div class="light-blue-fg font-size-30 line-height-72">
+                {{vm.dashBoard.countToday}}
+              </div>
+              <div class="h3 secondary-text font-weight-500">
+                <span translate="DASHBOARD.REVIEWS">Reviews</span>
+              </div>
+            </div>
+            <!--<div class="p-16 grey-50-bg border-top" layout="row" layout-align="start center">
+              <span class="h4 secondary-text text-truncate">{{vm.widget1.data.extra.label}}:</span>
+              <span class="h4 ml-8">{{vm.widget1.data.extra.count[vm.widget1.currentRange]}}</span>
+            </div>-->
+          </ms-widget-front>
+          <!-- / Reviews Today  -->
+        </ms-widget>
+        <!-- / WIDGET 1 -->
+        <!-- WIDGET 2 -->
+        <ms-widget flippable="true" layout="column" flex="100" flex-gt-xs="50" flex-gt-md="25">
+          <!-- Front -->
+          <ms-widget-front class="white-bg">
+            <div class="pl-16 pr-8 pv-16 h-55" layout="row" layout-align="space-between center">
+              <span class="font-size-16" translate="DASHBOARD.MONTH">MONTH</span>
+            </div>
+            <div class="pt-8 pb-32" layout="column" layout-align="center center">
+              <div class="red-fg font-size-30 line-height-72">
+                {{vm.dashBoard.countMonthly}}
+              </div>
+              <div class="h3 secondary-text font-weight-500">
+                <span translate="DASHBOARD.REVIEWS">Reviews</span>
+              </div>
+            </div>
+            <!--<div class="p-16 grey-50-bg border-top" layout="row" layout-align="start center">
+              <span class="h4 secondary-text text-truncate">{{vm.widget2.data.extra.label}}:</span>
+              <span class="h4 ml-8">{{vm.widget2.data.extra.count}}</span>
+            </div>-->
+          </ms-widget-front>
+          <!-- / Front -->
+        </ms-widget>
+        <!-- / WIDGET 2 -->
+        <!-- WIDGET 3 -->
+        <ms-widget flippable="true" layout="column" flex="100" flex-gt-xs="50" flex-gt-md="25">
+          <!-- Front -->
+          <ms-widget-front class="white-bg">
+            <div class="pl-16 pr-8 pv-16 h-55" layout="row" layout-align="space-between center">
+              <span class="font-size-16" translate="DASHBOARD.TODAY">TODAY</span>
+            </div>
+            <div class="pt-8 pb-32" layout="column" layout-align="center center">
+              <div class="orange-fg font-size-30 line-height-72">
+                {{vm.dashBoard.costToday | currency:"$":0}}
+              </div>
+              <div class="h3 secondary-text font-weight-500">
+                <span translate="DASHBOARD.PAYMENT">PAYMENT</span>
+              </div>
+            </div>
+            <!--<div class="p-16 grey-50-bg border-top" layout="row" layout-align="start center">
+              <span class="h4 secondary-text text-truncate">{{vm.widget3.data.extra.label}}:</span>
+              <span class="h4 ml-8">{{vm.widget3.data.extra.count}}</span>
+            </div>-->
+          </ms-widget-front>
+          <!-- / Front -->
+        </ms-widget>
+        <!-- / WIDGET 3 -->
+        <!-- WIDGET 4 -->
+        <ms-widget flippable="true" layout="column" flex="100" flex-gt-xs="50" flex-gt-md="25">
+          <!-- Front -->
+          <ms-widget-front class="white-bg">
+            <div class="pl-16 pr-8 pv-16 h-55" layout="row" layout-align="space-between center">
+              <span class="font-size-16" translate="DASHBOARD.MONTH">MONTH</span>
+            </div>
+            <div class="pt-8 pb-32" layout="column" layout-align="center center">
+              <div class="blue-grey-fg font-size-30 line-height-72">
+                {{vm.dashBoard.costMonthly | currency:"$":0}}
+              </div>
+              <div class="h3 secondary-text font-weight-500">
+                <span translate="DASHBOARD.PAYMENT">PAYMENT</span>
+              </div>
+            </div>
+            <!--<div class="p-16 grey-50-bg border-top" layout="row" layout-align="start center">
+              <span class="h4 secondary-text text-truncate">{{vm.widget4.data.extra.label}}:</span>
+              <span class="h4 ml-8">{{vm.widget4.data.extra.count}}</span>
+            </div>-->
+          </ms-widget-front>
+          <!-- / Front -->
+        </ms-widget>
+        <!-- / WIDGET 4 -->
+        <!-- Line Chart -->
+        <div class="widget-group" layout="row" flex="100" layout-wrap>
+          <ms-widget layout="row" flex="100">
+            <ms-widget-front class="white-bg">
+              <div class="ph-16 pv-8 border-bottom" layout="row" layout-align="space-between center"
+                layout-wrap>
+                <div class="pv-8 h3">
+                  <span translate="DASHBOARD.REVIEWS_BY_DAY">Reviews by days</span>
+                </div>
+              </div>
+              <div layout="row" layout-align="start center" layout-wrap>
+                <div class="p-16" layout="row" flex="100">
+                  <canvas id="line" class="chart chart-line" chart-data="vm.lineChart.data"
+                    chart-labels="vm.lineChart.labels" chart-legend="true" chart-series="vm.lineChart.series" chart-options="vm.lineChart.options">
+                  </canvas>
+                </div>
+              </div>
+            </ms-widget-front>
+          </ms-widget>
+        </div>
+        <!-- / Line Chart -->
+      </div>
+      <!-- / WIDGET GROUP -->
+    </div>
+    <!-- / CONTENT -->
+  </div>
+  <!-- / CENTER -->
+</div>

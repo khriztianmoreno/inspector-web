@@ -1,0 +1,120 @@
+<div id="e-commerce-product" class="page-layout simple tabbed" layout="column">
+  <!-- HEADER -->
+  <div class="header md-accent-bg" layout="row" layout-align="start center">
+    <div class="white-fg" layout="row" layout-align="start center" flex>
+      <md-button class="goto-products-button md-icon-button" aria-label="Go to products" ng-click="vm.gotoProducts()" translate
+        translate-attr-aria-label="PROMOTION.GO_TO_PRODUCTS">
+        <md-icon md-font-icon="icon-arrow-left"></md-icon>
+        </md-button>
+        <div layout="row" layout-align="start center">
+          <div class="product-image" hide-xs>
+            <img ng-src="{{vm.promotion.image}}">
+          </div>
+          <div layout="column" layout-align="start start">
+            <div class="h2">
+              {{vm.promotion.name}}
+            </div>
+            <div class="subtitle secondary-text">
+              <span translate="PROMOTION.PROMOTION_DETAIL">Product Detail</span>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div>
+      <md-button class="md-raised md-background" type="submit" ng-click="vm.savePromotion()"
+        ng-disabled="promotionForm.$invalid || promotionForm.$pristine || promotionForm.$isEmpty ">
+        <span translate="PROMOTION.SAVE">SAVE</span>
+      </md-button>
+    </div>
+  </div>
+  <!-- / HEADER -->
+  <!-- CONTENT -->
+  <div class="content">
+    <md-tabs md-dynamic-height>
+      <md-tab>
+        <md-tab-label>
+          <span translate="PROMOTION.BASIC_INFO">Basic Info</span>
+        </md-tab-label>
+        <md-tab-body>
+          <div class="product-detail-form-container md-background-bg md-whiteframe-1dp">
+            <form name="promotionForm">
+              <md-input-container class="md-block">
+                <label translate="PROMOTION.PROMOTION_NAME">Product Name</label>
+                <input type="text" ng-model="vm.promotion.name" required />
+              </md-input-container>
+              <md-input-container class="md-block">
+                <label translate="PROMOTION.PROMOTION_DESCRIPTION">Description</label>
+                <textarea ng-model="vm.promotion.description" md-maxlength="500"
+                  rows="5" md-select-on-focus maxlength="500" required >
+                </textarea>
+              </md-input-container>
+              <md-input-container class="md-block">
+                <label translate="PROMOTION.URL">Product Name</label>
+                <input type="url" ng-model="vm.promotion.image" required />
+              </md-input-container>
+
+              <!-- Country managers -->
+              <div layout="row" layout-xs="column" flex ng-show="vm.currentUser().role === 'country Manager'">
+                <md-input-container class="md-block" flex="50">
+                  <label translate="PROMOTION.COUNTRY">COUNTRY</label>
+                  <md-select ng-model="vm.selectedCountry">
+                    <md-option ng-repeat="country in vm.countries"
+                      ng-selected="country.alpha2Code.toUpperCase() === vm.promotion.country ? true : false || $first" 
+                      ng-value="{{country}}"value="{{country}}"
+                    >
+                      {{country.name | uppercase}}
+                    </md-option>
+                  </md-select>
+                  <br/>
+                </md-input-container>
+                <md-input-container class="md-block" flex="50">
+                  <label translate="PROMOTION.CATEGORY">Category</label>
+                  <md-select ng-model="vm.selectedCategory">
+                    <md-option ng-repeat="category in vm.categories"
+                      ng-selected="category === vm.promotion.category ? true : false || $first" value="{{category}}">
+                      {{category}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+              </div>
+              <!-- providers -->
+              <div layout="row" layout-xs="column"  ng-show="vm.currentUser().role === 'provider_app'">
+                <md-input-container class="md-block" flex="50">
+                  <label translate="PROMOTION.HEADQUARTER">Headquarter</label>
+                  <md-select ng-model="vm.selectedHeadquarter">
+                    <md-option ng-repeat="hq in vm.headquarters"
+                      ng-selected="hq._id === vm.promotion.owner.localId ? true : false || $first" ng-value="{{hq}}">
+                      {{hq.name}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container class="md-block" flex="50">
+                    <label translate="PROMOTION.SERVICES">SERVICES</label>
+                    <md-select ng-model="vm.selectedService">
+                      <md-option 
+                        ng-repeat="service in vm.selectedHeadquarter.services"
+                        ng-selected="service._id === vm.promotion.service.id ? true : false" ng-value="{{service}}" value="{{service}}">
+                        {{service.name}}
+                      </md-option>
+                    </md-select>
+                </md-input-container>
+              </div>
+              <md-input-container class="md-block" >
+                    <label translate="PROMOTION.ACTIVE">ACTIVE</label>
+                    <md-select ng-model="vm.promotion.active">
+                      <md-option ng-value="true" value="true" ng-selected="vm.promotion.active">
+                        ACTIVE
+                      </md-option>
+                      <md-option ng-value="false" value="false" ng-selected="!vm.promotion.active">
+                        INACTIVE
+                      </md-option>
+                    </md-select>
+                </md-input-container>
+            </form>
+          </div>
+        </md-tab-body>
+      </md-tab>
+    </md-tabs>
+  </div>
+  <!-- / CONTENT -->
+</div>

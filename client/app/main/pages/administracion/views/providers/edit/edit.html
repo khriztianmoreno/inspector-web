@@ -1,0 +1,70 @@
+<div id="provider-detail" class="page-layout simple tabbed" layout="column">
+  <!-- HEADER -->
+  <div class="header md-accent-bg" layout="row" layout-align="start center">
+    <div class="white-fg" layout="row" layout-align="start center" flex>
+      <md-button ng-hide="vm.getCurrentUser.role === 'provider_app'" class="goto-orders-button md-icon-button" aria-label="Go to orders" 
+        ng-click="vm.goToProviders()" translate translate-attr-aria-label="EC.GO_TO_ORDERS">
+        <md-icon md-font-icon="icon-arrow-left"></md-icon>
+      </md-button>
+      <div layout="column" layout-align="start start">
+        <div class="h2" ng-hide="vm.getCurrentUser.role === 'provider_app'">
+          <span translate="PROVIDER.DETAIL">DETAIL</span>
+        </div>
+        <div class="h2" ng-if="vm.getCurrentUser.role === 'provider_app'">
+          <span>{{ vm.provider.name }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons-->
+    <div>
+      <md-button type="submit" class="md-raised md-primary" 
+        ng-disabled="basicInfoForm.$invalid" ng-if="vm.currentTab === 0"
+        aria-label="Save" ng-click="vm.saveProvider()">
+        <span translate="PROVIDER.SAVE">SAVE</span>
+      </md-button>
+
+      <md-button type="submit" class="md-raised md-primary" 
+        ng-disabled="headquarterForm.$invalid" ng-if="vm.currentTab === 1 && !vm.edit"
+        aria-label="Save" ng-click="vm.saveHeadquarter()">
+        <span translate="PROVIDER.SAVE">SAVE</span>
+      </md-button>
+
+
+      <md-button type="submit" class="md-raised md-primary" 
+        ng-disabled="headquarterForm.$invalid" ng-if="vm.currentTab === 1 && vm.edit"
+        aria-label="Save" ng-click="vm.updatHeadquarter()">
+        <span translate="PROVIDER.SAVE">SAVE</span>
+      </md-button>
+
+    </div>
+    <!-- -->
+  </div>
+  <!-- / HEADER -->
+  <!-- CONTENT -->
+  <div class="content">
+    <md-tabs md-selected="vm.currentTab" md-dynamic-height>
+      <md-tab ng-disabled="vm.customerLocked">
+        <md-tab-label>
+          <span translate="PROVIDER.BASIC_INFO">Provider Details</span>
+        </md-tab-label>
+        <md-tab-body>
+          <form name="basicInfoForm">
+            <div ng-include="'app/main/pages/administracion/views/providers/includes/basicInfo.html'"></div>
+          </form>
+        </md-tab-body>
+      </md-tab>
+      <md-tab ng-disabled="vm.headQuartersLocked">
+        <md-tab-label>
+          <span translate="PROVIDER.HEADQUARTER">HEADQUARTER</span>
+        </md-tab-label>
+        <md-tab-body>
+          <form name="headquarterForm">
+            <div ng-include="'app/main/pages/administracion/views/providers/includes/headquarters.html'"></div>
+          </form>
+        </md-tab-body>
+      </md-tab>
+    </md-tabs>
+  </div>
+  <!-- / CONTENT -->
+</div>

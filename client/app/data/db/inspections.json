@@ -1,0 +1,3225 @@
+{ 
+    "_id" : ObjectId("57acc861ba02509575b00ac1"), 
+    "name" : "REVISION PREVENTIVA", 
+    "periodicity" : {
+        "type" : "MONTHLY", 
+        "value" : NumberInt(2)
+    }, 
+    "type" : "PREVENTIVE", 
+    "customer" : {
+        "localId" : "582e2e4a8fb233c49e13e9c2", 
+        "localName" : "SAPCO"
+    }, 
+    "updateAt" : ISODate("2016-08-03T21:48:09.741+0000"), 
+    "createAt" : ISODate("2016-08-03T21:48:09.741+0000"), 
+    "check" : [
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Luces", 
+                    "color" : "#04B404"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Color luces"
+                        }
+                    }, 
+                    "code" : "LUC001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces estacionamiento"
+                        }
+                    }, 
+                    "code" : "LUC002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces direccionales"
+                        }
+                    }, 
+                    "code" : "LUC003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces bajas y altas"
+                        }
+                    }, 
+                    "code" : "LUC004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces medias"
+                        }
+                    }, 
+                    "code" : "LUC005", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces freno"
+                        }
+                    }, 
+                    "code" : "LUC006", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces reversa"
+                        }
+                    }, 
+                    "code" : "LUC007", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces interiores"
+                        }
+                    }, 
+                    "code" : "LUC008", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Interior", 
+                    "color" : "#FF8000"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Bocina o pito"
+                        }
+                    }, 
+                    "code" : "INT001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Elementos deteriorados y sueltos"
+                        }
+                    }, 
+                    "code" : "INT002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Cinturones de seguridad"
+                        }
+                    }, 
+                    "code" : "INT003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Salida de emergencia"
+                        }
+                    }, 
+                    "code" : "INT004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Chapas y seguros"
+                        }
+                    }, 
+                    "code" : "INT005", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Sillas, carteras y portaequipajes"
+                        }
+                    }, 
+                    "code" : "INT006", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Stiker \"Como Conduzco\""
+                        }
+                    }, 
+                    "code" : "INT007", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Dispositivo Control de Velocidad"
+                        }
+                    }, 
+                    "code" : "INT008", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Timbre"
+                        }
+                    }, 
+                    "code" : "INT009", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión vidrios", 
+                    "color" : "#FE2E64"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Espejos retrovisores"
+                        }
+                    }, 
+                    "code" : "VID001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Elevadores vidrios"
+                        }
+                    }, 
+                    "code" : "VID002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Limpia parabrisas"
+                        }
+                    }, 
+                    "code" : "VID003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Parabrisas delantero"
+                        }
+                    }, 
+                    "code" : "VID004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Vidrios móviles"
+                        }
+                    }, 
+                    "code" : "VID005", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Vidrios fijos"
+                        }
+                    }, 
+                    "code" : "VID006", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Campo visual"
+                        }
+                    }, 
+                    "code" : "VID007", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Vidrios transparentes"
+                        }
+                    }, 
+                    "code" : "VID008", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Exterior", 
+                    "color" : "#FE2EC8"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Carrocería"
+                        }
+                    }, 
+                    "code" : "EXT001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Chasis"
+                        }
+                    }, 
+                    "code" : "EXT002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Puertas, Baúl y capo"
+                        }
+                    }, 
+                    "code" : "EXT003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Sistema de escape"
+                        }
+                    }, 
+                    "code" : "EXT004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Tercera placa y laterales"
+                        }
+                    }, 
+                    "code" : "EXT005", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Anclajes contenedores"
+                        }
+                    }, 
+                    "code" : "EXT006", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Sujeción carrocería"
+                        }
+                    }, 
+                    "code" : "EXT007", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Parachoques"
+                        }
+                    }, 
+                    "code" : "EXT008", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Roce llantas y guardabarros"
+                        }
+                    }, 
+                    "code" : "EXT009", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Peldaños"
+                        }
+                    }, 
+                    "code" : "EXT010", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Puertas de carga"
+                        }
+                    }, 
+                    "code" : "EXT011", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Equipo de carretera", 
+                    "color" : "#2E2EFE"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Botiquín"
+                        }
+                    }, 
+                    "code" : "EQU001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Extintor"
+                        }
+                    }, 
+                    "code" : "EQU002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Martillos fragmentación"
+                        }
+                    }, 
+                    "code" : "EQU003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Cruceta"
+                        }
+                    }, 
+                    "code" : "EQU004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Caja de herramientas"
+                        }
+                    }, 
+                    "code" : "EQU005", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Gato"
+                        }
+                    }, 
+                    "code" : "EQU006", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Señales"
+                        }
+                    }, 
+                    "code" : "EQU007", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Tacos de bloqueo"
+                        }
+                    }, 
+                    "code" : "EQU008", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Linterna"
+                        }
+                    }, 
+                    "code" : "EQU009", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Motor", 
+                    "color" : "#CC2EFA"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Batería"
+                        }
+                    }, 
+                    "code" : "MOT001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Cableado eléctrico"
+                        }
+                    }, 
+                    "code" : "MOT002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Fugas aceite"
+                        }
+                    }, 
+                    "code" : "MOT003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Sistema de refrigeración"
+                        }
+                    }, 
+                    "code" : "MOT004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Sistema combustible"
+                        }
+                    }, 
+                    "code" : "MOT005", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Rines y llantas", 
+                    "color" : "#2E9AFE"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Banda rodamiento"
+                        }
+                    }, 
+                    "code" : "LLA001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Bandas laterales"
+                        }
+                    }, 
+                    "code" : "LLA002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Deformaciones y fisura rines"
+                        }
+                    }, 
+                    "code" : "LLA003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Labrado"
+                        }
+                    }, 
+                    "code" : "LLA004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Llanta repuesto"
+                        }
+                    }, 
+                    "code" : "LLA005", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Tuercas y pernos"
+                        }
+                    }, 
+                    "code" : "LLA006", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Rines y llantas"
+                        }
+                    }, 
+                    "code" : "LLA007", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Suspensión", 
+                    "color" : "#2EFEC8"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Barra estabilizadora"
+                        }
+                    }, 
+                    "code" : "SUS001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Brazos suspensión"
+                        }
+                    }, 
+                    "code" : "SUS002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Muelles, resortes, tijeras, espirales, ballestas y barras de torsión"
+                        }
+                    }, 
+                    "code" : "SUS003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Amortiguadores"
+                        }
+                    }, 
+                    "code" : "SUS004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Elementos suspensión"
+                        }
+                    }, 
+                    "code" : "SUS005", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Frenos", 
+                    "color" : "#2EFE2E"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Cilindro mando"
+                        }
+                    }, 
+                    "code" : "FRE001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Freno emergencia"
+                        }
+                    }, 
+                    "code" : "FRE002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Fugas y fijación"
+                        }
+                    }, 
+                    "code" : "FRE003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Fundas, cables, guayas y varillas"
+                        }
+                    }, 
+                    "code" : "FRE004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Retorno pedal"
+                        }
+                    }, 
+                    "code" : "FRE005", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Tubos y mangueras"
+                        }
+                    }, 
+                    "code" : "FRE006", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Tapa líquido frenos"
+                        }
+                    }, 
+                    "code" : "FRE007", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Mordazas y discos"
+                        }
+                    }, 
+                    "code" : "FRE008", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Depósitos de presión"
+                        }
+                    }, 
+                    "code" : "FRE009", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Servofreno (booster)"
+                        }
+                    }, 
+                    "code" : "FRE010", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Nivel líquido frenos"
+                        }
+                    }, 
+                    "code" : "FRE011", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Válvula freno aire"
+                        }
+                    }, 
+                    "code" : "FRE012", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Trasmisión", 
+                    "color" : "#4B088A"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Fugas aceite"
+                        }
+                    }, 
+                    "code" : "TRA001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Holguras"
+                        }
+                    }, 
+                    "code" : "TRA002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Juntas cardan"
+                        }
+                    }, 
+                    "code" : "TRA003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Protector cardan"
+                        }
+                    }, 
+                    "code" : "TRA004", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Dirección", 
+                    "color" : "#FFFF00"
+                }
+            ], 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Juegos y fijación elementos"
+                        }
+                    }, 
+                    "code" : "DIR001", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Fugas"
+                        }
+                    }, 
+                    "code" : "DIR002", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Guardapolvos"
+                        }
+                    }, 
+                    "code" : "DIR003", 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "PASS"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "FAIL"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("57ec1aa2ea7093b68ad574fd"), 
+    "name" : "REVISION DE ALISTAMIENTO", 
+    "type" : "ENLISTMENT", 
+    "periodicity" : {
+        "type" : "DAILY", 
+        "value" : NumberInt(24)
+    }, 
+    "customer" : {
+        "localId" : "582e2e4a8fb233c49e13e9c2", 
+        "localName" : "SAPCO"
+    }, 
+    "updateAt" : ISODate("2016-10-11T18:18:21.198+0000"), 
+    "createAt" : ISODate("2016-08-03T21:48:09.741+0000"), 
+    "check" : [
+        {
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Color luces"
+                        }
+                    }, 
+                    "code" : "LUC001", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces estacionamiento"
+                        }
+                    }, 
+                    "code" : "LUC002", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces direccionales"
+                        }
+                    }, 
+                    "code" : "LUC003", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces bajas y altas"
+                        }
+                    }, 
+                    "code" : "LUC004", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces medias"
+                        }
+                    }, 
+                    "code" : "LUC005", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces freno"
+                        }
+                    }, 
+                    "code" : "LUC006", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces reversa"
+                        }
+                    }, 
+                    "code" : "LUC007", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Luces interiores"
+                        }
+                    }, 
+                    "code" : "LUC008", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ], 
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Luces", 
+                    "color" : "#04B404"
+                }
+            ]
+        }, 
+        {
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Juegos y fijación elementos"
+                        }
+                    }, 
+                    "code" : "DIR001", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Fugas"
+                        }
+                    }, 
+                    "code" : "DIR002", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Guardapolvos"
+                        }
+                    }, 
+                    "code" : "DIR003", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ], 
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "Revisión Dirección", 
+                    "color" : "#FFFF00"
+                }
+            ]
+        }, 
+        {
+            "_id" : ObjectId("57f72b2f46b0ec2c05f16214"), 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "description" : "CAUCHO", 
+                            "language" : "es"
+                        }
+                    }, 
+                    "code" : "LLA001", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "description" : "Bueno", 
+                                    "language" : "es"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "description" : "Malo", 
+                                    "language" : "es"
+                                }
+                            }
+                        }, 
+                        {
+                            "code" : "57eaef8334be98e36edd82af", 
+                            "name" : {
+                                "es" : {
+                                    "description" : "Regular", 
+                                    "language" : "es"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ], 
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "LLantas", 
+                    "_id" : ObjectId("57f72b2f46b0ec2c05f16215"), 
+                    "color" : "#e71818"
+                }
+            ]
+        }, 
+        {
+            "_id" : ObjectId("57f72ff14d7cf08e0f3f6104"), 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Espejos laterales"
+                        }
+                    }, 
+                    "code" : "VID002", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Espejos"
+                        }
+                    }, 
+                    "code" : "VID001", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ], 
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "VIDRIOS", 
+                    "_id" : ObjectId("57f72ff14d7cf08e0f3f6105"), 
+                    "color" : "#6e5eeb"
+                }
+            ]
+        }
+    ], 
+    "__v" : NumberInt(3)
+}
+{ 
+    "_id" : ObjectId("57fae2f2973f113d86e8508e"), 
+    "name" : "AVIS ALISTAMIENTO", 
+    "updateAt" : ISODate("2016-11-08T20:42:45.236+0000"), 
+    "createAt" : ISODate("2016-10-09T22:17:19.626+0000"), 
+    "check" : [
+        {
+            "_id" : ObjectId("57fae2f2973f113d86e85091"), 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "NUMERO MOTOR"
+                        }
+                    }, 
+                    "type" : "TEXT", 
+                    "isRequired" : true, 
+                    "code" : "MOT004", 
+                    "values" : [
+
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "PISTONES"
+                        }
+                    }, 
+                    "type" : "PASS/FAIL", 
+                    "isRequired" : true, 
+                    "code" : "MOT003", 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "description" : "PASS", 
+                                    "language" : "es"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "description" : "FAIL", 
+                                    "language" : "es"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "ACEITESSS"
+                        }
+                    }, 
+                    "code" : "MOT002", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno 1"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Regular"
+                                }
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "FUGA"
+                        }
+                    }, 
+                    "code" : "MOT001", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Regular"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ], 
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "MOTOR", 
+                    "_id" : ObjectId("57fae2f2973f113d86e85092"), 
+                    "color" : "#cd1313"
+                }
+            ]
+        }, 
+        {
+            "_id" : ObjectId("57fae2f2973f113d86e8508f"), 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "COJINES"
+                        }
+                    }, 
+                    "code" : "INT001", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Regular"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ], 
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "INTERIOR", 
+                    "_id" : ObjectId("57fae2f2973f113d86e85090"), 
+                    "color" : "#13ef5c"
+                }
+            ]
+        }
+    ], 
+    "periodicity" : {
+
+    }, 
+    "customer" : {
+        "localId" : "582e2e4a8fb233c49e13e9c2", 
+        "localName" : "SAPCO"
+    }, 
+    "type" : "ENLISTMENT", 
+    "__v" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("5807f72db3e1770167305d41"), 
+    "name" : "LAVADA", 
+    "updateAt" : ISODate("2016-10-19T22:30:07.681+0000"), 
+    "createAt" : ISODate("2016-10-19T22:30:07.681+0000"), 
+    "check" : [
+        {
+            "_id" : ObjectId("5807f72db3e1770167305d42"), 
+            "items" : [
+                {
+                    "name" : {
+                        "es" : {
+                            "language" : "es", 
+                            "description" : "Nuevo item"
+                        }
+                    }, 
+                    "code" : "009", 
+                    "type" : "SELECT", 
+                    "isRequired" : true, 
+                    "values" : [
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Bueno"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : {
+                                "es" : {
+                                    "language" : "es", 
+                                    "description" : "Malo"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ], 
+            "category" : [
+                {
+                    "language" : "es", 
+                    "description" : "VIDREI", 
+                    "_id" : ObjectId("5807f72db3e1770167305d43"), 
+                    "color" : "#fffff"
+                }
+            ]
+        }
+    ], 
+    "periodicity" : {
+        "type" : "DAILY", 
+        "value" : NumberInt(24)
+    }, 
+    "customer" : {
+        "localId" : "582e2e4a8fb233c49e13e9c2", 
+        "localName" : "SAPCO"
+    }, 
+    "type" : "ENLISTMENT", 
+    "__v" : NumberInt(0)
+}

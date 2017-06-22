@@ -1,0 +1,186 @@
+<div id="mi-flota" class="page-layout simple right-sidenav" layout="row">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- WIDGET GROUP -->
+      <div class="widget-group" layout="row" flex="100" layout-wrap>
+
+        <!-- WIDGET 1 -->
+        <ms-widget flippable="true" layout="column" flex="100" flex-gt-xs="50" flex-gt-md="25">
+
+          <!-- Front -->
+          <ms-widget-front class="white-bg">
+            <div class="ph-8 pv-16 h-55" layout="row" layout-align="space-between center">
+              <div class="h3" translate="WIDGET.UNFINISHED">UNFINISHED</div>
+            </div>
+
+            <div class="pt-8 pb-32" layout="column" layout-align="center center">
+              <div class="red-fg font-size-72 line-height-72">
+                {{vm.widgets.unfinished}}
+              </div>
+              <div class="h3 secondary-text font-weight-500" translate="WIDGET.VEHICLE">VEHICLE</div>
+            </div>
+
+            <div class="p-16 grey-50-bg border-top" layout="row" layout-align="start center">
+              <span class="h4 secondary-text text-truncate" translate="WIDGET.CURRENT_MONTH">CURRENT_MONTH</span>
+               <span class="h4 ml-8">{{vm.monthNames()}} </span>
+            </div>
+          </ms-widget-front>
+        </ms-widget>
+        <!-- / WIDGET 1 -->
+
+        <!-- WIDGET 2 -->
+        <ms-widget flippable="true" layout="column" flex="100" flex-gt-xs="50" flex-gt-md="25">
+
+          <!-- Front -->
+          <ms-widget-front class="white-bg">
+            <div class="pl-16 pr-8 pv-16 h-55" layout="row" layout-align="space-between center">
+              <div class="h3" translate="WIDGET.COMPLETED">COMPLETED</div>
+            </div>
+
+            <div class="pt-8 pb-32" layout="column" layout-align="center center">
+              <div class="light-blue-fg font-size-72 line-height-72">
+                {{vm.widgets.completed}}
+              </div>
+              <div class="h3 secondary-text font-weight-500" translate="WIDGET.VEHICLE">VEHICLE</div>
+            </div>
+
+            <div class="p-16 grey-50-bg border-top" layout="row" layout-align="start center">
+              <span class="h4 secondary-text text-truncate" translate="WIDGET.CURRENT_MONTH">CURRENT_MONTH</span>
+              <span class="h4 ml-8">{{vm.monthNames()}} </span>
+            </div>
+          </ms-widget-front>
+
+        </ms-widget>
+        <!-- / WIDGET 2 -->
+
+        <!-- WIDGET 3 -->
+        <ms-widget flippable="true" layout="column" flex="100" flex-gt-xs="50" flex-gt-md="25">
+
+          <!-- Front -->
+          <ms-widget-front class="white-bg">
+            <div class="pl-16 pr-8 pv-16 h-55" layout="row" layout-align="space-between center">
+              <div class="h3" translate="WIDGET.TOTAL">TOTAL</div>
+            </div>
+
+            <div class="pt-8 pb-32" layout="column" layout-align="center center">
+              <div class="orange-fg font-size-72 line-height-72">
+                {{vm.widgets.fleet}}
+              </div>
+              <div class="h3 secondary-text font-weight-500" translate="WIDGET.FLEET">Flotas</div>
+            </div>
+
+            <div class="p-16 grey-50-bg border-top" layout="row" layout-align="start center">
+              <span class="h4 secondary-text text-truncate">{{vm.getCurrentUser.customer.localName}}</span>
+            </div>
+
+          </ms-widget-front>
+          <!-- / Front -->
+        </ms-widget>
+        <!-- / WIDGET 3 -->
+
+        <!-- WIDGET 4 -->
+        <ms-widget flippable="true" layout="column" flex="100" flex-gt-xs="50" flex-gt-md="25">
+
+          <!-- Front -->
+          <ms-widget-front class="white-bg">
+            <div class="pl-16 pr-8 pv-16 h-55" layout="row" layout-align="space-between center">
+              <div class="h3" translate="WIDGET.TOTAL">Total</div>
+            </div>
+            <div class="pt-8 pb-32" layout="column" layout-align="center center">
+              <div class="blue-grey-fg font-size-72 line-height-72">{{vm.widgets.vehicles}}
+              </div>
+              <div class="h3 secondary-text font-weight-500" translate="WIDGET.VEHICLE">VEHICLE</div>
+            </div>
+
+            <div class="p-16 grey-50-bg border-top" layout="row" layout-align="start center">
+              <span class="h4 secondary-text text-truncate translate="WIDGET.FLEET"">Flotas:</span>
+              <span class="h4 ml-8">{{vm.widgets.fleet}} </span>
+            </div>
+
+          </ms-widget-front>
+          <!-- / Front -->
+
+        </ms-widget>
+        <!-- / WIDGET 4 -->
+      </div>
+      <!-- / WIDGET GROUP -->
+
+      <!-- Table GROUP -->
+      <div class="widget-group" layout="row" flex="100" layout-wrap>
+        <ms-widget layout="row" flex="100">
+          <ms-widget-front>
+            <div class="white-bg md-whiteframe-4dp">
+              <table class="dataTable row-border hover" datatable="ng" dt-options="vm.dtOptions">
+                <thead>
+                  <tr>
+                    <th class="secondary-text">
+                      <div class="table-header">
+                        <span class="column-title">Placa</span>
+                      </div>
+                    </th>
+                    <th class="secondary-text">
+                      <div class="table-header">
+                        <span class="column-title">Flota</span>
+                      </div>
+                    </th>
+                    <th class="secondary-text">
+                      <div class="table-header">
+                        <span class="column-title">Última Revisión</span>
+                      </div>
+                    </th>
+                    <th class="secondary-text">
+                      <div class="table-header">
+                        <span class="column-title">Modelo</span>
+                      </div>
+                    </th>
+                    <th class="secondary-text">
+                      <div class="table-header">
+                        <span class="column-title">Marca</span>
+                      </div>
+                    </th>
+                    <th class="secondary-text">
+                      <div class="table-header">
+                        <span class="column-title">Hoja de vida</span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="vehicle in ::vm.vehicles">
+                    <td>{{ vehicle.plate.number }}</td>
+                    <td>{{ vehicle.customer.localName }}</td>
+                    <td ng-if="vehicle.reviews.length > 0">
+                      {{ vehicle.reviews[vehicle.reviews.length -1].date | date:'medium' }}
+                    </td>
+                    <td ng-if="vehicle.reviews.length === 0"><span>Sin Revisión</span></td>
+                    <td>{{ vehicle.vehicleData.model }}</td>
+                    <td>{{ vehicle.vehicleData.brand }}</td>
+                    <td>
+                      <div class="actions" layout="row" layout-align="center">
+                        <md-button class="md-icon-button" aria-label="More" translate
+                          translate-attr-aria-label="CONTACTS.MORE">
+                          <md-tooltip md-direction="left">
+                            Ver hoja de vida
+                          </md-tooltip>
+                          <md-icon md-font-icon="icon-clipboard-text" ng-click="vm.goToDetailVehicle(vehicle._id)"></md-icon>
+                        </md-button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </ms-widget-front>
+        </ms-widget>
+      </div>
+      <!-- / WIDGET GROUP -->
+    </div>
+    <!-- / CONTENT -->
+  </div>
+  <!-- / CENTER -->
+</div>

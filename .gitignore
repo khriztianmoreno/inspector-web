@@ -1,0 +1,17 @@
+node_modules
+public
+.tmp
+.sass-cache
+.idea
+bower_components/
+dist
+/server/config/local.env.js
+npm-debug.log
+coverage
+/.tmp
+client/build/
+client/vendor/
+/.vscode
+
+mobi.service
+mobi.conf

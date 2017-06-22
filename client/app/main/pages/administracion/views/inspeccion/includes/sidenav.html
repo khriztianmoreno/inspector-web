@@ -1,0 +1,44 @@
+<div class="demo-sidenav">
+
+
+
+  <md-list>
+
+      <md-list-item ng-click="vm.filterChange('all')" ng-class="{'selected':vm.listType ==='all'}">
+          <p translate="REVIEW.ALL_CATEGORIES">
+              All contacts
+          </p>
+      </md-list-item>
+
+      <md-divider></md-divider>
+
+      <md-list-item class="new-group-form" ng-show="newListForm.$visible">
+          <p class="pl-8" editable-text="vm.newGroupName" e-form="newListForm"
+            e-label="Enter new category"
+          onaftersave="vm.addNewGroup()"></p>
+      </md-list-item>
+
+      <md-list-item class="" ng-click="newListForm.$show()">
+        <md-button class="md-accent md-raised" ng-click="vm.newCategory()"
+            aria-label="ADD CATEGORY" ng-disabled="vm.disableNewCategoryButton"
+            translate="INSPECTION.ADD_CATEGORY" translate-attr-aria-label="INSPECTION.ADD_CATEGORY">
+          ADD CATEGORY
+        </md-button>
+        <!--<p class="pl-8 md-accent-fg" translate="INSPECTION.ADD_CATEGORY">New Group</p>-->
+      </md-list-item>
+
+      <md-divider></md-divider>
+
+      <md-list-item ng-repeat="(keyC, inspection) in vm.inspection.check track by $index"
+            ng-click="vm.filterChange(inspection.category[0].description)">
+          <md-icon md-font-icon="icon-label" class="s16" ng-style="{'color' : inspection.category[0].color}"></md-icon>
+          <p class="pl-8">
+              {{inspection.category[0].description}}
+          </p>
+      </md-list-item>
+
+
+
+  </md-list>
+
+</div>

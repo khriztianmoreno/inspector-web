@@ -1,0 +1,14 @@
+{
+    "FORGOTPASSWORD": {
+        "TITLE": "Recupera tu contraseña",
+        "EMAIL_ADRESS": "Dirección de correo electrónico",
+        "SEND_RESET_LINK": "RESTABLECER CONTRASEÑA",
+        "GO_BACK": "Volver a iniciar sesión",
+        "RESET_OK": "Hemos enviado a tu correo las instrucciones para restablecer tu contraseña.",
+        "RESET_NOT_FOUND_EMAIL": "La dirección de correo electronico no se encuentra.",
+        "ERRORS": {
+            "EMAIL_REQUIRED": "Campo de correo electrónico es necesario",
+            "EMAIL_MUST_VALID": "El email debe ser una dirección de correo electrónico válida"
+        }
+    }
+}
